@@ -1,0 +1,3 @@
+#!/bin/bash
+rosrun xacro xacro.py $(rospack find arm_robot_model)/models/DarpaRobot.urdf.xacro  > /tmp/darpa.urdf
+rosrun urdf check_urdf /tmp/darpa.urdf

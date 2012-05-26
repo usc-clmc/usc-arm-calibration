@@ -1,0 +1,25 @@
+<package>
+  <description brief="arm_fiducial_cal">
+
+     arm_fiducial_cal
+
+  </description>
+  <author>Jon Binney</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/arm_fiducial_cal</url>
+
+  <depend package="rospy" />
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+  <depend package="pier" />
+  <depend package="tf" />
+  <depend package="sensor_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="rosbag"/>  
+
+  <depend package="arm_calibrate_extrinsics"/>
+  
+</package>
+
+

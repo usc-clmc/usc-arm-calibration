@@ -1,0 +1,414 @@
+<!--
+ * COPYRIGHT (C) 2010
+ * RE2, INC.
+ *
+ * Author: RE2
+ *
+ * This file is a part of arm_robot_model, which was developed for the
+ * DARPA ARM ROBOT Track C project.
+ *
+ * arm_robot_model is free software:
+ * you can redistribute it and/or modify it under the terms of the GNU General
+ * Public License as published by the Free Software Foundation, either version
+ * 3 of the License, or (at your option) any later version.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this package.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * RE2, INC. disclaims all warranties with regard to this software, including
+ * all implied warranties of merchantability and fitness, in no event shall
+ * RE2, INC. be liable for any special, indirect or consequential damages or
+ * any damages whatsoever resulting from loss of use, data or profits, whether
+ * in an action of contract, negligence or other tortious action, arising out
+ * of or in connection with the use or performance of this software.
+-->
+
+<robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:joint="http://playerstage.sourceforge.net/gazebo/xmlschema/#slider"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:body="http://playerstage.sourceforge.net/gazebo/xmlschema/#body"
+       xmlns:geom="http://playerstage.sourceforge.net/gazebo/xmlschema/#geom"
+       xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <include filename="$(find arm_robot_model)/models/common.urdf.xacro"/>
+    <include filename="$(find arm_robot_model)/models/sensorsValues.urdf.xacro"/>
+
+     <xacro:macro name="darpa_head_assembly" params="parent xyz rpy">
+
+    <!-- LINKS -->
+    
+    <link name="LOWER_PAN_UNIT" >
+        <inertial>
+            <origin xyz="0.00001 0.07282 -0.03237" />
+            <mass value="5.21134" />
+        <inertia  ixx="0.01476" ixy="0.00000" ixz="0.00000"
+		                   iyy="0.01308" iyz="0.00026"
+		                                    izz="0.01292" />
+        </inertial>
+        <visual>
+        <material name="DarpaGrey" />
+
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                    <mesh filename="${homeDirectory}/models/componentSTL/lowerPanUnit.stl"/>
+            </geometry>
+        </visual>
+            <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                    <mesh filename="${homeDirectory}/models/collision/lowerPanUnit.stl"/>
+            </geometry>
+            </collision>
+        </link>
+        <xacro:gazeboReference name="LOWER_PAN_UNIT" material="PR2/Grey2" />
+        <xacro:control name="DarmSim_lowerPan" topicName="DarmSim/lowerPan" linkName="LOWER_PAN_UNIT" jointName="DarmSim/LowerPanTilt/Pan" />
+
+
+
+    <link name="LOWER_TILT_BEAMS" >
+    <inertial>
+        <origin xyz="0 0.05569085 0" />
+        <mass value="0.23295" />
+        <inertia  ixx="0.00074525" ixy="0.00000000" ixz="0.00000000"
+		                   iyy="0.00086895" iyz="0.00000000"
+		                                    izz="0.00151618" />
+
+
+    </inertial>
+    <visual>
+        <material name="DarpaGrey" />
+
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+                <mesh filename="${homeDirectory}/models/componentSTL/lowerTiltBeamsLink.stl"/>
+        </geometry>
+    </visual>
+        <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+                <mesh filename="${homeDirectory}/models/collision/lowerTiltBeamsLink.stl"/>
+        </geometry>
+        </collision>
+    </link>
+    <xacro:gazeboReference name="LOWER_TILT_BEAMS" material="PR2/Grey2" />
+    <xacro:control name="DarmSim_lowerTilt" topicName="DarmSim/lowerTilt" linkName="LOWER_TILT_BEAMS" jointName="DarmSim/LowerPanTilt/Tilt" />
+
+
+
+
+
+
+    <link name="LOWER_TILT_BEAMS_FRONT">
+    <visual>
+        <material name="DarpaGrey" />
+
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="${homeDirectory}/models/componentSTL/lowerTiltBeamsFrontLink.stl"/>
+        </geometry>
+        <material name="base">
+            <color rgba="0 255 255 1.0"/>
+        </material>
+    </visual>
+    <inertial>
+        <origin xyz="-0.02081566 0.07765392 0" />
+        <mass value="0.18024349" />
+        <inertia  ixx="0.00040661" ixy="0.00004989"  ixz="0.0"  
+		            iyy="0.00008067"  iyz="0.0"
+		                       izz="0.00037761" />
+    </inertial>
+        <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="${homeDirectory}/models/collision/lowerTiltBeamsFrontLink.stl"/>
+        </geometry>
+        </collision>
+    </link>
+    <xacro:gazeboReference name="LOWER_TILT_BEAMS_FRONT" material="PR2/Grey2" />
+    <xacro:control name="DarmSim_lowerTiltFront" topicName="DarmSim/lowerTiltFront" linkName="LOWER_TILT_BEAMS_FRONT" jointName="DarmSim/lowerTiltFrontJoint" />
+ 
+    <link name="LOWER_TILT_BEAMS_TOP">
+    <visual>
+        <material name="DarpaGrey" />
+
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="${homeDirectory}/models/componentSTL/lowerTiltBeamsTopLink.stl"/>
+        </geometry>
+        <material name="base">
+            <color rgba="0 255 255 1.0"/>
+            </material>
+        </visual>
+    <inertial>
+        <origin xyz="0.00764212 0.02983896 0.02908565" />
+        <mass value="0.86295437" />
+	<inertia  ixx="0.00080256" ixy="0.00005477"  ixz="-0.00006009"  
+		            iyy="0.00100235"  iyz="0.00000187"
+		                       izz="0.00074854" />
+    </inertial>
+        <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="${homeDirectory}/models/collision/lowerTiltBeamsTopLink.stl"/>
+        </geometry>
+        </collision>
+    </link>
+        <xacro:gazeboReference name="LOWER_TILT_BEAMS_TOP" material="PR2/Grey2" />
+    <xacro:control name="DarmSim_lowerTiltTop" topicName="DarmSim/lowerTiltTop" linkName="LOWER_TILT_BEAMS_TOP" jointName="DarmSim/lowerTiltTopJoint" />
+
+    <link name="UPPER_TILT_UNIT" >
+    <inertial>
+        <origin xyz="-0.00174164 0.02676162 -0.01954200" />
+        <mass value="0.68038877" />
+        <inertia  ixx="0.00065547" ixy="0.00001112" ixz="-0.00000794"
+		                   iyy="0.00064556" iyz="0.00008438"
+		                                    izz="0.00037446" />
+    </inertial>
+    <visual>
+        <material name="DarpaGrey" />
+
+        <origin xyz="0 0 0.0" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="${homeDirectory}/models/componentSTL/upperTiltUnitLink.stl"/>
+        </geometry>
+    </visual>
+        <collision>
+        <origin xyz="0 0 0.0" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="${homeDirectory}/models/collision/upperTiltUnitLink.stl"/>
+        </geometry>
+        </collision>
+    </link>
+        <xacro:gazeboReference name="UPPER_TILT_UNIT" material="PR2/Grey2" />
+        <xacro:control name="DarmSim_upperTilt" topicName="DarmSim/upperTilt" linkName="UPPER_TILT_UNIT" jointName="DarmSim/UpperPanTilt/Pan" />
+
+
+
+    <link name="HEAD">
+    <inertial>
+        <origin xyz="-0.00010270 0.12983722 0.01665482" />
+        <mass value="1.99572228" />
+        <inertia  ixx="0.01220438" ixy="-0.00000904" ixz="0.00000750"
+		                   iyy="0.00646285" iyz="-0.00066863"
+		                                    izz="0.00926422" />
+    </inertial>
+    <visual>
+        <material name="DarpaGrey" />
+
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+                <mesh filename="${homeDirectory}/models/componentSTL/head.stl"/>
+        </geometry>
+    </visual>
+        <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+                <mesh filename="${homeDirectory}/models/collision/head.stl"/>
+        </geometry>
+        </collision>
+    </link>
+    <xacro:gazeboReference name="HEAD" material="PR2/Grey2" />
+        <xacro:control name="DarmSim_headPitch" topicName="DarmSim/headPitch" linkName="HEAD" jointName="DarmSim/UpperPanTilt/Tilt" />
+
+
+    <link name="SWISSRANGER">
+    <inertial>
+        <origin xyz="0 0 0" />
+        <mass value="0.01" />
+	<inertia ixx="0.00001"  ixy="0.0"  ixz="0.0"
+                 iyy="0.00001"  iyz="0.0"
+                 izz="0.00001" />
+    </inertial>
+    <visual>
+        <material name="DarpaGrey" />
+
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+               <cylinder radius="0.0000000001" length="0.0000000001" />
+         </geometry>
+    </visual>
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="0.0000000001 0.0000000001 0.0000000001" />
+            </geometry>
+        </collision>
+    </link>
+    <xacro:gazeboReference name="SWISSRANGER" material="PR2/Grey2" />
+
+    <link name="BUMBLEBEE_LEFT_REAL">
+    <inertial>
+        <origin xyz="0 0 0" />
+        <mass value="0.01" />
+	<inertia ixx="0.00001"  ixy="0.0"  ixz="0.0"
+                 iyy="0.00001"  iyz="0.0"
+                 izz="0.00001" />
+    </inertial>
+    <visual>
+        <material name="DarpaGrey" />
+
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+                <box size=" 0.0000000001 0.0000000001 0.0000000001" />
+     </geometry>
+    </visual>
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="0.0000000001 0.0000000001 0.0000000001" />
+            </geometry>
+        </collision>
+    </link>
+    <xacro:gazeboReference name="BUMBLEBEE_LEFT_REAL" material="PR2/Grey2" />
+
+
+    <link name="BUMBLEBEE_RIGHT">
+    <inertial>
+        <origin xyz="0 0 0" />
+        <mass value="0.01" />
+	<inertia ixx="0.00001"  ixy="0.0"  ixz="0.0"
+                 iyy="0.00001"  iyz="0.0"
+                 izz="0.00001" />
+    </inertial>
+    <visual>
+        <material name="DarpaGrey" />
+
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+                <box size=" 0.0000000001 0.0000000001 0.0000000001" />
+     </geometry>
+    </visual>
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size=" 0.0000000001 0.0000000001 0.0000000001" />
+            </geometry>
+        </collision>
+    </link>
+    <xacro:gazeboReference name="BUMBLEBEE_RIGHT" material="PR2/Grey2" />
+
+
+
+    <link name="PROSILICA">
+    <inertial>
+        <origin xyz="0 0 0" />
+        <mass value="0.01" />
+	<inertia ixx="0.00001"  ixy="0.0"  ixz="0.0"
+                 iyy="0.00001"  iyz="0.0"
+                 izz="0.00001" />
+    </inertial>
+    <visual>
+        <material name="DarpaGrey" />
+
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+                <box size=" 0.0000000001 0.0000000001 0.0000000001" />
+        </geometry>
+    </visual>
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size=" 0.0000000001 0.0000000001 0.0000000001" />
+            </geometry>
+        </collision>
+    </link>
+    <xacro:gazeboReference name="PROSILICA" material="PR2/Grey2" />
+
+
+
+    <!-- JOINTS -->
+
+
+     <joint name="LPAN" type="revolute">
+        <parent link="${parent}"/>
+        <child link="LOWER_PAN_UNIT"/>
+    <origin xyz="${xyz}" rpy="${rpy}"/>
+        <axis xyz="0 -1 0"/>
+        <limit effort="30" lower="${LPAN_min}" upper="${LPAN_max}" velocity="3.27"/>
+	<dynamics damping="0.301"/>
+    </joint>
+
+    <joint name="LTILT" type="revolute">
+        <parent link="LOWER_PAN_UNIT"/>
+        <child link="LOWER_TILT_BEAMS"/>
+    <origin xyz="0 .127 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="30" lower="${LTILT_min}" upper="${LTILT_max}" velocity="3.27"/>
+	<dynamics damping="0.301"/>
+    </joint>
+
+    <joint name="LTILT_FRONT" type="revolute">
+        <parent link="LOWER_PAN_UNIT"/>
+        <child link="LOWER_TILT_BEAMS_FRONT"/>
+    <origin xyz="0 0.127 0.04953" rpy="0 ${0.5 * PI} 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="30" lower="${LTILT_min}" upper="${LTILT_max}" velocity="3.27"/>
+	<dynamics damping="0.301"/>
+        <mimic joint="LTILT" multiplier="1" offset="0"/>
+    </joint>
+
+<!-- The following gazebo block is passed directly to gazebo to close the 4-bar linkage in the head -->
+<gazebo> 
+  <joint:hinge name="DarmSim/lowerTiltFrontTopJoint"> 
+    <body1>LOWER_TILT_BEAMS_FRONT</body1> 
+    <body2>LOWER_TILT_BEAMS_TOP</body2> 
+    <anchor>LOWER_TILT_BEAMS_TOP</anchor> 
+    <axis>-1 0 0</axis> 
+    <damping>0.301</damping> 
+    <anchorOffset>0 0 0.04953</anchorOffset> 
+  </joint:hinge> 
+</gazebo> 
+
+    <joint name="LTILT_TOP" type="revolute">
+        <parent link="LOWER_TILT_BEAMS"/>
+        <child link="LOWER_TILT_BEAMS_TOP"/>
+    <origin xyz="0 0.1524 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="30" lower="${LTILT_min}" upper="${LTILT_max}" velocity="3.27"/>
+	<dynamics damping="0.301"/>
+        <mimic joint="LTILT" multiplier="-1" offset="0"/>
+    </joint>
+
+    <joint name="UPAN" type="revolute">
+        <parent link="LOWER_TILT_BEAMS_TOP"/>
+        <child link="UPPER_TILT_UNIT"/>
+            <origin xyz = "0 .059182 .04953" rpy="0 0 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit effort="30" lower="${UPAN_min}" upper="${UPAN_max}" velocity="3.27"/>
+    <dynamics damping="0.101"/>
+    </joint>
+
+    <joint name="UTILT" type="revolute">
+        <parent link="UPPER_TILT_UNIT"/>
+        <child link="HEAD"/>
+    <origin xyz="0 0.04371 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="30" lower="${UTILT_min}" upper="${UTILT_max}" velocity="3.27"/>
+    <dynamics damping="0.101"/>
+</joint>
+
+
+    <joint name="XtionJoint" type="fixed">
+        <parent link="BUMBLEBEE_LEFT_REAL"/>
+        <child link="SWISSRANGER"/>
+    <origin xyz="${SRFromBBLeftXYZ}" rpy="${SRFromBBLeftRPY}"/>
+    </joint>
+    <joint name="BumbleBee2LeftEyeJoint" type="fixed">
+        <parent link="HEAD"/>
+        <child link="BUMBLEBEE_LEFT_REAL"/>
+        <origin xyz="${BBLeftEyeFromNeckXYZ}" rpy="${BBLeftEyeFromNeckRPY}"/>
+    </joint>
+    <joint name="RightEyeJoint" type="fixed">
+        <parent link="BUMBLEBEE_LEFT_REAL"/>
+        <child link="BUMBLEBEE_RIGHT"/>
+    <origin xyz="${BBRightFromLeftXYZ}" rpy="${BBRightFromLeftRPY}"/>
+    </joint>
+    <joint name="ProsilicaJoint" type="fixed">
+        <parent link="BUMBLEBEE_LEFT_REAL"/>
+        <child link="PROSILICA"/>
+    <origin xyz="${ProsilicaFromBBLeftXYZ}" rpy="${ProsilicaFromBBLeftRPY}"/>
+    </joint>
+
+    </xacro:macro>
+</robot>

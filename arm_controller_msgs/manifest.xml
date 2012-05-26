@@ -1,0 +1,16 @@
+<package>
+  <description brief="arm_controller_msgs">
+
+     arm_controller_msgs
+
+  </description>
+  <author>Mrinal Kalakrishnan</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/arm_controller_msgs</url>
+
+  <depend package="geometry_msgs"/>
+
+</package>
+
+

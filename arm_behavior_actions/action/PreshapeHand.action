@@ -1,0 +1,9 @@
+int32 command
+int32 OPEN=0
+int32 PRESHAPE=1
+---
+int32 result
+int32 FAILED=0
+int32 SUCCEEDED=1
+---
+float64 percent_complete

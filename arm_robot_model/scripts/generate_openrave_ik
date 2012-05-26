@@ -1,0 +1,3 @@
+#openrave.py --database inversekinematics --robot=$(rospack find arm_robot_model)/openrave/DarpaRobot.robot.xml
+#openrave.py --database inversekinematics --robot=$(rospack find arm_robot_model)/openrave/usc_barrettwam.robot.xml
+openrave.py --database inversekinematics --robot=/usr/local/share/openrave/robots/barrettwam.robot.xml

@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+import sys, subprocess
+
+topic_groups = dict(
+    fusion = ['/tf',
+              '/time',
+              '/joint_states',
+              '/Honeybee/left/camera_info',
+              '/Honeybee/right/camera_info',
+              '/Honeybee/left/image_raw',
+              '/Honeybee/right/image_raw']
+    )
+
+bag_name = sys.argv[1]
+topic_group_name = sys.argv[2]
+topics = topic_groups[topic_group_name]
+cmd = ['rosbag', 'record', '-O', bag_name] + topics
+
+print 'Recording to %s:\n%s' % (bag_name, '\n'.join(topics))
+print '\n\nCommand: %s' % cmd
+
+subprocess.call(cmd)
+

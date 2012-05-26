@@ -1,0 +1,16 @@
+# Define the goal
+string[] object_names
+int32 method
+int32 METHOD_DEFAULT=0
+int32 METHOD_2D=1
+int32 METHOD_3D=2
+---
+# Define the result
+arm_msgs/Objects objects
+int32 result
+int32 FAILED=0
+int32 SUCCEEDED=1
+string info
+---
+# Define a feedback message
+

@@ -1,0 +1,71 @@
+#!/usr/bin/env python
+import sys
+
+from ros import rosbag
+
+
+def write_imu_data(msg):
+    """Write serialized IMU data from bag file."""
+    print "%d.%09d % .9lf % .9lf % .9lf % .9lf % .9lf % .9lf" % \
+        (msg.header.stamp.secs, msg.header.stamp.nsecs, \
+         msg.linear_acceleration.x, msg.linear_acceleration.y, \
+         msg.linear_acceleration.z, msg.angular_velocity.x, \
+         msg.angular_velocity.y, msg.angular_velocity.z)
+
+def write_odom_data(msg):
+    """Write serialized odometry data from bag file."""
+    print "%d.%09d % .9lf % .9lf % .9lf % .9lf % .9lf % .9lf %.9lf" % \
+        (msg.header.stamp.secs, msg.header.stamp.nsecs, \
+         msg.pose.pose.position.x, msg.pose.pose.position.y, \
+         msg.pose.pose.position.z, msg.pose.pose.orientation.x, \
+         msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, \
+         msg.pose.pose.orientation.w)
+
+def write_joint_traject_data(msg):
+    """Write serialized encoder data from bag file."""
+    # TODO: Generalize to check for number of joints.
+    print "%d.%09d % .9lf % .9lf % .9lf % .9lf" % \
+        (msg.header.stamp.secs, msg.header.stamp.nsecs, \
+         msg.actual.positions[0], msg.actual.positions[1], \
+         msg.actual.velocities[0], msg.actual.velocities[1])
+
+def process_bag(bag, topic, startTime = None, endTime = None):
+    """Process bag file, extracting messages from topic only."""
+    # Determine topic type (and write function) from first msg.
+    (topic, msg, t) = bag.read_messages(topics = [topic]).next()
+
+    #-- Debug --
+    print msg._type
+
+    if msg._type == 'sensor_msgs/Imu':
+        write_func = write_imu_data
+    elif msg._type == 'nav_msgs/Odometry':
+        write_func = write_odom_data
+    # PR2-specific messages.
+    elif msg._type == 'pr2_controllers_msgs/JointTrajectoryControllerState':
+        write_func = write_joint_traject_data
+    else:
+        return false  # Failure, unrecognized type.
+
+    # Iterate over entire bag...
+    for topic, msg, t in bag.read_messages(topics = [topic]):
+        write_func(msg)
+
+    return true  # Success.
+
+def usage():
+    """Print usage information."""
+    print "Usage: debag2txt <bag file> <topic> [<start time> [<end_time>]]"
+
+# Run as application.
+if __name__ == "__main__":
+    if len(sys.argv) != 3:
+        usage()
+        sys.exit(0)
+
+    #try:
+    bag = rosbag.Bag(sys.argv[1])
+    process_bag(bag, sys.argv[2])
+    bag.close()
+    #except:
+    #    pass # DO SOMETHING HERE

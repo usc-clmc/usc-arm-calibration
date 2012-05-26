@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find ar_pose)/launch/ar_pose_left_single.launch" />
+  <include file="$(find ar_pose)/launch/ar_pose_right_single.launch" />  
+</launch>
+

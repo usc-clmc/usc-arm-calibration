@@ -1,0 +1,11 @@
+# Define the goal
+float64[] goal_joint_configuration
+---
+# Define the result
+int32 result
+int32 SUCCEEDED=1
+int32 FAILED=2
+string info
+---
+# Define a feedback message
+float32 progress

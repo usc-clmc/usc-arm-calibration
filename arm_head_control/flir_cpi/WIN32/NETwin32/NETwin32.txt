@@ -1,0 +1,33 @@
+/*************************************************************************
+*****                    Pan-Tilt Tracking Mount                     *****
+*****          NETwin32/95/98/NT PROGRAMMER'S INTERFACE              *****
+*****                                                                *****
+*****               (C)2001, Directed Perception, Inc.               *****
+*****                     All Rights Reserved.                       *****
+**************************************************************************
+
+This directory contains a Project NETwin32.mdp created within
+Microsoft Visual C++ Version 6.0. It requires that the code 
+and include files that make up the PTU C Programmer's Interface
+be located in the directory immediately above this location.
+
+This test program is used to test and verify control of a network of
+DP pan-tilts connected via their RS485 networks. The pan-tilts must 
+be cabled and powered for this test program to work. The pan-tilt 
+unit ID numbers should be listed in the file nettest.c for variable 
+PTU_units_list (defaults to two units with IDs 1 and 2), and the total 
+number of pan-tilts on the network added as NUMBER_OF_NETWORKED_PTUs
+(defaults to 2). The program NETwin32.exe may be run to test the binary 
+interface without the requirement for compiling.
+
+Files in the NETwin32 directory:
+
+FILE		DESCRIPTION
+--------------+---------------------------------------------
+NETwin32.txt	This file.
+NETwin32.mdp	Project for NETwin32 in Microsoft Visual C++,
+                version 6.0
+NETwin32.mak	Project for NETwin32 in Microsoft Visual C++,
+                version 1.52
+NETwin32.exe 	Compiled NETwin32 project executable that tests
+		the C binary interface

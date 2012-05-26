@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -O2 -g  -pthread   -shared -Wl,-soname,libarm_dashboard_client.so -o ../lib/libarm_dashboard_client.so CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o -L/opt/ros/fuerte/lib -lroscpp -lrostime -lrosconsole -lroscpp_serialization -lxmlrpcpp -Wl,-rpath,/opt/ros/fuerte/lib 

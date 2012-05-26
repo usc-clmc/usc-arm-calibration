@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# Based on Freek's 'gitall' script
+
+# Usage: arm-git <command> <args> ...
+#
+# 
+
+### Repository definitions:
+###
+### The 'ARM_GIT_ENABLED' array contains the indices of repositories you're 
+### interested in. You can customize it by exporting the variable in your .bashrc
+
+if [ -z "${ARM_GIT_ENABLED+x}" ]
+then
+  ARM_GIT_ENABLED="0 1 2 3 4 5"
+fi
+
+ARM_GIT_NAMES=("mandy" "usc-clmc-ros-pkg" "armUser" "arm" "mandy-data" "sl-ros-pkg")
+ARM_GIT_PACKAGES=("arm_launch" "usc_utilities" "arm_sl_user" "arm_sl"  "arm_recorder_data" "sl_base")
+ARM_GIT_PATHS=(".." "../.." "armUser" "arm" ".." "..")
+
+if [ -z ${1} ]
+then
+  echo "Usage: arm-git <command> <args> ..."
+  echo ""
+  echo "Executes <command> in all enabled git repositories."
+else
+  if [ $1 != "cd" ]
+  then
+    for i in ${ARM_GIT_ENABLED}
+    do
+      ARM_GIT_FULL_PATH=`rospack find ${ARM_GIT_PACKAGES[$i]}`/${ARM_GIT_PATHS[$i]}
+      echo -e "-------------- ${ARM_GIT_NAMES[$i]} -------------";
+      cd ${ARM_GIT_FULL_PATH}
+      git "$@"
+    done
+  else
+    if [ -z ${2} ]
+    then
+      echo "Usage: arm-git cd <repository_name>"
+    else
+      ARM_GIT_NAME=$2
+      ARM_GIT_COUNT=0
+      for i in "${ARM_GIT_NAMES[@]}"
+      do
+        if [ $i = $ARM_GIT_NAME ]
+        then
+          ARM_GIT_FULL_PATH=`rospack find ${ARM_GIT_PACKAGES[$ARM_GIT_COUNT]}`/${ARM_GIT_PATHS[$ARM_GIT_COUNT]}
+          cd ${ARM_GIT_FULL_PATH}
+        fi
+        ARM_GIT_COUNT=$(($ARM_GIT_COUNT+1))
+      done
+    fi # if [ -z ${2} ]
+  fi # if [ $1 != "cd" ]
+fi # if [ -z ${1} ]
+

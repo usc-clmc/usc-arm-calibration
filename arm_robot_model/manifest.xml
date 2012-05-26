@@ -1,0 +1,16 @@
+<package>
+  <description brief="arm_robot_model">
+
+     arm_robot_model
+
+  </description>
+  <author>Mrinal Kalakrishnan</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/arm_robot_model</url>
+
+  <depend package="robot_state_publisher"/>
+
+</package>
+
+

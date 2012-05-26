@@ -1,0 +1,12 @@
+# Define the goal
+geometry_msgs/Point pos
+float64 lower_pan
+float64 lower_tilt
+---
+# Define the result
+int32 result
+int32 FAILED=0
+int32 SUCCEEDED=1
+string info
+---
+# Define a feedback message

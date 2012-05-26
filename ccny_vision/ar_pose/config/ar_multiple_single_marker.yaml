@@ -1,0 +1,11 @@
+marker_pattern: data/object_data
+marker_width: 80.0
+marker_center_x: 0.0
+marker_center_y: 0.0
+publish_tf: false
+publish_visual_markers: true
+reverse_transform: false
+threshold: 50
+use_history: true
+
+error_threshold: 0.6

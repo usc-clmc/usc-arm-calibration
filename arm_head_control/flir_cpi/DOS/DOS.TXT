@@ -1,0 +1,33 @@
+/*************************************************************************
+*****                    Pan-Tilt Tracking Mount                     *****
+*****                  DOS PROGRAMMER'S INTERFACE                    *****
+*****                                                                *****
+*****               (C)1999, Directed Perception, Inc.               *****
+*****                     All Rights Reserved.                       *****
+**************************************************************************
+
+This directory contains a Project DOS.mak created within
+Microsoft Visual C++ Version 1.52. It requires that the code 
+and include files that make up the PTU C Programmer's Interface
+be located in the directory immediately above this location.
+
+This code compiles the binary test program which verifies that
+the compiled binary interface works correctly by exercising
+and testing all binary commands. The program DOS.exe may
+be run to test the binary interface without the requirement
+for compiling. 
+
+Files in the DOS directory:
+
+FILE		DESCRIPTION
+--------------+---------------------------------------------
+DOS.txt		This file.
+DOS.mak		Project for DOS in Microsoft Visual C++,
+                version 1.52
+DOS.exe	 	Compiled DOS project executable that tests
+		the C binary interface
+
+NOTE: This DOS example serial code uses the standard PC IRQ
+assignments: COM1/3 use IRQ4, and COM2/4 use IRQ3.  If your
+PC does not always use these IRQ assignments, you will need 
+to modify COM1IRQ to COM4IRQ definitions in DOSseria.h .

@@ -1,0 +1,30 @@
+# log4j.logger.ros.arm_dynamic_movement_primitive_utilities=DEBUG
+# log4j.logger.ros.dynamic_movement_primitive_utilities=DEBUG
+# log4j.logger.ros.dynamic_movement_primitive=DEBUG
+# log4j.logger.ros.alsa_audio=DEBUG
+
+# log4j.logger.ros.pluginlib=DEBUG
+# log4j.logger.ros.arm_sl_user=DEBUG
+# log4j.logger.ros.arm_sl=DEBUG
+
+log4j.logger.ros.arm_controller_interface=DEBUG
+# log4j.logger.ros.sl_controllers=INFO
+# log4j.logger.ros.arm_sl_controllers=INFO
+# log4j.logger.ros.sl_base=DEBUG
+
+log4j.logger.ros.task_recorder2=INFO
+log4j.logger.ros.arm_task_recorder2=DEBUG
+
+# log4j.logger.ros.task_monitor_gui=DEBUG
+# log4j.logger.ros.task_event_detector=DEBUG
+# log4j.logger.ros.gui_utilities=DEBUG
+# log4j.logger.ros.usc_utilities=WARN
+
+# log4j.logger.ros.usc_dashboard=INFO
+# log4j.logger.ros.task_event_detector=INFO
+# log4j.logger.ros.ar_pose=INFO
+# log4j.logger.ros.ar_target=DEBUG
+
+log4j.logger.ros.swissranger=ERROR
+log4j.logger.ros.Fusion=WARN
+log4j.logger.ros.OrangePaperFinder=INFO

@@ -1,0 +1,21 @@
+<package>
+  <description brief="Driver for Point Grey Bumblebee 2 stereo camera.">
+
+     arm_honeybee - Driver for Point Grey Research Bumblebee 2 stereo camera.
+
+  </description>
+  <author>Jonathan Kelly</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+
+  <!-- ROS dependencies -->
+  <depend package="roscpp"/>
+  <depend package="camera_info_manager"/>
+  <depend package="driver_base"/>
+  <depend package="dynamic_reconfigure"/>
+  <depend package="image_transport"/>
+  <depend package="sensor_msgs"/>
+  <depend package="tf"/>
+
+</package>

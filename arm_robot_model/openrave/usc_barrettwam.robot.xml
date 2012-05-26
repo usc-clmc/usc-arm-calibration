@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Robot name="USCBarrettWAM">
+  <KinBody file="usc_wam7.kinbody.xml"/>
+  <KinBody file="usc_barretthand.kinbody.xml"/>
+
+  <Manipulator name="arm">
+    <base>wam0</base>
+    <effector>wam7</effector>
+    <iksolver>WAM7ikfast 0.05</iksolver>
+    <Translation>0 0 0.22</Translation>
+    <joints>JF1 JF2 JF3 JF4</joints>
+    <closingdirection>1 1 1 0</closingdirection>
+    <direction>0 0 1</direction>
+  </Manipulator>
+</Robot>

@@ -1,0 +1,9 @@
+arm_msgs/Object object
+geometry_msgs/Point target
+float64 yaw_diff
+---
+int32 result
+int32 FAILED=0
+int32 SUCCEEDED=1
+---
+float64 percent_complete

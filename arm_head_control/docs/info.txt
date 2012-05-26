@@ -1,0 +1,92 @@
+Some info I gathered about the pan tilt units:
+
+Communicate with them using minicom, with the following settings:
+
+A -    Serial Device      : /dev/ttyUSB_LowerPanTilt
+B - Lockfile Location     : /var/lock               
+C -   Callin Program      :                         
+D -  Callout Program      :                         
+E -    Bps/Par/Bits       : 9600 8N1                
+F - Hardware Flow Control : No                      
+G - Software Flow Control : No                      
+
+Lower Pan Tilt:
+(PR) Pan resolution: 92.5714 seconds arc per position
+(TR) Tilt resolution: 46.2857 seconds arc per position
+(PN, PX) Pan position limits: -6554 to 6555
+(TN, TX) Tilt position limits: -5821 to 5824
+(PA) Desired pan acceleration: 5000 positions / sec^2
+(TA) Desired tilt acceleration: 5000 positions / sec^2
+(PB) Pan base speed: 500
+(TB) Tilt base speed: 60
+(WT) Tilt stepping mode: half step
+(WP) pan stepping mode: half step
+
+Lower pan tilt in auto stepping mode:
+(PR) Pan resolution: 23.1428 seconds arc per position
+(TR) Tilt resolution: 11.5714 seconds arc per position
+(PN, PX) Pan position limits: -26211 to 26212
+(TN, TX) Tilt position limits: -23279 to 23292
+(PA) Desired pan acceleration: 8000 positions / sec^2 (max = 200000)
+(TA) Desired tilt acceleration: 8000 positions / sec^2 (max = 200000)
+(PU,PL) Pan speed bounds: 0 to 7944
+(TU,TL) Tilt speed bounds: 0 to 7944
+(PB) Pan base speed: 57
+(TB) Tilt base speed: 57
+(WT) Tilt stepping mode: auto
+(WP) pan stepping mode: auto
+
+Upper pan tilt in auto stepping mode:
+(PR) Pan resolution: 46.2857 seconds arc per position
+(TR) Tilt resolution: 11.5714 seconds arc per position
+(PN, PX) Pan position limits: -12315 to 12316
+(TN, TX) Tilt position limits: -14383 to 9486
+(PA) Desired pan acceleration: 8000 positions / sec^2 (max = 268112)
+(TA) Desired tilt acceleration: 8000 positions / sec^2 (max = 268112)
+(PU,PL) Pan speed bounds: 0 to 7944 (max 32623)
+(TU,TL) Tilt speed bounds: 0 to 7944 (max 32623)
+(PB) Pan base speed: 57
+(TB) Tilt base speed: 57
+(WT) Tilt stepping mode: auto
+(WP) pan stepping mode: auto
+
+Upper pan tilt RE^2 settings:
+(PR) Pan resolution: 185.1428 seconds arc per position
+(TR) Tilt resolution: 46.2857 seconds arc per position
+(PN, PX) Pan position limits: -3079 to 3080
+(TN, TX) Tilt position limits: -3591 to 2368
+(PA) Desired pan acceleration: 2000 positions / sec^2 
+(TA) Desired tilt acceleration: 2000 positions / sec^2
+(PU,PL) Pan speed bounds: 0 to 4002
+(TU,TL) Tilt speed bounds: 0 to 4002
+(PB) Pan base speed: 1000
+(TB) Tilt base speed: 1000
+(WT) Tilt stepping mode: half
+(WP) pan stepping mode: half
+(PH) * Pan in LOW hold power mode                                                    
+(TH) * Tilt in LOW hold power mode                                                   
+(PM) * Pan in REGULAR move power mode                                                
+(TM) * Tilt in REGULAR move power mode                                               
+
+Lower pan tilt RE^2 settings:
+(PR) Pan resolution: 92.5714 seconds arc per position
+(TR) Tilt resolution: 46.2857 seconds arc per position
+(PN, PX) Pan position limits: -6553 to 6554
+(TN, TX) Tilt position limits: -5820 to 5823
+(PA) Desired pan acceleration: 5000 positions / sec^2 
+(TA) Desired tilt acceleration: 5000 positions / sec^2
+(PU,PL) Pan speed bounds: 0 to 4002
+(TU,TL) Tilt speed bounds: 0 to 4002
+(PB) Pan base speed: 500
+(TB) Tilt base speed: 60
+(WT) Tilt stepping mode: half
+(WP) pan stepping mode: half
+(PH) * Pan in LOW hold power mode                                                    
+(TH) * Tilt in LOW hold power mode                                                   
+(PM) * Pan in REGULAR move power mode                                                
+(TM) * Tilt in HIGH move power mode                                               
+
+---------------------------------------
+
+On my laptop, ttyUSB2 is lower PTU
+On my laptop, ttyUSB5 is upper PTU

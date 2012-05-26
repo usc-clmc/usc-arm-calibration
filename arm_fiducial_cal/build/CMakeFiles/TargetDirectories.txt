@@ -1,0 +1,15 @@
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/ROSBUILD_gensrv_cpp.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/ROSBUILD_gensrv_lisp.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/clean-test-results.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/rosbuild_precompile.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/rosbuild_premsgsrvgen.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/rospack_genmsg.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/rospack_genmsg_libexe.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/rospack_gensrv.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/test.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/test-future.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/test-results.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/test-results-run.dir
+/home/test_user/usc-arm-calibration/arm_fiducial_cal/build/CMakeFiles/tests.dir

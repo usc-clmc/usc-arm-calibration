@@ -1,0 +1,16 @@
+#the number of patterns to be recognized
+2
+
+/home/pastor/ARM/mandy/perception/vision/ccny_vision/ar_target/data/m2.pat_new
+101.0
+0.0 0.0
+1.0  0.0   0.0   24.4929
+0.0  1.0   0.0   0.0
+0.0  0.0   1.0   0.0
+
+/home/pastor/ARM/mandy/perception/vision/ccny_vision/ar_target/data/m1.pat_new
+101.0
+0.0 0.0
+1.0  0.0   0.0   0.0
+0.0  1.0   0.0   0.0
+0.0  0.0   1.0   0.0

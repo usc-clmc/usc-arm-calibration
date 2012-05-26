@@ -1,0 +1,28 @@
+/*************************************************************************
+*****                    Pan-Tilt Tracking Mount                     *****
+*****            Win3.X(16 bit) PROGRAMMER'S INTERFACE               *****
+*****                                                                *****
+*****               (C)1999, Directed Perception, Inc.               *****
+*****                     All Rights Reserved.                       *****
+**************************************************************************
+
+This directory contains a Project Win16.mak created within
+Microsoft Visual C++ Version 1.52. It requires that the code 
+and include files that make up the PTU C Programmer's Interface
+be located in the directory immediately above this location.
+
+This code compiles the binary test program which verifies that
+the compiled binary interface works correctly by exercising
+and testing all binary commands. The program Win16.exe may
+be run to test the binary interface without the requirement
+for compiling.
+
+Files in the Win16 directory:
+
+FILE		DESCRIPTION
+--------------+---------------------------------------------
+Win16.txt	This file.
+Win16.mak	Project for Win16 in Microsoft Visual C++,
+                version 1.52
+Win16.exe 	Compiled Win16 project executable that tests
+		the C binary interface

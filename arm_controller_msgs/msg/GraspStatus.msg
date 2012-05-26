@@ -1,0 +1,9 @@
+# Status
+int32 status
+
+# Possible types of status
+int32 GRASP_SUCCEEDED=1
+int32 GRASP_FAILED=2
+int32 RELEASE_SUCCEEDED=3
+int32 RELEASE_FAILED=4
+int32 HOLDING_FAILED=5

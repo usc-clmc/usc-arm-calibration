@@ -1,0 +1,26 @@
+<package>
+  <description brief="arm_behavior_actions">
+
+     arm_behavior_actions
+
+  </description>
+  <author>Mrinal Kalakrishnan, Ludovic Righetti, Peter Pastor</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/arm_behavior_actions</url>
+
+  <depend package="roscpp"/>
+  <depend package="geometry_msgs"/>
+  <depend package="actionlib_msgs"/>
+
+  <depend package="arm_controller_msgs"/>
+  <depend package="arm_msgs"/>
+
+<!--
+  <depend package="dynamic_movement_primitive"/>
+  <depend package="skill_library"/>
+-->
+
+</package>
+
+

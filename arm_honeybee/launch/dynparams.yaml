@@ -1,0 +1,2 @@
+{correlation_window_size: 15, disparity_range: 128, min_disparity: 29, prefilter_cap: 15,
+  prefilter_size: 5, speckle_range: 6, speckle_size: 10, texture_threshold: 10, uniqueness_ratio: 50.0}

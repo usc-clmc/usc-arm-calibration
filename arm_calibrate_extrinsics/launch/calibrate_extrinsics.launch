@@ -1,0 +1,18 @@
+<launch>
+
+  <include file="$(find ar_target)/launch/ar_target_left_multiple_single.launch" />
+
+  <arg name="debug" default="false"/>
+  <arg if="$(arg debug)" name="launch_prefix" value="xterm -rv -e gdb -ex run -args"/>
+  <arg unless="$(arg debug)" name="launch_prefix" value=""/>
+
+  <node pkg="arm_calibrate_extrinsics" name="CalibrateExtrinsics" type="calibrate_extrinsics" output="screen" launch-prefix="$(arg launch_prefix)" >                          
+    <rosparam command="load" file="$(find arm_calibrate_extrinsics)/config/calibrate_extrinsics.yaml"/>
+    <remap from="/image" to="/Honeybee/left/image_rect_color"/>
+    <remap from="/camera_info" to="/Honeybee/left/camera_info"/>    
+    <remap from="/points" to="/Honeybee/points2"/>
+  </node>
+
+  <node pkg="arm_calibrate_extrinsics" name="CallCalibrateExtrinsics" type="call_calibrate_extrinsics.py" output="screen"/>
+  
+</launch>

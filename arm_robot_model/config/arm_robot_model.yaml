@@ -1,0 +1,144 @@
+# This file has evolved into a configuration file for the arm_controller_interface library
+
+joint_state_publish_rate: 300
+
+joint_info:
+  -
+    name: "R_SFE"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "R_SAA"
+    sl_joint_offset: 1.570796
+    sl_joint_polarity: -1.0
+    preferred_velocity: 2.0
+  -
+    name: "R_HR"
+    sl_joint_offset: -0.785398
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "R_EB"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "R_WR"
+    sl_joint_offset: -1.570796
+    sl_joint_polarity: 1.0
+    preferred_velocity: 3.0
+  -
+    name: "R_WFE"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 3.0
+  -
+    name: "R_WAA"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 3.0
+  -
+    name: "L_SFE"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "L_SAA"
+    sl_joint_offset: 1.570796
+    sl_joint_polarity: -1.0
+    preferred_velocity: 2.0
+  -
+    name: "L_HR"
+    sl_joint_offset: -0.785398
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "L_EB"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "L_WR"
+    sl_joint_offset: -1.570796
+    sl_joint_polarity: 1.0
+    preferred_velocity: 3.0
+  -
+    name: "L_WFE"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 3.0
+  -
+    name: "L_WAA"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 3.0
+  -
+    name: "R_FR"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "R_RF"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "R_MF"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "R_LF"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "L_FR"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "L_RF"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "L_MF"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "L_LF"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "LPAN"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.45
+  -
+    name: "LTILT"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: -1.0
+    preferred_velocity: 0.23
+  -
+    name: "UPAN"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: -1.0
+    preferred_velocity: 2.7
+  -
+    name: "UTILT"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: -1.0
+    preferred_velocity: 0.7
+
+trajectory_timing_generator:
+  min_cartesian_trajectory_duration: 0.1
+  cartesian_preferred_velocities:
+    position: 1.0       # meters per second
+    orientation: 2.0    # radians per second
+
+cartesian_position_tolerance: 0.05
+cartesian_orientation_tolerance: 0.4

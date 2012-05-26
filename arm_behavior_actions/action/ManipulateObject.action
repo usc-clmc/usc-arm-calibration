@@ -1,0 +1,25 @@
+# All objects needed for the task
+arm_msgs/Object[] objects
+
+# Task description
+arm_msgs/Task task
+
+# The retry status contains the number of times the behavior has failed before
+int32 retry_status
+int32 FIRST_TIME=0
+---
+int32 result
+int32 FAILED=0
+int32 SUCCEEDED=1
+
+# Used for drill repositioning:
+int32 REPOSITION=2
+int32 RETRY=3
+geometry_msgs/Point target
+float64 yaw_diff
+
+# Result if preempted
+int32 PREEMPTED=4
+
+---
+float64 percent_complete

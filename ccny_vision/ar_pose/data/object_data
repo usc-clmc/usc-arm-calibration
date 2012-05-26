@@ -1,0 +1,18 @@
+#the number of patterns to be recognized
+4
+
+# pattern 1
+data/wrist/marker_01.pat_new
+80.0
+
+# pattern 2
+data/wrist/marker_02.pat_new
+80.0
+
+# pattern 3
+data/wrist/marker_03.pat_new
+80.0
+
+# pattern 4
+data/wrist/marker_04.pat_new
+80.0

@@ -1,0 +1,158 @@
+head_settling_duration: 2.0
+bag_file_name: ar_target_frames_3d.bag
+confidence_threshold: 0.81
+num_snapshots_for_averaging: 1
+
+do_calibration: false
+generate_head_configurations: false
+move_head_using_SL: true
+
+head_look_at_configurations:
+# lower_pan, lower_tilt, target_x, target_y, target_z
+  - look_at_configuration: [0.5, 0.0, -0.5, 0.8, 0.78]
+  - look_at_configuration: [0.5, 0.0, -0.5, 1.2, 0.78]
+  - look_at_configuration: [0.5, 0.0, 0.0, 0.8, 0.78]
+  - look_at_configuration: [0.5, 0.0, 0.0, 1.2, 0.78]
+  - look_at_configuration: [0.5, 0.0, 0.5, 0.8, 0.78]
+  - look_at_configuration: [0.5, 0.0, 0.5, 1.2, 0.78]
+
+  - look_at_configuration: [0.25, 0.0, -0.5, 0.8, 0.78]
+  - look_at_configuration: [0.25, 0.0, -0.5, 1.2, 0.78]
+  - look_at_configuration: [0.25, 0.0, 0.0, 0.8, 0.78]
+  - look_at_configuration: [0.25, 0.0, 0.0, 1.2, 0.78]
+  - look_at_configuration: [0.25, 0.0, 0.5, 0.8, 0.78]
+  - look_at_configuration: [0.25, 0.0, 0.5, 1.2, 0.78]
+
+  - look_at_configuration: [0.0, 0.0, -0.5, 0.8, 0.78]
+  - look_at_configuration: [0.0, 0.0, -0.5, 1.2, 0.78]
+  - look_at_configuration: [0.0, 0.0, 0.0, 0.8, 0.78]
+  - look_at_configuration: [0.0, 0.0, 0.0, 1.2, 0.78]
+  - look_at_configuration: [0.0, 0.0, 0.5, 0.8, 0.78]
+  - look_at_configuration: [0.0, 0.0, 0.5, 1.2, 0.78]
+
+  - look_at_configuration: [-0.25, 0.0, -0.5, 0.8, 0.78]
+  - look_at_configuration: [-0.25, 0.0, -0.5, 1.2, 0.78]
+  - look_at_configuration: [-0.25, 0.0, 0.0, 0.8, 0.78]
+  - look_at_configuration: [-0.25, 0.0, 0.0, 1.2, 0.78]
+  - look_at_configuration: [-0.25, 0.0, 0.5, 0.8, 0.78]
+  - look_at_configuration: [-0.25, 0.0, 0.5, 1.2, 0.78]
+
+  - look_at_configuration: [-0.5, 0.0, -0.5, 0.8, 0.78]
+  - look_at_configuration: [-0.5, 0.0, -0.5, 1.2, 0.78]
+  - look_at_configuration: [-0.5, 0.0, 0.0, 0.8, 0.78]
+  - look_at_configuration: [-0.5, 0.0, 0.0, 1.2, 0.78]
+  - look_at_configuration: [-0.5, 0.0, 0.5, 0.8, 0.78]
+  - look_at_configuration: [-0.5, 0.0, 0.5, 1.2, 0.78]
+
+  - look_at_configuration: [-0.5, 1.0, -0.5, 0.8, 0.78]
+  - look_at_configuration: [-0.5, 1.0, -0.5, 1.2, 0.78]
+  - look_at_configuration: [-0.5, 1.0, 0.0, 0.8, 0.78]
+  - look_at_configuration: [-0.5, 1.0, 0.0, 1.2, 0.78]
+  - look_at_configuration: [-0.5, 1.0, 0.5, 0.8, 0.78]
+  - look_at_configuration: [-0.5, 1.0, 0.5, 1.2, 0.78]
+
+  - look_at_configuration: [-0.25, 1.0, -0.5, 0.8, 0.78]
+  - look_at_configuration: [-0.25, 1.0, -0.5, 1.2, 0.78]
+  - look_at_configuration: [-0.25, 1.0, 0.0, 0.8, 0.78]
+  - look_at_configuration: [-0.25, 1.0, 0.0, 1.2, 0.78]
+  - look_at_configuration: [-0.25, 1.0, 0.5, 0.8, 0.78]
+  - look_at_configuration: [-0.25, 1.0, 0.5, 1.2, 0.78]
+
+  - look_at_configuration: [0.0, 1.0, -0.5, 0.8, 0.78]
+  - look_at_configuration: [0.0, 1.0, -0.5, 1.2, 0.78]
+  - look_at_configuration: [0.0, 1.0, 0.0, 0.8, 0.78]
+  - look_at_configuration: [0.0, 1.0, 0.0, 1.2, 0.78]
+  - look_at_configuration: [0.0, 1.0, 0.5, 0.8, 0.78]
+  - look_at_configuration: [0.0, 1.0, 0.5, 1.2, 0.78]
+
+  - look_at_configuration: [0.5, 1.0, -0.5, 0.8, 0.78]
+  - look_at_configuration: [0.5, 1.0, -0.5, 1.2, 0.78]
+  - look_at_configuration: [0.5, 1.0, 0.0, 0.8, 0.78]
+  - look_at_configuration: [0.5, 1.0, 0.0, 1.2, 0.78]
+  - look_at_configuration: [0.5, 1.0, 0.5, 0.8, 0.78]
+  - look_at_configuration: [0.5, 1.0, 0.5, 1.2, 0.78]
+
+  - look_at_configuration: [0.25, 1.0, -0.5, 0.8, 0.78]
+  - look_at_configuration: [0.25, 1.0, -0.5, 1.2, 0.78]
+  - look_at_configuration: [0.25, 1.0, 0.0, 0.8, 0.78]
+  - look_at_configuration: [0.25, 1.0, 0.0, 1.2, 0.78]
+  - look_at_configuration: [0.25, 1.0, 0.5, 0.8, 0.78]
+  - look_at_configuration: [0.25, 1.0, 0.5, 1.2, 0.78]
+
+head_look_at_joint_configurations:
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 1.1160]
+  - look_at_configuration: [0.0000, 1.1000, 0.9645, 0.9266] 
+  - look_at_configuration: [0.0000, 1.1000, 0.6523, 0.8474]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 0.9693]
+
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 1.1160]
+  - look_at_configuration: [0.0000, 1.1000, 0.9645, 0.9266] 
+  - look_at_configuration: [0.0000, 1.1000, 0.6523, 0.8474]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 0.9693]
+
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 1.1160]
+  - look_at_configuration: [0.0000, 1.1000, 0.9645, 0.9266] 
+  - look_at_configuration: [0.0000, 1.1000, 0.6523, 0.8474]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 0.9693]
+
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 1.1160]
+  - look_at_configuration: [0.0000, 1.1000, 0.9645, 0.9266] 
+  - look_at_configuration: [0.0000, 1.1000, 0.6523, 0.8474]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 0.9693]
+
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 1.1160]
+  - look_at_configuration: [0.0000, 1.1000, 0.9645, 0.9266] 
+  - look_at_configuration: [0.0000, 1.1000, 0.6523, 0.8474]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 0.9693]
+
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 1.1160]
+  - look_at_configuration: [0.0000, 1.1000, 0.9645, 0.9266] 
+  - look_at_configuration: [0.0000, 1.1000, 0.6523, 0.8474]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 0.9693]
+
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 1.1160]
+  - look_at_configuration: [0.0000, 1.1000, 0.9645, 0.9266] 
+  - look_at_configuration: [0.0000, 1.1000, 0.6523, 0.8474]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 0.9693]
+
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 1.1160]
+  - look_at_configuration: [0.0000, 1.1000, 0.9645, 0.9266] 
+  - look_at_configuration: [0.0000, 1.1000, 0.6523, 0.8474]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 0.9693]
+
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 1.1160]
+  - look_at_configuration: [0.0000, 1.1000, 0.9645, 0.9266] 
+  - look_at_configuration: [0.0000, 1.1000, 0.6523, 0.8474]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 0.9693]
+
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, -0.6667, 0.9541]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 1.1160]
+  - look_at_configuration: [0.0000, 1.1000, 0.9645, 0.9266] 
+  - look_at_configuration: [0.0000, 1.1000, 0.6523, 0.8474]
+  - look_at_configuration: [0.0000, 1.1000, 0.0000, 0.9693]
+
+lower_ptu_configurations:
+  - ptu_configuration: [0.0, 1.1]
+  - ptu_configuration: [0.0, -1.0]
+  - ptu_configuration: [1.57, 1.0]
+  - ptu_configuration: [0.0, 0.0]
+  - ptu_configuration: [-1.57, 1.0]

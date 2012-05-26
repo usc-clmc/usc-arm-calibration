@@ -1,0 +1,24 @@
+marker_pattern: data/patt.hiro
+marker_width: 80.0
+marker_center_x: 0.0
+marker_center_y: 0.0
+publish_tf: true
+publish_visual_markers: true
+reverse_transform: false
+threshold: 100
+use_history: true
+
+rot_x: -90.0
+rot_y: 0.0
+rot_z: 0.0
+
+marker_offset:
+  position:
+    x: 0.0
+    y: 0.0
+    z: -0.0514
+  orientation:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0

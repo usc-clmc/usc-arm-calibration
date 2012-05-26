@@ -1,0 +1,17 @@
+<package>
+  <description brief="SafetyLight_msgs">
+
+     SafetyLight_msgs
+
+  </description>
+  <author>DARPA ARM GFE Team</author>
+  <license>GPL</license>
+
+  <depend package="roscpp"/>
+  <export>
+    <cpp cflags="-I${prefix}/msg/cpp"/>
+  </export>
+
+</package>
+
+

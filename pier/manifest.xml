@@ -1,0 +1,34 @@
+<package>
+  <description brief="pier">
+
+     pier
+
+  </description>
+  <author>Jonathan Binney</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/pier</url>
+
+
+  <depend package='rospy'/>
+  <depend package='visualization_msgs'/>
+  <depend package='geometry_msgs'/>
+  <depend package='std_msgs' />
+  <depend package='tf'/>
+
+  <!-- We use the python code from rosparam to parse message files
+  and autogenerate wrapper code -->
+  <depend package='rosparam' />
+
+  <depend package="rospy"/>
+  <export>
+    <!-- Add the lib dir to the python path,                                                         
+	 for loading shared library as python module -->
+    <python path="${prefix}/src:${prefix}/lib" />
+    <cpp cflags="-I${prefix}/include" lflags=" " />
+  </export>
+
+
+</package>
+
+

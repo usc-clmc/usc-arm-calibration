@@ -1,0 +1,4 @@
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find arm_robot_model)/models/DarpaRobot.urdf.xacro'" />
+  <rosparam command="load" ns="/arm_robot_model" file="$(find arm_robot_model)/config/arm_robot_model.yaml" />
+</launch>

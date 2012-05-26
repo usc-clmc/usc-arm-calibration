@@ -1,0 +1,11 @@
+<launch>
+  <!-- Image proc for left camera -->
+  <node pkg="image_proc" type="image_proc" respawn="false"
+        output="screen" name="HoneybeeLeftImageProc" ns="Honeybee/left">
+  </node>
+
+  <!-- Image proc for right camera -->
+  <node pkg="image_proc" type="image_proc" respawn="false"
+        output="screen" name="HoneybeeRightImageProc" ns="Honeybee/right">
+  </node>
+</launch>

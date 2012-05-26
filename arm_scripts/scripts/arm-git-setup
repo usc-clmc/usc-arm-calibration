@@ -1,0 +1,22 @@
+# source this script from .bashrc to set up the following:
+#  1) arm-git alias
+#  2) arm-cd alias
+#  3) command line autocompletion for the above commands
+
+alias arm-git='$(rospack find arm_scripts)/scripts/arm-git'
+alias arm-cd='source $(rospack find arm_scripts)/scripts/arm-git cd'
+
+_arm_git()
+{
+  local cur
+  COMPREPLY=()
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  
+  local tags="mandy usc-clmc-ros-pkg re2 armUser arm mandy-data sl-ros-pkg"
+  COMPREPLY=($(compgen -W "${tags}" $cur)) 
+}
+
+complete -F _arm_git arm-cd
+complete -o bashdefault -o default -o nospace -F _git arm-git 2>/dev/null \
+        || complete -o default -o nospace -F _git arm-git
+

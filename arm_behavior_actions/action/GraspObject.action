@@ -1,0 +1,14 @@
+arm_msgs/Object object
+geometry_msgs/Point target
+
+# The retry status contains the number of times the behavior has failed before
+int32 retry_status
+int32 FIRST_TIME=0
+---
+int32 result
+int32 FAILED=0
+int32 SUCCEEDED=1
+int32 REPOSITION=2
+int32 RETRY=3
+---
+float64 percent_complete

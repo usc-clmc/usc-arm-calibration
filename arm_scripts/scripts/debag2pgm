@@ -1,0 +1,80 @@
+#!/usr/bin/env python
+import array
+import Image
+import sys
+import struct
+
+from ros import rosbag
+
+
+
+def int16_str(d):
+    return array.array('B', [ min(x, 255) for x in d ]).tostring()
+    #return array.array('f', [ float(x) for x in d ]).tostring() 
+
+def write_image(msg, imgDir, imgFile):
+    """Write image data to PGM file with timestamp in header."""
+    print msg.encoding
+
+    if msg.encoding == 'mono16':
+        maxval = 65535
+    else:
+        maxval = 255
+
+    (w, h) = msg.width, msg.height
+
+    # Grrr - PIL doesn't support comments???  So do this manually.
+    f = open("%s/%s" % (imgDir, imgFile), 'w')
+
+    f.write('P5\n')  # PGM magic number.
+    f.write("#  Timestamp: %d.%09d\n" % \
+        (msg.header.stamp.secs, msg.header.stamp.nsecs))
+    f.write("%d %d %d\n" % (w, h, maxval))
+
+    #print msg.is_bigendian
+    #return
+
+    for i in range(0, w*h):
+        print i
+        print struct.unpack('>H', ''.join([msg.data[2*i+1], msg.data[2*i]]))
+
+        f.write(msg.data[2*i + 1])
+        f.write(msg.data[2*i])
+
+    #f.write(msg.data)
+    f.close()
+
+def process_bag(bag, topic, imgDir, startTime = None, endTime = None):
+    """Process bag file, extracting images from topic only."""
+    # Determine topic type (and write function) from first msg.
+    (topic, msg, t) = bag.read_messages(topics = [topic]).next()
+
+    #-- Debug --
+    #print msg._type
+
+    if msg._type != 'sensor_msgs/Image':
+        return false  # Failure, not an image.
+
+    # Iterate over entire bag...
+    i = 0
+    for topic, msg, t in bag.read_messages(topics = [topic]):
+        write_image(msg, imgDir, "img-%06d.pgm" % i)
+        i += 1
+
+def usage():
+    """Print usage information."""
+    print "Usage: debag2pgm <bag file> <topic> <output dir> " \
+          "[<start time> [<end_time>]]"
+
+# Run as application.
+if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        usage()
+        sys.exit(0)
+
+    #try:
+    bag = rosbag.Bag(sys.argv[1])
+    process_bag(bag, sys.argv[2], sys.argv[3])
+    bag.close()
+    #except:
+    #    pass # DO SOMETHING HERE

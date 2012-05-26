@@ -1,0 +1,16 @@
+<package>
+  <description brief="arm_scripts">
+
+     arm_scripts
+
+  </description>
+  <author>Jonathan Binney</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/arm_scripts</url>
+  
+  <depend package="pier" />
+
+</package>
+
+

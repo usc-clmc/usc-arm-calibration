@@ -1,0 +1,14 @@
+<launch>
+
+  <include file="$(find arm_robot_model)/launch/arm_robot_model_extrinsics_calibration.launch" />
+
+  <include file="$(find arm_head_control)/launch/arm_head_control.launch" />
+  
+  <node pkg="tf" type="static_transform_publisher" name="ZeroBBOffsetPublisher" args="0 0 0 0 0 0 BUMBLEBEE_LEFT_REAL BUMBLEBEE_LEFT 300" />
+  
+  <include file="$(find arm_honeybee)/launch/honeybee.launch" />
+  <include file="$(find arm_honeybee)/launch/honeybee_stereo_proc.launch" />
+
+  <include file="$(find arm_calibrate_extrinsics)/launch/calibrate_extrinsics_3d.launch" />
+
+</launch>

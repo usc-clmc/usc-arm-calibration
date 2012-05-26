@@ -1,0 +1,5 @@
+Last tested openrave revision: r1941 (openrave 0.2.17)
+Requires trunk version of robot_model: r35133 of https://code.ros.org/svn/ros-pkg/stacks/robot_model/trunk
+
+Run scripts/urdf_to_collada
+Run scripts/generate_openrave_ik

@@ -1,0 +1,6 @@
+<launch>
+
+    <param name="homeDirectory" type="string" value="$(find arm_robot_model)/sensorCalibrationData"/>
+    <node name="sensorCalibrationToURDF" pkg="TeamRobotModel" type="sensorCalibrationToURDF" />
+
+</launch>

@@ -1,0 +1,17 @@
+<!-- openrave xml file used for defining manipulators -->
+<robot>
+  <robot name="DarpaRobot" file="DarpaRobot.dae">
+    <!--<adjacent></adjacent>-->
+  </robot>
+  <!--  <kinbody>
+    <adjacent>DarmSim/RArm/WAM/ShoulderLink DarmSim/RArm/WAM/UpperArmLink</adjacent>
+    <adjacent>DarmSim/RArm/WAM/ForeArmLink DarmSim/RArm/WAM/UpperWristPitchLink</adjacent>
+    <adjacent>DarmSim/RArm/WAM/ForeArmLink DarmSim/RArm/WAM/LowerWristFTPalmLink</adjacent>
+  </kinbody>-->
+  <manipulator name="arm">
+    <base>BASE</base>
+    <effector>R_PALM</effector>
+    <translation>0 0 0</translation>
+    <direction>0 0 1</direction>
+  </manipulator>
+</robot>

@@ -1,0 +1,21 @@
+<package>
+  <description brief="arm_msgs">
+
+     arm_msgs
+
+  </description>
+  <author>Peter Pastor</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/arm_msgs</url>
+
+  <depend package="roscpp"/>
+  <depend package="geometry_msgs"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/msg_gen/cpp"/>
+  </export>
+
+</package>
+
+

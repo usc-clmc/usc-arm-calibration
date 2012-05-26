@@ -1,0 +1,106 @@
+<!--
+ * COPYRIGHT (C) 2010
+ * RE2, INC.
+ *
+ * Author: RE2
+ *
+ * This file is a part of arm_robot_model, which was developed for the
+ * DARPA ARM ROBOT Track C project.
+ *
+ * arm_robot_model is free software:
+ * you can redistribute it and/or modify it under the terms of the GNU General
+ * Public License as published by the Free Software Foundation, either version
+ * 3 of the License, or (at your option) any later version.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this package.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * RE2, INC. disclaims all warranties with regard to this software, including
+ * all implied warranties of merchantability and fitness, in no event shall
+ * RE2, INC. be liable for any special, indirect or consequential damages or
+ * any damages whatsoever resulting from loss of use, data or profits, whether
+ * in an action of contract, negligence or other tortious action, arising out
+ * of or in connection with the use or performance of this software.
+-->
+
+<robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:joint="http://playerstage.sourceforge.net/gazebo/xmlschema/#slider"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:body="http://playerstage.sourceforge.net/gazebo/xmlschema/#body"
+       xmlns:geom="http://playerstage.sourceforge.net/gazebo/xmlschema/#geom"
+       xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:property name="homeDirectory" value="package://arm_robot_model" />
+    <xacro:property name="PI" value="3.1415926535897931" />
+    <xacro:macro name="gazeboReference" params="name material">
+        <gazebo reference="${name}">
+            <material>
+                ${material}
+            </material>
+            <turnGravityOff>
+                true
+            </turnGravityOff>
+            <selfCollide>
+                true
+            </selfCollide>
+        </gazebo>
+    </xacro:macro>
+    <xacro:macro name="control" params="name topicName linkName jointName">
+        <transmission type="pr2_mechanism_model/SimpleTransmission" name="${name}_trans">
+            <actuator name="${name}_motor" />
+            <joint name="${jointName}" />
+            <mechanicalReduction>1</mechanicalReduction>
+            <motorTorqueConstant>1</motorTorqueConstant>
+            <pulsesPerRevolution>90000</pulsesPerRevolution>
+        </transmission>
+     </xacro:macro>
+
+<!-- offsets from RE^2 joint convention to SL (or something like that) -->
+
+    <xacro:property name="SFE_offset" value="0.0" />
+    <xacro:property name="SAA_offset" value="1.570796" />
+    <xacro:property name="HR_offset" value="-0.785398" />
+    <xacro:property name="EB_offset" value="0.0" />
+    <xacro:property name="WR_offset" value="-1.570796" />
+    <xacro:property name="WFE_offset" value="0.0" />
+    <xacro:property name="WAA_offset" value="0.0" />
+    
+<!-- joint limits of right arm -->
+    <xacro:property name="SFE_min" value="-2.67" />
+    <xacro:property name="SAA_min" value="-3.47" />
+    <xacro:property name="HR_min" value="-5.18" />
+    <xacro:property name="EB_min" value="-0.85" />
+    <xacro:property name="WR_min" value="-3.18" />
+    <xacro:property name="WFE_min" value="-1.52" />
+    <xacro:property name="WAA_min" value="-2.96" />
+    
+    <xacro:property name="SFE_max" value="2.66" />
+    <xacro:property name="SAA_max" value="0.40" />
+    <xacro:property name="HR_max" value="0.43" />
+    <xacro:property name="EB_max" value="3.11" />
+    <xacro:property name="WR_max" value="2.0" />
+    <xacro:property name="WFE_max" value="1.52" />
+    <xacro:property name="WAA_max" value="2.99" />
+
+<!-- offsets to get the joint angles of left arm from the right arm -->
+    <xacro:property name="SFE_lr_offset" value="0.0" />
+    <xacro:property name="SAA_lr_offset" value="0.0" />
+    <xacro:property name="HR_lr_offset" value="0.03" />
+    <xacro:property name="EB_lr_offset" value="0.0" />
+    <xacro:property name="WR_lr_offset" value="3.54" />
+    <xacro:property name="WFE_lr_offset" value="0.02" />
+    <xacro:property name="WAA_lr_offset" value="0.05" />
+
+<!-- head joint limits -->
+
+    <xacro:property name="LPAN_min" value="-2.90" />
+    <xacro:property name="LPAN_max" value="2.90" />
+    <xacro:property name="LTILT_min" value="-1.22" />
+    <xacro:property name="LTILT_max" value="1.22" />
+    <xacro:property name="UPAN_min" value="-1.55" />
+    <xacro:property name="UPAN_max" value="1.55" />
+    <xacro:property name="UTILT_min" value="0.0" />
+    <xacro:property name="UTILT_max" value="1.30" />
+
+</robot>

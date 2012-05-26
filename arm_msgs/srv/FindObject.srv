@@ -1,0 +1,10 @@
+# name of the object to find
+string name
+
+# parent object (for the case where we are looking for part of
+# another object which has already been found).
+bool has_parent_object
+arm_msgs/Object parent_object
+---
+bool found
+arm_msgs/Object object

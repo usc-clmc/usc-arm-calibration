@@ -1,0 +1,29 @@
+/*************************************************************************
+*****                    Pan-Tilt Tracking Mount                     *****
+*****                Windows PROGRAMMER'S INTERFACE                  *****
+*****                                                                *****
+*****               (C)2006, Directed Perception, Inc.               *****
+*****                     All Rights Reserved.                       *****
+**************************************************************************
+
+This directory contains a Project Win32.mdp created within
+Microsoft Visual C++ Version 6.0. It requires that the code 
+and include files that make up the PTU C Programmer's Interface
+be located in the directory immediately above this location.
+
+This code compiles the binary test program which verifies that
+the compiled binary interface works correctly by exercising
+and testing all binary commands. The program Win32.exe may
+be run to test the binary interface without the requirement
+for compiling.
+
+Files in the Win32 directory:
+
+FILE		DESCRIPTION
+--------------+---------------------------------------------
+Win32.txt	This file.
+Win32.mdp	Project for Win32 in Microsoft Visual C++,
+                version 6.0
+Win32.mak	Makefile used by the Win32 MSVC project
+Win32.exe	Compiled Win32 project executable that tests
+		the C binary interface

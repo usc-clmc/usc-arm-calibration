@@ -1,0 +1,13 @@
+# Define the goal
+string object_name
+geometry_msgs/Point target_location
+---
+# Define the result
+arm_msgs/Object object
+int32 result
+int32 FAILED=0
+int32 SUCCEEDED=1
+string info
+---
+# Define a feedback message
+

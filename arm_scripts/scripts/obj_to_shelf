@@ -1,0 +1,77 @@
+#! /usr/bin/env python
+import sys, random, re, random, optparse, shelve
+import numpy as np
+from scipy import linalg
+import roslib
+roslib.load_manifest('arm_scripts')
+import pier
+
+parser = optparse. OptionParser(
+    usage="usage: %prog <infile> <outfile> [options]")
+parser.add_option(
+    "", "--input_units", dest="input_units", default="mm",
+    help="Units of input file. Can be mm for millimeters or in for inches.")
+(options, args) = parser.parse_args()
+
+if len(args) < 2:
+    parser.print_usage()
+    sys.exit()
+else:
+    filename_in = args[0]
+    filename_out = args[1]
+
+face_re = re.compile('f\s+(\d+)\S*\s+(\d+)\S*\s+(\d+)\S*\s*', re.I)
+    
+# parse the input file and read in the vertices and faces
+f_in = open(filename_in)
+print "Parsing obj file"
+vertices = []
+faces = []
+for line in f_in.readlines():
+    tokens = line.strip().split()
+    if len(tokens) == 4 and tokens[0] == 'v':
+        vertices.append(
+            np.array((float(tokens[1]), float(tokens[2]), float(tokens[3]))))
+        continue
+
+    m = face_re.match(line)
+    if m:
+        # subtract 1 from vertex # because obj indexes from one, not zero
+        v1_i, v2_i, v3_i = [int(v_str)-1 for v_str in m.groups()]
+        faces.append( (v1_i, v2_i, v3_i) )
+        continue
+f_in.close()
+vertices = np.array(vertices)
+faces = np.array(faces)
+
+def darpaformat_to_uscformat(points, input_units):
+    '''
+    The obj models we are given have the Y axis pointing up, and are not
+    int meters. Here we transform the object so that the Z axis points up, the
+    origin is at the center of the object base, and the units are meters.
+    '''
+    # rotate to have Z axis point up
+    points = points[:,[2,0,1]]
+
+    # shift up so that the bottom of the object is on the table
+    points -= np.tile((0.0, 0.0, points[:,2].min()), (len(points), 1))
+    
+    # convert units to meters
+    if input_units == 'in':
+        print "Converted from inches to meters"
+    	points = points*2.54/100.
+    elif input_units == 'mm':
+        print "Converted from millimeters to meters"
+        points *= 0.001
+    else:
+        raise Exception('Unknown unit type %s' % input_units)
+    return points
+
+# convert to our format
+vertices = darpaformat_to_uscformat(vertices, options.input_units)
+
+# write vertices and faces out to a shelf
+s_out = shelve.open(filename_out)
+tm = pier.trimesh.TriMesh(vertices, faces)
+s_out['trimesh'] = tm
+s_out.close()

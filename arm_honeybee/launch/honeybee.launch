@@ -1,0 +1,14 @@
+<launch>
+  <node pkg="arm_honeybee" type="honeybee" respawn="false" output="screen" name="Honeybee">
+    <!-- Currently, both images are published with the left frame ID
+         as required by stereo_image_proc. -->
+    <param name="frame_id" type="string" value="BUMBLEBEE_LEFT"/>
+    <param name="bus_reset" type="bool" value="false"/>
+
+    <!-- Locations of left and right calibration files -->
+    <param name="left_calibration_url"  type="string" 
+           value="file://$(find arm_robot_model)/calib/bb_calib_left.yaml" />
+    <param name="right_calibration_url" type="string"
+           value="file://$(find arm_robot_model)/calib/bb_calib_right.yaml" />
+  </node>
+</launch>

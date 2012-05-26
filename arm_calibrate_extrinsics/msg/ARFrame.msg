@@ -1,0 +1,15 @@
+Header header
+int32[] ids
+float64[] u_corner_1
+float64[] v_corner_1
+float64[] u_corner_2
+float64[] v_corner_2
+float64[] u_corner_3
+float64[] v_corner_3
+float64[] u_corner_4
+float64[] v_corner_4
+sensor_msgs/PointCloud2 points
+sensor_msgs/Image image
+sensor_msgs/CameraInfo camera_info
+geometry_msgs/Transform head_transform_base
+geometry_msgs/Transform cam_transform_head

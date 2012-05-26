@@ -1,0 +1,19 @@
+
+<robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:joint="http://playerstage.sourceforge.net/gazebo/xmlschema/#slider"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:body="http://playerstage.sourceforge.net/gazebo/xmlschema/#body"
+       xmlns:geom="http://playerstage.sourceforge.net/gazebo/xmlschema/#geom"
+       xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:property name="BBLeftEyeFromNeckXYZ" value="0.051511 0.152688 0.041656" />
+<xacro:property name="BBLeftEyeFromNeckRPY" value="-0.000539 -0.003804 3.132815" />
+<xacro:property name="BBRightFromLeftXYZ" value="0.121158 0.000685 -0.004150" />
+<xacro:property name="BBRightFromLeftRPY" value="-0.003023 -0.004726 0.002817" />
+<xacro:property name="ProsilicaFromBBLeftXYZ" value="0.060819 -0.058169 -0.016757" />
+<xacro:property name="ProsilicaFromBBLeftRPY" value="-0.040877 -0.015545 0.013051" />
+<xacro:property name="SRFromBBLeftXYZ" value="0.059904 0.069943 0.016921" />
+<xacro:property name="SRFromBBLeftRPY" value="-0.039463 -0.011636 0.0" />
+
+</robot>

@@ -1,0 +1,10 @@
+float64[] positions
+float64 time
+bool auto_generate_time
+---
+int32 result
+int32 FAILED=0
+int32 SUCCEEDED=1
+int32 PREEMPTED=2
+---
+float64 percent_complete

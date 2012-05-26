@@ -1,0 +1,14 @@
+left_camera_info_topic: /Honeybee/left/camera_info
+right_camera_info_topic: /Honeybee/right/camera_info
+
+marker_1_transform_orientation: [-90.0, 0.0, 0.0]
+marker_1_transform_position: [0.0, 0.0256, -0.0455]
+
+marker_2_transform_orientation: [-90.0, -90.0, 0.0]
+marker_2_transform_position: [0.0, 0.0256, -0.0455]
+
+marker_3_transform_orientation: [-90.0, 180.0, 0.0]
+marker_3_transform_position: [0.0, 0.0256, -0.0455]
+
+marker_4_transform_orientation: [-90.0, 90.0, 0.0]
+marker_4_transform_position: [0.0, 0.0256, -0.0455]

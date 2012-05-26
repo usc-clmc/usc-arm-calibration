@@ -1,0 +1,11 @@
+<!-- openrave xml file used for defining manipulators -->
+<robot>
+  <robot name="DarpaRobot" file="DarpaRobot.dae">
+  </robot>
+  <manipulator name="arm">
+    <base>world</base>
+    <effector>DarmSim/RightArm/WAM/PalmLink</effector>
+    <translation>0 0 0</translation>
+    <direction>0 0 1</direction>
+  </manipulator>
+</robot>

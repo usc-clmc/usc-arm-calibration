@@ -1,0 +1,214 @@
+#! /usr/bin/env python
+import sys, random, re, random, optparse, shelve
+import numpy as np
+from scipy import linalg
+
+parser = optparse. OptionParser(
+    usage="usage: %prog <infile> <outfile> [options]")
+parser.add_option(
+    "", "--input_units", dest="input_units", default="m",
+    help="Units of input file. Can be mm for millimeters or in for inches.")
+parser.add_option("", "--nsamples", dest="nsamples", type="int", default=1000,
+                  help="Number of samples to generate on the object")
+parser.add_option("", "--no_normals", dest="no_normals", action="store_false",
+                  help="Include this flag if normals should not be included")
+(options, args) = parser.parse_args()
+
+if len(args) < 2:
+    parser.print_usage()
+    sys.exit()
+else:
+    filename_in = args[0]
+    filename_out = args[1]
+
+face_re = re.compile('f\s+(\d+)\S*\s+(\d+)\S*\s+(\d+)\S*\s*', re.I)
+face_with_normals_re = re.compile('f\s+(\d+)//(\d+)\S*\s+(\d+)//(\d+)\S*\s+(\d+)//(\d+)\S*\s*', re.I)
+    
+# parse the input file and read in the vertices and faces
+f_in = open(filename_in)
+print 'Parsing obj file %s' % filename_in
+vertices = []
+vertex_normals = []
+face_normals = []
+faces = []
+for line in f_in.readlines():
+    tokens = line.strip().split()
+    if len(tokens) == 4 and tokens[0] == 'v':
+        vertices.append(
+            np.array((float(tokens[1]), float(tokens[2]), float(tokens[3]))))
+        continue
+    elif len(tokens) == 4 and tokens[0] == 'vn':
+        vertex_normals.append(
+            np.array((float(tokens[1]), float(tokens[2]), float(tokens[3]))))
+        continue
+    elif tokens[0] == 'f':
+        if options.no_normals:
+            m = face_re.match(line)
+            if m:
+                v1_i, v2_i, v3_i = [int(v_str) for v_str in m.groups()]
+                faces.append( (v1_i, v2_i, v3_i) )
+                continue
+        else:
+            m = face_with_normals_re.match(line)
+            if m:
+                v1_i, vn1_i, v2_i, vn2_i, v3_i, vn3_i = [int(v_str) for v_str in m.groups()]
+                faces.append( (v1_i, v2_i, v3_i) )
+                face_normals.append(vertex_normals[vn1_i-1]) # only using one of the vertex normals
+                continue
+            
+f_in.close()
+
+def triangle_orthovecs(v1, v2, v3):
+    '''
+    Create 2 orthogonal vectors that span the triangle. When normalized,
+    these vectors define a 2d coordinate system for the triangle centered
+    at v1.
+    '''
+    ivec = v2 - v1
+    unit_ivec = ivec/linalg.norm(ivec)
+    jvec = (v3 - v1) - np.dot(unit_ivec, (v3 - v1)) * unit_ivec
+    return ivec, jvec
+
+def to_barycentric(a, b, c, p):
+    ''' Return the barycentric coordinates of point p w.r.t. the triangle abc.
+
+    a,b,c: vertex points of triangle
+    p: point whose coords we want to calculate
+
+    Borrowed from:
+    http://www.blackpawn.com/texts/pointinpoly/default.html
+    '''
+    v0 = c - a
+    v1 = b - a
+    v2 = p - a
+    u = ((np.dot(v1,v1)*np.dot(v2,v0)-np.dot(v1,v0)*np.dot(v2,v1)) 
+         / (np.dot(v0,v0)*np.dot(v1,v1) - np.dot(v0,v1)*np.dot(v1,v0)))
+    v = ((np.dot(v0,v0)*np.dot(v2,v1)-np.dot(v0,v1)*np.dot(v2,v0)) 
+         / (np.dot(v0,v0)*np.dot(v1,v1) - np.dot(v0,v1)*np.dot(v1,v0)))
+    return u, v
+
+def sample_from_triangle(v1, v2, v3):
+    ivec, jvec = triangle_orthovecs(v1, v2, v3)
+    unit_ivec = ivec / linalg.norm(ivec)
+    v2_icoord = np.dot(unit_ivec, v3-v1)
+    while True:
+        i = random.random()
+        j = random.random()
+        x = v1 + i * ivec + j * jvec
+        u, v = to_barycentric(v1, v2, v3, x)
+        if u >= 0 and v >= 0 and u + v <= 1:
+            return x
+
+# find the area of the faces, and create an array for which element i contains
+# the cumulative area of faces 0 through i inclusive
+cumulative_area_arr = []
+area_arr = []
+cumulative_area = 0.0
+print '%d faces' % len(faces)
+for f in faces:
+    v1, v2, v3 = [vertices[v_ii-1] for v_ii in f]
+    try:
+        ivec, jvec = triangle_orthovecs(v1, v2, v3)
+        area = 0.5 * linalg.norm(ivec) * linalg.norm(jvec)
+    except ValueError:
+        # this happens when 2 of the vertices are at the same point,
+        # causing the vector to have zero length, and giving NaNs
+        # when the cross product is taken.  we'll set the area to
+        # zero (which it is) so that it won't be chosen when we take
+        # samples later on.
+        area = 0.0
+    cumulative_area += area
+    cumulative_area_arr.append(cumulative_area)
+    area_arr.append(area)
+    
+cumulative_area_arr = np.array(cumulative_area_arr)
+area_arr = np.array(area_arr)
+
+# sample evenly across the surface of the object
+fchoose_count = np.zeros((len(faces),))
+sample_arr = []
+sample_normals_arr = []
+for ii in range(options.nsamples):
+    # randomly choose a face with, with probability of choosing a
+    # particular face proportional to its area
+    a = random.random() * cumulative_area_arr[-1]
+    f_ii = np.searchsorted(cumulative_area_arr, a, side='left')
+    fchoose_count[f_ii] += 1
+
+    # randomly choose a point on the face
+    v1, v2, v3 = [vertices[v_ii-1] for v_ii in faces[f_ii]]
+    if not options.no_normals:
+        vn = face_normals[f_ii]
+        sample_normals_arr.append(vn)
+    x = sample_from_triangle(v1, v2, v3)
+    sample_arr.append(x)
+sample_arr = np.array(sample_arr)
+    
+# enable this to check whether the faces are being chosen with probability
+# proportional to their area. when nsamples is large, the plot should be
+# very close to y=x
+if 0:
+    from matplotlib import pyplot as plt
+    p_list = []
+    empirical_p_list = []
+    for f_ii in range(len(faces)):
+        p = area_arr[f_ii] / cumulative_area_arr[-1]
+        empirical_p = fchoose_count[f_ii] / options.nsamples
+        p_list.append(p)
+        empirical_p_list.append(empirical_p)
+    plt.scatter(p_list, empirical_p_list)
+    plt.xlabel("Proportion of total surface area")
+    plt.ylabel("Percentage of times chosen")
+    plt.show()
+
+print "Chose %d samples from %d faces" % (len(sample_arr), len(faces))
+
+print "Min,Max before:", sample_arr.min(axis=0), sample_arr.max(axis=0)
+print "Dimensions:", sample_arr.max(axis=0) - sample_arr.min(axis=0)
+
+# convert units to meters
+if options.input_units == 'in':
+    print "Converted from inches to meters"
+    sample_arr = sample_arr*2.54/100.
+elif options.input_units == 'mm':
+    print "Converted from millimeters to meters"
+    sample_arr *= 0.001
+elif options.input_units == 'cm':
+    print "Converted from centimeters to meters"
+    sample_arr *= 0.01
+elif options.input_units == 'm':
+    print "Converted from meters to meters"
+else:
+    print "ERROR: Unknown unit type: %s" % options.input_units
+    die_unknown_unit_type
+
+print "Min,Max after:", sample_arr.min(axis=0), sample_arr.max(axis=0)
+print "Dimensions:", sample_arr.max(axis=0) - sample_arr.min(axis=0)
+
+# write result out to file
+f_out = open(filename_out, 'w+')
+print >> f_out, "# .PCD v.5 - Point Cloud Data file format"
+if not options.no_normals:
+    # we have to include the "curvature" field because a pcl::PointNormal
+    # has this field
+    print >> f_out, "FIELDS x y z normal_x normal_y normal_z curvature"
+    print >> f_out, "SIZE 4 4 4 4 4 4 4"
+    print >> f_out, "TYPE F F F F F F F"
+else:
+    print >> f_out, "FIELDS x y z"
+    print >> f_out, "SIZE 4 4 4"
+    print >> f_out, "TYPE F F F"
+print >> f_out, "WIDTH %d" % len(sample_arr)
+print >> f_out, "HEIGHT 1"
+print >> f_out, "POINTS %d" % len(sample_arr)
+print >> f_out, "DATA ascii"
+for sample_i in range(len(sample_arr)):
+    x = sample_arr[sample_i]
+    if options.no_normals:
+        print >> f_out, "%f %f %f" % (x[0], x[1], x[2])        
+    else:
+        xn = sample_normals_arr[sample_i]
+        print >> f_out, "%f %f %f %f %f %f %f" % (x[0], x[1], x[2], xn[0], xn[1], xn[2], 0.0)
+f_out.close()
+print "Wrote resulting cloud to %s" % filename_out
+

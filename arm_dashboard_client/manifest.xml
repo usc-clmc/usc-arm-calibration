@@ -1,0 +1,23 @@
+<package>
+  <description brief="arm_dashboard_client">
+
+     arm_dashboard_client
+
+  </description>
+  <author>Peter Pastor</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/arm_dashboard_client</url>
+
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="arm_msgs"/>
+  <depend package="SafetyLight_msgs"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -larm_dashboard_client"/>
+  </export>
+  
+</package>
+
+

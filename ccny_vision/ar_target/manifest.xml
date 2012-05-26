@@ -1,0 +1,40 @@
+<package>
+  <description brief="ar_target">
+
+     ar_target
+
+  </description>
+  <author>Peter Pastor</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ar_target</url>
+
+  <depend package="roscpp"/>
+
+  <depend package="image_geometry"/>
+  <depend package="message_filters"/>
+  <depend package="visualization_msgs"/>
+  <depend package="geometry_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="stereo_msgs"/>
+ 
+  <depend package="tf"/>
+  <depend package="angles"/>
+
+  <depend package="resource_retriever"/>
+  
+  <depend package="opencv2"/>
+  <depend package="image_transport"/>
+  <depend package="cv_bridge"/>
+
+  <depend package="artoolkit"/>
+  <depend package="usc_utilities"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/msg_gen/cpp -I${prefix}/srv_gen/cpp"/>
+  </export>
+
+  <rosdep name="glut"/>
+</package>
+
+

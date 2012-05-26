@@ -1,0 +1,117 @@
+<!--
+ * COPYRIGHT (C) 2010
+ * RE2, INC.
+ *
+ * Author: RE2
+ *
+ * This file is a part of RobotModel, which was developed for the
+ * DARPA ARM ROBOT Track C project.
+ *
+ * RobotModel is free software:
+ * you can redistribute it and/or modify it under the terms of the GNU General
+ * Public License as published by the Free Software Foundation, either version
+ * 3 of the License, or (at your option) any later version.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this package.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * RE2, INC. disclaims all warranties with regard to this software, including
+ * all implied warranties of merchantability and fitness, in no event shall
+ * RE2, INC. be liable for any special, indirect or consequential damages or
+ * any damages whatsoever resulting from loss of use, data or profits, whether
+ * in an action of contract, negligence or other tortious action, arising out
+ * of or in connection with the use or performance of this software.
+-->
+
+<robot name="darpa_arm_robot"
+    xmlns:xacro="http://www.ros.org/wiki/xacro"
+    xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller">
+
+    <include filename="$(find arm_robot_model)/models/common.urdf.xacro"/>
+    <include filename="$(find arm_robot_model)/models/arm.urdf.xacro"/>
+    <include filename="$(find arm_robot_model)/models/headAssembly.urdf.xacro"/>
+
+    <material name="DarpaGrey">
+        <color rgba="0.9 0.9 0.9 1.0"/>
+    </material>
+    <material name="DarpaBlue">
+        <color rgba="0.0 0.5 0.5 1.0"/>
+    </material>
+
+    <link name = "BASE"/>
+    <link name = "CYLINDER">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="1.0" />
+            <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
+        </inertial>
+        <visual>
+            <material name="DarpaGrey" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.1016" length="0.81337" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.1016" length="0.81337"/>
+            </geometry>
+        </collision>
+    </link>
+    <xacro:gazeboReference name="CYLINDER" material="PR2/Grey2" />
+
+
+    <link name ="TORSO">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="1.0" />
+            <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
+        </inertial>
+        <visual>
+            <material name="DarpaGrey" />
+            <origin xyz="0 0 0" rpy="${0.5 * PI} 0 ${PI}" />
+            <geometry>
+                <mesh filename="package://arm_robot_model/models/componentSTL/baseLinkTwoArms.stl"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="${0.5 * PI} 0 ${PI}" />
+            <geometry>
+                <mesh filename="package://arm_robot_model/models/collision/baseLinkTwoArms.stl"/>
+            </geometry>
+        </collision>
+    </link>
+    <xacro:gazeboReference name="TORSO" material="PR2/Grey2" />
+
+    <joint name="fixedJoint" type="fixed">
+        <parent link="BASE"/>
+        <child link="CYLINDER"/>
+        <origin xyz="0 0 0.406686" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="baseJoint" type="fixed">
+        <parent link="CYLINDER"/>
+        <child link="TORSO"/>
+        <origin xyz="0 0 0.406686" rpy="0 0 0"/>
+    </joint>
+
+
+
+    <gazebo>
+        <controller:gazebo_ros_controller_manager name="gazebo_ros_controller_manager" plugin="libgazebo_ros_controller_manager.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>1000.0</updateRate>
+        </controller:gazebo_ros_controller_manager>
+    </gazebo>
+
+
+<!--  offset was -.2186555 before adding sin(45)*.186 which is needed to put shoulder in right place -->
+    <xacro:darpa_arm side="R" reflect="1" lrOffset="0" parentLink="TORSO" xyz="0.350177361 0.350177361 .37836125" rpy="-${0.5 * PI} -${0.5 * PI} ${(PI + 0.25*PI + SFE_offset)}" />
+    <xacro:darpa_head_assembly parent="TORSO" xyz="0 .1292225 .52971" rpy="${0.5 * PI} 0 ${PI}"/>
+
+<!--  offset was -.2186555 before adding sin(45)*.186 which is needed to put shoulder in right place -->
+    <xacro:darpa_arm side="L" reflect="-1" lrOffset="1" parentLink="TORSO" xyz="-0.350177361 0.350177361 .37836125" rpy="-${0.5 * PI} -${0.5 * PI} ${(PI + 0.75*PI + SFE_offset)}" />
+
+
+</robot>

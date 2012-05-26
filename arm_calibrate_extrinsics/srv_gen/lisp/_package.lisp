@@ -1,0 +1,10 @@
+(cl:defpackage arm_calibrate_extrinsics-srv
+  (:use )
+  (:export
+   "CALIBRATEEXTRINSICS"
+   "<CALIBRATEEXTRINSICS-REQUEST>"
+   "CALIBRATEEXTRINSICS-REQUEST"
+   "<CALIBRATEEXTRINSICS-RESPONSE>"
+   "CALIBRATEEXTRINSICS-RESPONSE"
+  ))
+

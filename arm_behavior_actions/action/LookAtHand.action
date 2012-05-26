@@ -1,0 +1,9 @@
+# Define the goal
+---
+# Define the result
+int32 result
+int32 FAILED=0
+int32 SUCCEEDED=1
+string info
+---
+# Define a feedback message

@@ -1,0 +1,106 @@
+left_camera_info_topic: /Honeybee/left/camera_info
+right_camera_info_topic: /Honeybee/right/camera_info
+
+confidence_threshold: 0.8
+
+num_markers: 2
+
+marker_1_transform_orientation: [0.0, 0.0, 0.0]
+marker_1_transform_position: [0.0, 0.0, 0.0]
+
+marker_2_transform_orientation: [0.0, 0.0, 0.0]
+marker_2_transform_position: [0.244929, 0.0, 0.0]
+
+marker_3_transform_orientation: [0.0, 0.0, 0.0]
+marker_3_transform_position: [0.489857, 0.0, 0.0]
+
+marker_4_transform_orientation: [0.0, 0.0, 0.0]
+marker_4_transform_position: [0.734785, 0.0, 0.0]
+
+marker_5_transform_orientation: [0.0, 0.0, 0.0]
+marker_5_transform_position: [0.979714, 0.0, 0.0]
+
+marker_6_transform_orientation: [0.0, 0.0, 0.0]
+marker_6_transform_position: [1.224643, 0.0, 0.0]
+
+marker_7_transform_orientation: [0.0, 0.0, 0.0]
+marker_7_transform_position: [1.469571, 0.0, 0.0]
+
+marker_8_transform_orientation: [0.0, 0.0, 0.0]
+marker_8_transform_position: [1.714500, 0.0, 0.0]
+
+
+marker_9_transform_orientation: [0.0, 0.0, 0.0]
+marker_9_transform_position: [0.0, -0.2667, 0.0]
+
+marker_10_transform_orientation: [0.0, 0.0, 0.0]
+marker_10_transform_position: [0.244929, -0.2667, 0.0]
+
+marker_11_transform_orientation: [0.0, 0.0, 0.0]
+marker_11_transform_position: [0.489857, -0.2667, 0.0]
+
+marker_12_transform_orientation: [0.0, 0.0, 0.0]
+marker_12_transform_position: [0.734785, -0.2667, 0.0]
+
+marker_13_transform_orientation: [0.0, 0.0, 0.0]
+marker_13_transform_position: [0.979714, -0.2667, 0.0]
+
+marker_14_transform_orientation: [0.0, 0.0, 0.0]
+marker_14_transform_position: [1.224643, -0.2667, 0.0]
+
+marker_15_transform_orientation: [0.0, 0.0, 0.0]
+marker_15_transform_position: [1.469571, -0.2667, 0.0]
+
+marker_16_transform_orientation: [0.0, 0.0, 0.0]
+marker_16_transform_position: [1.714500, -0.2667, 0.0]
+
+
+marker_17_transform_orientation: [0.0, 0.0, 0.0]
+marker_17_transform_position: [0.0, -0.5334, 0.0]
+
+marker_18_transform_orientation: [0.0, 0.0, 0.0]
+marker_18_transform_position: [0.244929, -0.5334, 0.0]
+
+marker_19_transform_orientation: [0.0, 0.0, 0.0]
+marker_19_transform_position: [0.489857, -0.5334, 0.0]
+
+marker_20_transform_orientation: [0.0, 0.0, 0.0]
+marker_20_transform_position: [0.734785, -0.5334, 0.0]
+
+marker_21_transform_orientation: [0.0, 0.0, 0.0]
+marker_21_transform_position: [0.979714, -0.5334, 0.0]
+
+marker_22_transform_orientation: [0.0, 0.0, 0.0]
+marker_22_transform_position: [1.224643, -0.5334, 0.0]
+
+marker_23_transform_orientation: [0.0, 0.0, 0.0]
+marker_23_transform_position: [1.469571, -0.5334, 0.0]
+
+marker_24_transform_orientation: [0.0, 0.0, 0.0]
+marker_24_transform_position: [1.714500, -0.5334, 0.0]
+
+
+marker_25_transform_orientation: [0.0, 0.0, 0.0]
+marker_25_transform_position: [0.0, -0.8001, 0.0]
+
+marker_26_transform_orientation: [0.0, 0.0, 0.0]
+marker_26_transform_position: [0.244929, -0.8001, 0.0]
+
+marker_27_transform_orientation: [0.0, 0.0, 0.0]
+marker_27_transform_position: [0.489857, -0.8001, 0.0]
+
+marker_28_transform_orientation: [0.0, 0.0, 0.0]
+marker_28_transform_position: [0.734785, -0.8001, 0.0]
+
+marker_29_transform_orientation: [0.0, 0.0, 0.0]
+marker_29_transform_position: [0.979714, -0.8001, 0.0]
+
+marker_30_transform_orientation: [0.0, 0.0, 0.0]
+marker_30_transform_position: [1.224643, -0.8001, 0.0]
+
+marker_31_transform_orientation: [0.0, 0.0, 0.0]
+marker_31_transform_position: [1.469571, -0.8001, 0.0]
+
+marker_32_transform_orientation: [0.0, 0.0, 0.0]
+marker_32_transform_position: [1.714500, -0.8001, 0.0]
+

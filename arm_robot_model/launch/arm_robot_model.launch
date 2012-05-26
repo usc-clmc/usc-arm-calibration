@@ -1,0 +1,9 @@
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find arm_robot_model)/models/DarpaRobot.urdf.xacro'" />
+  <rosparam command="load" ns="/arm_robot_model" file="$(find arm_robot_model)/config/arm_robot_model.yaml" />
+  <include file="$(find robot_info)/launch/load_arm_parameters.launch"/>
+  <include file="$(find arm_planning_config)/launch/planning_environment.launch"/>
+  <param name="/arm_robot_model/right_hand_eye_calibration_model_file_name" value="$(find arm_learn_hand_eye_calibration)/data/right_arm_models.txt"/>
+  <param name="/arm_robot_model/left_hand_eye_calibration_model_file_name" value="$(find arm_learn_hand_eye_calibration)/data/left_arm_models.txt"/>
+
+</launch>

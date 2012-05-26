@@ -1,0 +1,22 @@
+<package>
+  <description brief="usc_fiducial_calibration">
+
+     usc_fiducial_calibration
+
+  </description>
+  <author>Test User</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/usc_fiducial_calibration</url>
+
+  <depend package="arm_behavior_actions"/>
+  <depend package="arm_dashboard_client"/>
+  <depend package="arm_head_control"/>
+  <depend package="usc_utilities"/>
+  <depend package="arm_calibrate_extrinsics"/>
+  <depend package="arm_fiducial_cal"/>
+  <depend package="ar_target"/>
+
+</package>
+
+

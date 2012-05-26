@@ -1,0 +1,9 @@
+marker_pattern: data/multiple_single.conf
+marker_width: 101.0
+marker_center_x: 0.0
+marker_center_y: 0.0
+publish_tf: false
+publish_visual_markers: true
+reverse_transform: false
+threshold: 125
+use_history: true

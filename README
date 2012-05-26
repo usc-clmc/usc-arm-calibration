@@ -1,0 +1,36 @@
+1) Git clone the repository into your home directory
+
+$ cd
+$ git clone github.com/usc-arm-calibration
+
+2) Add the following lines to your .bashrc
+
+$ git clone github.com/usc-arm-calibration
+
+source /opt/ros/fuerte/setup.bash
+export ROSCONSOLE_CONFIG_FILE=~/usc-arm-calibration/rosconsole
+export ROS_PACKAGE_PATH=~/usc-arm-calibration:${ROS_PACKAGE_PATH}
+
+3) source the new .bashrc
+
+$ source ~/.bashrc
+
+4) make
+
+$ rosmake --pre-clean usc_fiducial_calibration
+
+5) start a roscore is a separate terminal
+
+$ roscore
+
+6) (cross fingers) and run the calibration code
+
+$ roslaunch usc_fiducial_calibration fiducial_calibration.launch
+
+7) check the progress in rviz (optional) (copy rviz files first)
+
+$ copy ~/usc-arm-calibration/config/dot_rviz ~/.rviz
+$ rosrun rviz rviz
+
+
+ 

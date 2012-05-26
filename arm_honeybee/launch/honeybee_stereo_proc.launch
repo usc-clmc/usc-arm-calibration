@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="stereo_image_proc" type="stereo_image_proc" respawn="false"
+        output="screen" name="HoneybeeStereoProc" ns="Honeybee">
+    <rosparam file="$(find arm_honeybee)/launch/dynparams.yaml" command="load"/>
+  </node>
+</launch>

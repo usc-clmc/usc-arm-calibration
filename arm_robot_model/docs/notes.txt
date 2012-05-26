@@ -1,0 +1,9 @@
+YawJoint: ROBOT_BASE -> ShoulderLink
+ShoulderPitchJoint: ShoulderLink -> UpperArmInShoulderLink
+
+
+Link translations:
+ShoulderLink = R_WAM_BASE
+UpperArmInShoulderLink = R_SHOULDER
+UpperArmLink = R_BEFORE_ELBOW
+

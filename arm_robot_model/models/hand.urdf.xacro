@@ -1,0 +1,205 @@
+<!--
+ * COPYRIGHT (C) 2010
+ * RE2, INC.
+ *
+ * Author: RE2
+ *
+ * This file is a part of RobotModel, which was developed for the
+ * DARPA ARM ROBOT Track C project.
+ *
+ * RobotModel is free software:
+ * you can redistribute it and/or modify it under the terms of the GNU General
+ * Public License as published by the Free Software Foundation, either version
+ * 3 of the License, or (at your option) any later version.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this package.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * RE2, INC. disclaims all warranties with regard to this software, including
+ * all implied warranties of merchantability and fitness, in no event shall
+ * RE2, INC. be liable for any special, indirect or consequential damages or
+ * any damages whatsoever resulting from loss of use, data or profits, whether
+ * in an action of contract, negligence or other tortious action, arising out
+ * of or in connection with the use or performance of this software.
+-->
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <include filename="$(find arm_robot_model)/models/common.urdf.xacro"/>
+
+    <xacro:macro name="fingers" params="parent side number xyz rpy">
+    
+        <link name="${side}_HAND_${number}_FINGER_KNUCKLE_2">
+            <visual>
+        <material name="DarpaGrey" />
+
+                <origin xyz="0 0 0" rpy="${PI} ${0.5 * PI} 0" />
+                <geometry>
+                    <mesh filename="${homeDirectory}/models/componentSTL/secondFingerLink.stl"/>
+                </geometry>
+            </visual>
+            <inertial>
+                <origin xyz=".031720 .001070 -.000586" />
+                <mass value="0.057957" />
+                <inertia  ixx="0.00000461" ixy="0.00000003"  ixz="0.00000164"
+                                           iyy="0.00003590"  iyz="0.00000004"
+                                                             izz="0.00003682" />
+            </inertial>
+            <collision>
+                <origin xyz="0 0 0" rpy="${PI} ${0.5 * PI} 0" />
+                <geometry>
+                    <mesh filename="${homeDirectory}/models/collision/secondFingerLink.stl"/>
+                </geometry>
+		<mu1 value="50000.0" />
+		<mu2 value="50000.0" />
+		<kp  value="1000000.0" />
+		<kd  value="1.0" />
+            </collision>
+        </link>
+        <xacro:gazeboReference name="${side}_HAND_${number}_FINGER_KNUCKLE_2" material="PR2/Grey2" />
+        <xacro:control topicName="${side}_Arm_${number}_Finger_KnuckleTwo" name="DarmSim_${side}Arm_BHand_Finger${number}KnuckleTwo" linkName="${side}_HAND_${number}_FINGER_KNUCKLE_2" jointName="${side}_Arm_${number}_Finger_KnuckleTwoJoint" />
+
+        <link name="${side}_HAND_${number}_FINGER_KNUCKLE_3">
+            <visual>
+        <material name="DarpaGrey" />
+
+            <origin xyz="0 0 0" rpy="0 ${0.5 * PI} 0" />
+            <geometry>
+                <mesh filename="${homeDirectory}/models/componentSTL/thirdFingerLink.stl"/>
+            </geometry>
+        </visual>
+        <inertial>
+            <origin xyz="0.01970974 0.00182016 0.00020041" />
+            <mass value="0.03421781" />
+            <inertia  ixx="0.00000287" ixy="0.00000091"  ixz="-0.00000007"
+                                       iyy="0.00001329"  iyz="-0.00000002"
+                                                         izz="0.00001214" />
+        </inertial>
+            <collision>
+            <origin xyz="0 0 0" rpy="0 ${0.5 * PI} 0" />
+            <geometry>
+                <mesh filename="${homeDirectory}/models/collision/thirdFingerLink.stl"/>
+            </geometry>
+	    <mu1 value="50000.0" />
+	    <mu2 value="50000.0" />
+	    <kp  value="1000000.0" />
+	    <kd  value="1.0" />
+            </collision>
+        </link>
+        <xacro:gazeboReference name="${side}_HAND_${number}_FINGER_KNUCKLE_3" material="PR2/Grey2" />
+        <xacro:control topicName="${side}_Arm_${number}_Finger_KnuckleThree" name="DarmSim_${side}Arm_BHand_Finger${number}KnuckleThree" linkName="${side}_HAND_${number}_FINGER_KNUCKLE_3" jointName="${side}_Arm_${number}_Finger_KnuckleThreeJoint" />
+
+        <link name="${side}_HAND_${number}_FINGER_TIP"/>
+
+        <joint name="${side}_${number}F" type="revolute">
+            <parent link="${parent}"/>
+            <child link="${side}_HAND_${number}_FINGER_KNUCKLE_2"/>
+            <origin xyz="${xyz}" rpy="${rpy}"/>
+            <axis xyz="0 0 -1"/>
+            <limit effort="1" lower="0" upper="${2.12930169 - 0.00698131701}" velocity="3.27"/>
+            <dynamics damping="0.005" friction="100.0"/>
+        </joint>
+        <joint name="${side}_${number}F2" type="revolute">
+            <parent link="${side}_HAND_${number}_FINGER_KNUCKLE_2"/>
+            <child link="${side}_HAND_${number}_FINGER_KNUCKLE_3"/>
+            <origin xyz="0.07 0 0" rpy="0 0 0"/>
+            <!--<origin xyz="0.07 0 0" rpy="0 0 -0.733038286"/>-->
+            <axis xyz="0 0 -1"/>
+            <limit effort="1" lower="0" upper="${1.6406095 - 0.733038286}" velocity="3.27"/>
+            <dynamics damping="0.005" friction="100.0"/>
+            <!--<mimic joint="${side}_${number}F" multiplier="1" offset="0"/>-->
+        </joint>
+        <joint name="${side}_${number}F3" type="fixed">
+            <parent link="${side}_HAND_${number}_FINGER_KNUCKLE_3"/>
+            <child link="${side}_HAND_${number}_FINGER_TIP"/>
+            <origin xyz="0.056 0 0" rpy="0 0 0"/>
+        </joint>
+    </xacro:macro>
+    
+    <xacro:macro name="darpa_hand" params="side">
+
+    <xacro:fingers side="${side}" parent="${side}_LOWER_WRIST" number="M" xyz="0 -0.05 0.09938" rpy="-${0.5 * PI} -0.0429350996 -${0.5 * PI}"/>
+
+
+    <link name="${side}_HAND_L_FINGER_KNUCKLE_1">
+      <visual>
+        <material name="DarpaGrey" />
+
+        <origin xyz="0 0 0" rpy="${0.5 * PI} 0 -${0.5 * PI}" />
+        <geometry>
+            <mesh filename="${homeDirectory}/models/componentSTL/firstFingerLink.stl"/>
+        </geometry>
+	<mu1 value="50000.0" />
+	<mu2 value="50000.0" />
+	<kp  value="1000000.0" />
+	<kd  value="1.0" />
+      </visual>
+      <inertial>
+        <origin xyz="0.03201666 -0.00086502 0.00890075" />
+        <mass value="0.16252678" />
+        <inertia  ixx="0.00002567" ixy="-0.00000146"  ixz="0.00001128"
+                  iyy="0.00008818"   iyz="-0.00000094"
+                  izz="0.00007827" />
+      </inertial>
+      <collision>
+        <origin xyz="0 0 0" rpy="${0.5 * PI} 0 -${0.5 * PI}" />
+        <geometry>
+          <mesh filename="${homeDirectory}/models/collision/firstFingerLink.stl"/>
+        </geometry>
+      </collision>
+    </link>
+    <xacro:gazeboReference name="${side}_HAND_L_FINGER_KNUCKLE_1" material="PR2/Grey2" />
+    <xacro:control topicName="${side}_Arm_FingerOne_KnuckleOne" name="DarmSim_${side}Arm_BHand_FingerOneKnuckleOne" linkName="${side}_HAND_L_FINGER_KNUCKLE_1" jointName="${side}_Arm_FingerOne_KnuckleOneJoint" />
+
+    <xacro:fingers side="${side}" parent="${side}_HAND_L_FINGER_KNUCKLE_1" number="L" xyz=".05 0 0.02140" rpy="-${0.5 * PI} -0.0429350996 0"/>
+
+    <link name="${side}_HAND_R_FINGER_KNUCKLE_1">
+        <visual>
+        <material name="DarpaGrey" />
+
+        <origin xyz="0 0 0" rpy="${0.5 * PI} 0 -${0.5 * PI}" />
+        <geometry>
+            <mesh filename="${homeDirectory}/models/componentSTL/firstFingerLink.stl"/>
+        </geometry>
+    </visual>
+    <inertial>
+        <origin xyz="0.03201666 -0.00086502 0.00890075" />
+        <mass value="0.16252678" />
+        <inertia  ixx="0.00002567" ixy="-0.00000146"  ixz="0.00001128"
+                                   iyy="0.00008818"   iyz="-0.00000094"
+                                                      izz="0.00007827" />
+    </inertial>
+        <collision>
+        <origin xyz="0 0 0" rpy="${0.5 * PI} 0 -${0.5 * PI}" />
+        <geometry>
+            <mesh filename="${homeDirectory}/models/collision/firstFingerLink.stl"/>
+        </geometry>
+        </collision>
+    </link>
+    <xacro:gazeboReference name="${side}_HAND_R_FINGER_KNUCKLE_1" material="PR2/Grey2" />
+    <xacro:control topicName="${side}_Arm_FingerTwo_KnuckleOne" name="DarmSim_${side}Arm_BHand_FingerTwoKnuckleOne" linkName="${side}_HAND_R_FINGER_KNUCKLE_1" jointName="${side}_Arm_FingerTwo_KnuckleOneJoint" />
+
+    <xacro:fingers side="${side}" parent="${side}_HAND_R_FINGER_KNUCKLE_1" number="R" xyz=".05 0 0.02140" rpy="-${0.5 * PI} -0.0429350996 0"/>
+
+
+    <joint name="${side}_FR" type="revolute">
+        <parent link="${side}_LOWER_WRIST"/>
+        <child link="${side}_HAND_L_FINGER_KNUCKLE_1"/>
+        <origin xyz=".02497 0 0.07798" rpy="0 0 ${0.5 * PI}"/>
+        <axis xyz="0 0 -1"/>
+        <limit effort="1" lower="0" upper="${PI}" velocity="3.27"/>
+        <dynamics damping="0.005" friction="100.0"/>
+    </joint>
+
+    <joint name="${side}_FR2" type="revolute">
+        <parent link="${side}_LOWER_WRIST"/>
+        <child link="${side}_HAND_R_FINGER_KNUCKLE_1"/>
+        <origin xyz="-.02497 0 0.07798" rpy="0 0 ${0.5 * PI}"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1" lower="0" upper="${PI}" velocity="3.27"/>
+        <dynamics damping="0.005" friction="100.0"/>
+        <mimic joint="${side}_FR" multiplier="1" offset="0"/>
+    </joint>
+
+    </xacro:macro>
+
+</robot>

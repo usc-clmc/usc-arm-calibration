@@ -1,0 +1,12 @@
+# Define the goal
+---
+# Define the result
+geometry_msgs/Point mean
+geometry_msgs/Point variance
+int32 result
+int32 FAILED=0
+int32 SUCCEEDED=1
+string info
+---
+# Define a feedback message
+geometry_msgs/Point error

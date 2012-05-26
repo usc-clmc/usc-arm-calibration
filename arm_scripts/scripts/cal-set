@@ -1,0 +1,76 @@
+#!/bin/bash
+
+# Switch between USC and AGT calibration files.
+#
+# Usage: cal-set [usc | agt]
+#
+# Without an argument, the script switches
+# to USC calibration files by default.
+
+MODEL_PACKAGE=arm_robot_model
+CALIB_DIR=calib
+URDF_DIR=models
+
+SENSORS_URDF=sensorsValues.urdf.xacro
+SENSORS_URDF_USC=sensorsValuesUSC.urdf.xacro
+SENSORS_URDF_AGT=sensorsValuesAGT.urdf.xacro
+
+BB_L_YAML=bb_calib_left.yaml
+BB_L_YAML_USC=bb_calib_left_usc.yaml
+BB_L_YAML_AGT=bb_calib_left_agt.yaml
+BB_R_YAML=bb_calib_right.yaml
+BB_R_YAML_USC=bb_calib_right_usc.yaml
+BB_R_YAML_AGT=bb_calib_right_agt.yaml
+SR_YAML=swissranger_calib.yaml
+SR_YAML_USC=swissranger_calib_usc.yaml
+SR_YAML_AGT=swissranger_calib_agt.yaml
+
+CURRENT_DIR=$PWD
+
+# electric, diamondback
+# source ${ROS_ROOT}/tools/rosbash/rosbash
+
+# fuerte
+source ${ROS_ROOT}/../rosbash/rosbash
+
+roscd $MODEL_PACKAGE
+
+# Setup for AGT...
+if [ "x$1" = "xagt" ];
+then
+  cd "$CALIB_DIR"
+  ln -sf $BB_L_YAML_AGT $BB_L_YAML
+  ln -sf $BB_R_YAML_AGT $BB_R_YAML
+  ln -sf $SR_YAML_AGT   $SR_YAML
+  cd "../$URDF_DIR"
+  ln -sf $SENSORS_URDF_AGT $SENSORS_URDF
+elif [ "x$1" = "xusc" ];
+then
+  cd "$CALIB_DIR"
+  ln -sf $BB_L_YAML_USC $BB_L_YAML
+  ln -sf $BB_R_YAML_USC $BB_R_YAML
+  ln -sf $SR_YAML_USC   $SR_YAML
+  cd "../$URDF_DIR"
+  ln -sf $SENSORS_URDF_USC $SENSORS_URDF
+else
+  echo "ERROR!"
+  echo "ERROR! Please use either "usc" or "agt" as the argument."
+  echo "ERROR!"
+fi
+
+roscd arm_learn_hand_eye_calibration/data
+ln -sf "right_arm_models_$1.txt" right_arm_models.txt
+ln -sf "left_arm_models_$1.txt" left_arm_models.txt
+ln -sf "data_$1".clmc data.clmc
+roscd arm_sl_user/armUser/config
+ln -sf "ExtraSensorCalibration_$1.cf" ExtraSensorCalibration.cf
+ln -sf "LinkParameters_$1.cf" LinkParameters.cf
+
+roscd arm_fiducial_cal
+rm -rf cache
+ln -sf "$1_cache" cache
+
+roscd arm_robot_model/calib
+ln -sf table_height_$1.txt table_height.txt
+
+cd $CURRENT_DIR

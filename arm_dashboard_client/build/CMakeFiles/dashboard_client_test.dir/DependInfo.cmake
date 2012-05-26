@@ -1,0 +1,14 @@
+# The set of languages for which implicit dependencies are needed:
+SET(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+SET(CMAKE_DEPENDS_CHECK_CXX
+  "/home/test_user/usc-arm-calibration/arm_dashboard_client/test/dashboard_client_test.cpp" "/home/test_user/usc-arm-calibration/arm_dashboard_client/build/CMakeFiles/dashboard_client_test.dir/test/dashboard_client_test.o"
+  )
+SET(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Targets to which this target links.
+SET(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/test_user/usc-arm-calibration/arm_dashboard_client/build/CMakeFiles/arm_dashboard_client.dir/DependInfo.cmake"
+  )

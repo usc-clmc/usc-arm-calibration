@@ -1,0 +1,10 @@
+string type
+string GRASP=grasp
+string STAPLE=staple
+string SWITCH_ON=turn_on
+string OPEN=open
+string UNLOCK=unlock
+string DRILL_HOLE=drill_hole
+string HANG_UP=hang_up
+string object_name
+string model_file_name

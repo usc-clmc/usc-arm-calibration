@@ -1,0 +1,41 @@
+<package>
+  <description brief="arm_calibrate_extrinsics">
+
+     arm_calibrate_extrinsics
+
+  </description>
+  <author>Peter Pastor</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/arm_calibrate_extrinsics</url>
+  
+  <depend package="roscpp"/>
+  <depend package="ar_target"/>
+  
+  <depend package="visualization_msgs"/>
+  
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+  <depend package="image_transport"/>
+  
+  <depend package="usc_utilities"/>
+  <depend package="sensor_msgs"/>
+  <depend package="image_geometry"/>
+  <depend package="tf"/>
+
+  <depend package="arm_msgs"/>
+
+  <depend package="actionlib"/>
+  <depend package="arm_behavior_actions"/>
+  <depend package="arm_dashboard_client"/>
+
+  <!-- for JPL + CMU -->
+  <depend package="arm_head_control"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/msg_gen/cpp -I${prefix}/srv_gen/cpp"/>
+  </export>
+
+</package>
+
+
