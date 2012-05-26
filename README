@@ -1,7 +1,7 @@
 1) Git clone the repository into your home directory
 
 $ cd
-$ git clone github.com/usc-arm-calibration
+$ git clone git://github.com/usc-clmc/usc-arm-calibration.git
 
 2) Add the following lines to your .bashrc
 
