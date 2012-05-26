@@ -21,9 +21,13 @@ $ rosdep init
 $ rosdep update
 $ rosdep install usc_fiducial_calibration
 
-5) install octave
+5) set some symlinks to point at the correct calibration files
 
-$ sudo apt-get install octave
+$ rosrun arm_scripts cal-set agt
+roscd: No such package/stack 'arm_learn_hand_eye_calibration/data'
+roscd: No such package/stack 'arm_sl_user/armUser/config'
+
+(ignore these error messages)
 
 6) make
 

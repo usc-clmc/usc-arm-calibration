@@ -1,1 +1,1 @@
-left_arm_models_usc.txt
+left_arm_models_agt.txt
