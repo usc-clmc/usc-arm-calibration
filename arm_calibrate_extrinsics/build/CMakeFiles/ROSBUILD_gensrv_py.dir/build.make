@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build
 
 # Utility rule file for ROSBUILD_gensrv_py.
 
@@ -45,9 +45,9 @@ include CMakeFiles/ROSBUILD_gensrv_py.dir/progress.make
 CMakeFiles/ROSBUILD_gensrv_py: ../src/arm_calibrate_extrinsics/srv/__init__.py
 
 ../src/arm_calibrate_extrinsics/srv/__init__.py: ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_calibrate_extrinsics/srv/__init__.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --initpy /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/srv/CalibrateExtrinsics.srv
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --initpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/srv/CalibrateExtrinsics.srv
 
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: ../srv/CalibrateExtrinsics.srv
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py
@@ -75,7 +75,7 @@ CMakeFiles/ROSBUILD_gensrv_py: ../src/arm_calibrate_extrinsics/srv/__init__.py
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -87,32 +87,32 @@ CMakeFiles/ROSBUILD_gensrv_py: ../src/arm_calibrate_extrinsics/srv/__init__.py
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/share/rosbag/manifest.xml
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/ccny_vision/ar_target/manifest.xml
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/arm_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/manifest.xml
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/manifest.xml
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/share/actionlib_msgs/manifest.xml
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/share/actionlib/manifest.xml
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/arm_controller_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/arm_behavior_actions/manifest.xml
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/SafetyLight_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/arm_dashboard_client/manifest.xml
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions/manifest.xml
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/manifest.xml
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/stacks/geometry/tf_conversions/manifest.xml
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/stacks/robot_model/robot_state_publisher/manifest.xml
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/arm_head_control/manifest.xml
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/manifest.xml
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg_gen/generated
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/arm_msgs/msg_gen/generated
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/arm_msgs/srv_gen/generated
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/arm_controller_msgs/msg_gen/generated
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/arm_behavior_actions/msg_gen/generated
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg_gen/generated
-../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/test_user/usc-arm-calibration/arm_head_control/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles $(CMAKE_PROGRESS_2)
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg_gen/generated
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg_gen/generated
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/srv_gen/generated
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg_gen/generated
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions/msg_gen/generated
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg_gen/generated
+../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_calibrate_extrinsics/srv/_CalibrateExtrinsics.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/srv/CalibrateExtrinsics.srv
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/gensrv_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/srv/CalibrateExtrinsics.srv
 
 ROSBUILD_gensrv_py: CMakeFiles/ROSBUILD_gensrv_py
 ROSBUILD_gensrv_py: ../src/arm_calibrate_extrinsics/srv/__init__.py
@@ -129,6 +129,6 @@ CMakeFiles/ROSBUILD_gensrv_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_gensrv_py.dir/clean
 
 CMakeFiles/ROSBUILD_gensrv_py.dir/depend:
-	cd /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles/ROSBUILD_gensrv_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles/ROSBUILD_gensrv_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_gensrv_py.dir/depend
 

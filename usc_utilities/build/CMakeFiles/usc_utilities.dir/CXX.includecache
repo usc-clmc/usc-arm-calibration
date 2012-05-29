@@ -76,7 +76,7 @@ ros/macros.h
 ros/assert.h
 ../msg_gen/cpp/include/usc_utilities/ros/assert.h
 
-/home/test_user/usc-arm-calibration/usc_utilities/src/accumulator.cpp
+/home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/accumulator.cpp
 algorithm
 -
 ros/ros.h
@@ -90,7 +90,7 @@ usc_utilities/assert.h
 usc_utilities/accumulator.h
 -
 
-/home/test_user/usc-arm-calibration/usc_utilities/src/kdl_chain_wrapper.cpp
+/home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/kdl_chain_wrapper.cpp
 usc_utilities/kdl_chain_wrapper.h
 -
 usc_utilities/assert.h
@@ -102,11 +102,11 @@ ros/assert.h
 map
 -
 
-/home/test_user/usc-arm-calibration/usc_utilities/src/rviz_publisher.cpp
+/home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/rviz_publisher.cpp
 usc_utilities/rviz_publisher.h
 -
 
-/home/test_user/usc-arm-calibration/usc_utilities/src/sl_config_file_handler.cpp
+/home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/sl_config_file_handler.cpp
 usc_utilities/sl_config_file_handler.h
 -
 string.h

@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build
 
 # Utility rule file for rospack_genmsg.
 
@@ -57,6 +57,6 @@ CMakeFiles/rospack_genmsg.dir/clean:
 .PHONY : CMakeFiles/rospack_genmsg.dir/clean
 
 CMakeFiles/rospack_genmsg.dir/depend:
-	cd /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles/rospack_genmsg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles/rospack_genmsg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rospack_genmsg.dir/depend
 

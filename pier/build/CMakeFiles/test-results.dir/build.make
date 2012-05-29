@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/pier
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/pier/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/build
 
 # Utility rule file for test-results.
 
@@ -58,6 +58,6 @@ CMakeFiles/test-results.dir/clean:
 .PHONY : CMakeFiles/test-results.dir/clean
 
 CMakeFiles/test-results.dir/depend:
-	cd /home/test_user/usc-arm-calibration/pier/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/pier /home/test_user/usc-arm-calibration/pier /home/test_user/usc-arm-calibration/pier/build /home/test_user/usc-arm-calibration/pier/build /home/test_user/usc-arm-calibration/pier/build/CMakeFiles/test-results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/build/CMakeFiles/test-results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test-results.dir/depend
 

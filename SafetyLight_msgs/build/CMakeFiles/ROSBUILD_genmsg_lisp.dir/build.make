@@ -32,56 +32,28 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/SafetyLight_msgs
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/SafetyLight_msgs/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build
 
 # Utility rule file for ROSBUILD_genmsg_lisp.
 
 # Include the progress variables for this target.
 include CMakeFiles/ROSBUILD_genmsg_lisp.dir/progress.make
 
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/SetRed.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetRed.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/SetGreen.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetGreen.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/SetColor.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetColor.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/SetGreen.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetGreen.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/SetRed.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetRed.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/SetYellow.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetYellow.lisp
-
-../msg_gen/lisp/SetRed.lisp: ../msg/SetRed.msg
-../msg_gen/lisp/SetRed.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/SetRed.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
-../msg_gen/lisp/SetRed.lisp: ../manifest.xml
-../msg_gen/lisp/SetRed.lisp: /opt/ros/fuerte/share/roslang/manifest.xml
-../msg_gen/lisp/SetRed.lisp: /opt/ros/fuerte/share/roscpp/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/SetRed.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_SetRed.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg/SetRed.msg
-
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/SetRed.lisp
-
-../msg_gen/lisp/_package_SetRed.lisp: ../msg_gen/lisp/SetRed.lisp
-
-../msg_gen/lisp/SetGreen.lisp: ../msg/SetGreen.msg
-../msg_gen/lisp/SetGreen.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/SetGreen.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
-../msg_gen/lisp/SetGreen.lisp: ../manifest.xml
-../msg_gen/lisp/SetGreen.lisp: /opt/ros/fuerte/share/roslang/manifest.xml
-../msg_gen/lisp/SetGreen.lisp: /opt/ros/fuerte/share/roscpp/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/SetGreen.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_SetGreen.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg/SetGreen.msg
-
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/SetGreen.lisp
-
-../msg_gen/lisp/_package_SetGreen.lisp: ../msg_gen/lisp/SetGreen.lisp
 
 ../msg_gen/lisp/SetColor.lisp: ../msg/SetColor.msg
 ../msg_gen/lisp/SetColor.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
@@ -89,13 +61,41 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetYellow.lisp
 ../msg_gen/lisp/SetColor.lisp: ../manifest.xml
 ../msg_gen/lisp/SetColor.lisp: /opt/ros/fuerte/share/roslang/manifest.xml
 ../msg_gen/lisp/SetColor.lisp: /opt/ros/fuerte/share/roscpp/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/SetColor.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_SetColor.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg/SetColor.msg
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg/SetColor.msg
 
 ../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/SetColor.lisp
 
 ../msg_gen/lisp/_package_SetColor.lisp: ../msg_gen/lisp/SetColor.lisp
+
+../msg_gen/lisp/SetGreen.lisp: ../msg/SetGreen.msg
+../msg_gen/lisp/SetGreen.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../msg_gen/lisp/SetGreen.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
+../msg_gen/lisp/SetGreen.lisp: ../manifest.xml
+../msg_gen/lisp/SetGreen.lisp: /opt/ros/fuerte/share/roslang/manifest.xml
+../msg_gen/lisp/SetGreen.lisp: /opt/ros/fuerte/share/roscpp/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/SetGreen.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_SetGreen.lisp"
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg/SetGreen.msg
+
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/SetGreen.lisp
+
+../msg_gen/lisp/_package_SetGreen.lisp: ../msg_gen/lisp/SetGreen.lisp
+
+../msg_gen/lisp/SetRed.lisp: ../msg/SetRed.msg
+../msg_gen/lisp/SetRed.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../msg_gen/lisp/SetRed.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
+../msg_gen/lisp/SetRed.lisp: ../manifest.xml
+../msg_gen/lisp/SetRed.lisp: /opt/ros/fuerte/share/roslang/manifest.xml
+../msg_gen/lisp/SetRed.lisp: /opt/ros/fuerte/share/roscpp/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/SetRed.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_SetRed.lisp"
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg/SetRed.msg
+
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/SetRed.lisp
+
+../msg_gen/lisp/_package_SetRed.lisp: ../msg_gen/lisp/SetRed.lisp
 
 ../msg_gen/lisp/SetYellow.lisp: ../msg/SetYellow.msg
 ../msg_gen/lisp/SetYellow.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
@@ -103,24 +103,24 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetYellow.lisp
 ../msg_gen/lisp/SetYellow.lisp: ../manifest.xml
 ../msg_gen/lisp/SetYellow.lisp: /opt/ros/fuerte/share/roslang/manifest.xml
 ../msg_gen/lisp/SetYellow.lisp: /opt/ros/fuerte/share/roscpp/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/SetYellow.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_SetYellow.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg/SetYellow.msg
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg/SetYellow.msg
 
 ../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/SetYellow.lisp
 
 ../msg_gen/lisp/_package_SetYellow.lisp: ../msg_gen/lisp/SetYellow.lisp
 
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/SetRed.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetRed.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/SetGreen.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetGreen.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/SetColor.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetColor.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/SetGreen.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetGreen.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/SetRed.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetRed.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/SetYellow.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_SetYellow.lisp
@@ -136,6 +136,6 @@ CMakeFiles/ROSBUILD_genmsg_lisp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_lisp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_lisp.dir/depend:
-	cd /home/test_user/usc-arm-calibration/SafetyLight_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/SafetyLight_msgs /home/test_user/usc-arm-calibration/SafetyLight_msgs /home/test_user/usc-arm-calibration/SafetyLight_msgs/build /home/test_user/usc-arm-calibration/SafetyLight_msgs/build /home/test_user/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_lisp.dir/depend
 

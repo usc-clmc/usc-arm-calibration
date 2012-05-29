@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/arm_head_control
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/arm_head_control/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/arm_head_control.dir/depend.make
@@ -77,22 +77,22 @@ CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o: /opt/ros/fuerte/share/acti
 CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
 CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_head_control/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o -c /home/test_user/usc-arm-calibration/arm_head_control/src/arm_head_c_api.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/arm_head_c_api.cpp
 
 CMakeFiles/arm_head_control.dir/src/arm_head_c_api.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_head_control.dir/src/arm_head_c_api.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/arm_head_control/src/arm_head_c_api.cpp > CMakeFiles/arm_head_control.dir/src/arm_head_c_api.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/arm_head_c_api.cpp > CMakeFiles/arm_head_control.dir/src/arm_head_c_api.i
 
 CMakeFiles/arm_head_control.dir/src/arm_head_c_api.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_head_control.dir/src/arm_head_c_api.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/arm_head_control/src/arm_head_c_api.cpp -o CMakeFiles/arm_head_control.dir/src/arm_head_c_api.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/arm_head_c_api.cpp -o CMakeFiles/arm_head_control.dir/src/arm_head_c_api.s
 
 CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o.requires:
 .PHONY : CMakeFiles/arm_head_control.dir/src/arm_head_c_api.o.requires
@@ -134,22 +134,22 @@ CMakeFiles/arm_head_control.dir/src/arm_head_unit.o: /opt/ros/fuerte/share/actio
 CMakeFiles/arm_head_control.dir/src/arm_head_unit.o: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
 CMakeFiles/arm_head_control.dir/src/arm_head_unit.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/arm_head_control.dir/src/arm_head_unit.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/arm_head_control.dir/src/arm_head_unit.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-CMakeFiles/arm_head_control.dir/src/arm_head_unit.o: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+CMakeFiles/arm_head_control.dir/src/arm_head_unit.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+CMakeFiles/arm_head_control.dir/src/arm_head_unit.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 CMakeFiles/arm_head_control.dir/src/arm_head_unit.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/arm_head_control.dir/src/arm_head_unit.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-CMakeFiles/arm_head_control.dir/src/arm_head_unit.o: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_head_control/build/CMakeFiles $(CMAKE_PROGRESS_2)
+CMakeFiles/arm_head_control.dir/src/arm_head_unit.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/arm_head_control.dir/src/arm_head_unit.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_head_control.dir/src/arm_head_unit.o -c /home/test_user/usc-arm-calibration/arm_head_control/src/arm_head_unit.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_head_control.dir/src/arm_head_unit.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/arm_head_unit.cpp
 
 CMakeFiles/arm_head_control.dir/src/arm_head_unit.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_head_control.dir/src/arm_head_unit.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/arm_head_control/src/arm_head_unit.cpp > CMakeFiles/arm_head_control.dir/src/arm_head_unit.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/arm_head_unit.cpp > CMakeFiles/arm_head_control.dir/src/arm_head_unit.i
 
 CMakeFiles/arm_head_control.dir/src/arm_head_unit.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_head_control.dir/src/arm_head_unit.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/arm_head_control/src/arm_head_unit.cpp -o CMakeFiles/arm_head_control.dir/src/arm_head_unit.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/arm_head_unit.cpp -o CMakeFiles/arm_head_control.dir/src/arm_head_unit.s
 
 CMakeFiles/arm_head_control.dir/src/arm_head_unit.o.requires:
 .PHONY : CMakeFiles/arm_head_control.dir/src/arm_head_unit.o.requires
@@ -191,22 +191,22 @@ CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o: /opt/ros/fuerte/share/a
 CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
 CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_head_control/build/CMakeFiles $(CMAKE_PROGRESS_3)
+CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o -c /home/test_user/usc-arm-calibration/arm_head_control/src/arm_pan_tilt_unit.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/arm_pan_tilt_unit.cpp
 
 CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/arm_head_control/src/arm_pan_tilt_unit.cpp > CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/arm_pan_tilt_unit.cpp > CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.i
 
 CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/arm_head_control/src/arm_pan_tilt_unit.cpp -o CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/arm_pan_tilt_unit.cpp -o CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.s
 
 CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o.requires:
 .PHONY : CMakeFiles/arm_head_control.dir/src/arm_pan_tilt_unit.o.requires
@@ -248,22 +248,22 @@ CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o: /opt/ros/fuerte/share/ac
 CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
 CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_head_control/build/CMakeFiles $(CMAKE_PROGRESS_4)
+CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o -c /home/test_user/usc-arm-calibration/arm_head_control/src/dp_pan_tilt_unit.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/dp_pan_tilt_unit.cpp
 
 CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/arm_head_control/src/dp_pan_tilt_unit.cpp > CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/dp_pan_tilt_unit.cpp > CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.i
 
 CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/arm_head_control/src/dp_pan_tilt_unit.cpp -o CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/dp_pan_tilt_unit.cpp -o CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.s
 
 CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o.requires:
 .PHONY : CMakeFiles/arm_head_control.dir/src/dp_pan_tilt_unit.o.requires
@@ -305,22 +305,22 @@ CMakeFiles/arm_head_control.dir/src/linuxser.o: /opt/ros/fuerte/share/actionlib/
 CMakeFiles/arm_head_control.dir/src/linuxser.o: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
 CMakeFiles/arm_head_control.dir/src/linuxser.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/arm_head_control.dir/src/linuxser.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/arm_head_control.dir/src/linuxser.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-CMakeFiles/arm_head_control.dir/src/linuxser.o: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+CMakeFiles/arm_head_control.dir/src/linuxser.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+CMakeFiles/arm_head_control.dir/src/linuxser.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 CMakeFiles/arm_head_control.dir/src/linuxser.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/arm_head_control.dir/src/linuxser.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-CMakeFiles/arm_head_control.dir/src/linuxser.o: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_head_control/build/CMakeFiles $(CMAKE_PROGRESS_5)
+CMakeFiles/arm_head_control.dir/src/linuxser.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/arm_head_control.dir/src/linuxser.o"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_head_control.dir/src/linuxser.o   -c /home/test_user/usc-arm-calibration/arm_head_control/src/linuxser.c
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_head_control.dir/src/linuxser.o   -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/linuxser.c
 
 CMakeFiles/arm_head_control.dir/src/linuxser.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/arm_head_control.dir/src/linuxser.i"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/arm_head_control/src/linuxser.c > CMakeFiles/arm_head_control.dir/src/linuxser.i
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/linuxser.c > CMakeFiles/arm_head_control.dir/src/linuxser.i
 
 CMakeFiles/arm_head_control.dir/src/linuxser.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/arm_head_control.dir/src/linuxser.s"
-	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/arm_head_control/src/linuxser.c -o CMakeFiles/arm_head_control.dir/src/linuxser.s
+	/usr/bin/gcc  $(C_DEFINES) $(C_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/linuxser.c -o CMakeFiles/arm_head_control.dir/src/linuxser.s
 
 CMakeFiles/arm_head_control.dir/src/linuxser.o.requires:
 .PHONY : CMakeFiles/arm_head_control.dir/src/linuxser.o.requires
@@ -362,22 +362,22 @@ CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /opt/ros/fuerte/share/ac
 CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
 CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_head_control/build/CMakeFiles $(CMAKE_PROGRESS_6)
+CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/arm_head_control.dir/src/arm_head_control.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_head_control.dir/src/arm_head_control.o -c /home/test_user/usc-arm-calibration/arm_head_control/src/arm_head_control.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_head_control.dir/src/arm_head_control.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/arm_head_control.cpp
 
 CMakeFiles/arm_head_control.dir/src/arm_head_control.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_head_control.dir/src/arm_head_control.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/arm_head_control/src/arm_head_control.cpp > CMakeFiles/arm_head_control.dir/src/arm_head_control.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/arm_head_control.cpp > CMakeFiles/arm_head_control.dir/src/arm_head_control.i
 
 CMakeFiles/arm_head_control.dir/src/arm_head_control.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_head_control.dir/src/arm_head_control.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/arm_head_control/src/arm_head_control.cpp -o CMakeFiles/arm_head_control.dir/src/arm_head_control.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/arm_head_control.cpp -o CMakeFiles/arm_head_control.dir/src/arm_head_control.s
 
 CMakeFiles/arm_head_control.dir/src/arm_head_control.o.requires:
 .PHONY : CMakeFiles/arm_head_control.dir/src/arm_head_control.o.requires
@@ -428,6 +428,6 @@ CMakeFiles/arm_head_control.dir/clean:
 .PHONY : CMakeFiles/arm_head_control.dir/clean
 
 CMakeFiles/arm_head_control.dir/depend:
-	cd /home/test_user/usc-arm-calibration/arm_head_control/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/arm_head_control /home/test_user/usc-arm-calibration/arm_head_control /home/test_user/usc-arm-calibration/arm_head_control/build /home/test_user/usc-arm-calibration/arm_head_control/build /home/test_user/usc-arm-calibration/arm_head_control/build/CMakeFiles/arm_head_control.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build/CMakeFiles/arm_head_control.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/arm_head_control.dir/depend
 

@@ -79,8 +79,8 @@ CMakeFiles/arm_head_control.dir/src/arm_head_control.o: ../msg_gen/cpp/include/a
 CMakeFiles/arm_head_control.dir/src/arm_head_control.o: ../msg_gen/cpp/include/arm_head_control/LookAtGoal.h
 CMakeFiles/arm_head_control.dir/src/arm_head_control.o: ../msg_gen/cpp/include/arm_head_control/LookAtResult.h
 CMakeFiles/arm_head_control.dir/src/arm_head_control.o: ../src/arm_head_control.cpp
-CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /home/test_user/usc-arm-calibration/usc_utilities/include/usc_utilities/assert.h
-CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /home/test_user/usc-arm-calibration/usc_utilities/include/usc_utilities/param_server.h
+CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/include/usc_utilities/assert.h
+CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/include/usc_utilities/param_server.h
 CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /opt/ros/fuerte/include/XmlRpcDecl.h
 CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /opt/ros/fuerte/include/XmlRpcValue.h
 CMakeFiles/arm_head_control.dir/src/arm_head_control.o: /opt/ros/fuerte/include/actionlib/action_definition.h

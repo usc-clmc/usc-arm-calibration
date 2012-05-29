@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/usc_utilities
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/usc_utilities/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build
 
 # Utility rule file for rostest_launch_usc_utilities_test.test.
 
@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/usc_utilities/build
 include CMakeFiles/rostest_launch_usc_utilities_test.test.dir/progress.make
 
 CMakeFiles/rostest_launch_usc_utilities_test.test: ../launch/usc_utilities_test.test
-	cd /home/test_user/usc-arm-calibration/usc_utilities && rostest launch/usc_utilities_test.test
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities && rostest launch/usc_utilities_test.test
 
 rostest_launch_usc_utilities_test.test: CMakeFiles/rostest_launch_usc_utilities_test.test
 rostest_launch_usc_utilities_test.test: CMakeFiles/rostest_launch_usc_utilities_test.test.dir/build.make
@@ -58,6 +58,6 @@ CMakeFiles/rostest_launch_usc_utilities_test.test.dir/clean:
 .PHONY : CMakeFiles/rostest_launch_usc_utilities_test.test.dir/clean
 
 CMakeFiles/rostest_launch_usc_utilities_test.test.dir/depend:
-	cd /home/test_user/usc-arm-calibration/usc_utilities/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/usc_utilities /home/test_user/usc-arm-calibration/usc_utilities /home/test_user/usc-arm-calibration/usc_utilities/build /home/test_user/usc-arm-calibration/usc_utilities/build /home/test_user/usc-arm-calibration/usc_utilities/build/CMakeFiles/rostest_launch_usc_utilities_test.test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build/CMakeFiles/rostest_launch_usc_utilities_test.test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rostest_launch_usc_utilities_test.test.dir/depend
 

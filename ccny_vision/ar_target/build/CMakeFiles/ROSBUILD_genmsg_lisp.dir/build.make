@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/ccny_vision/ar_target
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build
 
 # Utility rule file for ROSBUILD_genmsg_lisp.
 
@@ -45,15 +45,15 @@ include CMakeFiles/ROSBUILD_genmsg_lisp.dir/progress.make
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ARMarker.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarker.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ARMarkers.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarkers.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ARMarkers3d.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarkers3d.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ARMarker3d.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarker3d.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ARMarkers.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarkers.lisp
 
 ../msg_gen/lisp/ARMarker.lisp: ../msg/ARMarker.msg
 ../msg_gen/lisp/ARMarker.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
@@ -82,7 +82,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarkers.lisp
 ../msg_gen/lisp/ARMarker.lisp: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 ../msg_gen/lisp/ARMarker.lisp: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 ../msg_gen/lisp/ARMarker.lisp: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../msg_gen/lisp/ARMarker.lisp: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../msg_gen/lisp/ARMarker.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 ../msg_gen/lisp/ARMarker.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 ../msg_gen/lisp/ARMarker.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 ../msg_gen/lisp/ARMarker.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -94,18 +94,72 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarkers.lisp
 ../msg_gen/lisp/ARMarker.lisp: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 ../msg_gen/lisp/ARMarker.lisp: /opt/ros/fuerte/share/rosbag/manifest.xml
 ../msg_gen/lisp/ARMarker.lisp: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../msg_gen/lisp/ARMarker.lisp: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../msg_gen/lisp/ARMarker.lisp: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+../msg_gen/lisp/ARMarker.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../msg_gen/lisp/ARMarker.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 ../msg_gen/lisp/ARMarker.lisp: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 ../msg_gen/lisp/ARMarker.lisp: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../msg_gen/lisp/ARMarker.lisp: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_1)
+../msg_gen/lisp/ARMarker.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/ARMarker.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_ARMarker.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker.msg
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker.msg
 
 ../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/ARMarker.lisp
 
 ../msg_gen/lisp/_package_ARMarker.lisp: ../msg_gen/lisp/ARMarker.lisp
+
+../msg_gen/lisp/ARMarkers.lisp: ../msg/ARMarkers.msg
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
+../msg_gen/lisp/ARMarkers.lisp: ../msg/ARMarker.msg
+../msg_gen/lisp/ARMarkers.lisp: ../manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/roslang/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/roscpp/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/rospy/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/sensor_msgs/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/vision_opencv/opencv2/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/vision_opencv/image_geometry/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/message_filters/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/stereo_msgs/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/bullet/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/rosconsole/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/geometry/angles/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/rostest/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/roswtf/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/geometry/tf/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/roslib/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/resource_retriever/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/ros/core/rosbuild/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/colladadom/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/urdf_interface/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/urdf_parser/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/collada_parser/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/urdf/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/rosbag/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/std_msgs/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
+../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
+../msg_gen/lisp/ARMarkers.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/ARMarkers.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_ARMarkers.lisp"
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers.msg
+
+../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/ARMarkers.lisp
+
+../msg_gen/lisp/_package_ARMarkers.lisp: ../msg_gen/lisp/ARMarkers.lisp
 
 ../msg_gen/lisp/ARMarkers3d.lisp: ../msg/ARMarkers3d.msg
 ../msg_gen/lisp/ARMarkers3d.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
@@ -138,7 +192,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarkers.lisp
 ../msg_gen/lisp/ARMarkers3d.lisp: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 ../msg_gen/lisp/ARMarkers3d.lisp: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 ../msg_gen/lisp/ARMarkers3d.lisp: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../msg_gen/lisp/ARMarkers3d.lisp: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../msg_gen/lisp/ARMarkers3d.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 ../msg_gen/lisp/ARMarkers3d.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 ../msg_gen/lisp/ARMarkers3d.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 ../msg_gen/lisp/ARMarkers3d.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -150,14 +204,14 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarkers.lisp
 ../msg_gen/lisp/ARMarkers3d.lisp: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 ../msg_gen/lisp/ARMarkers3d.lisp: /opt/ros/fuerte/share/rosbag/manifest.xml
 ../msg_gen/lisp/ARMarkers3d.lisp: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../msg_gen/lisp/ARMarkers3d.lisp: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../msg_gen/lisp/ARMarkers3d.lisp: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+../msg_gen/lisp/ARMarkers3d.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../msg_gen/lisp/ARMarkers3d.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 ../msg_gen/lisp/ARMarkers3d.lisp: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 ../msg_gen/lisp/ARMarkers3d.lisp: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../msg_gen/lisp/ARMarkers3d.lisp: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_2)
+../msg_gen/lisp/ARMarkers3d.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/ARMarkers3d.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_ARMarkers3d.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers3d.msg
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers3d.msg
 
 ../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/ARMarkers3d.lisp
 
@@ -192,7 +246,7 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarkers.lisp
 ../msg_gen/lisp/ARMarker3d.lisp: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 ../msg_gen/lisp/ARMarker3d.lisp: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 ../msg_gen/lisp/ARMarker3d.lisp: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../msg_gen/lisp/ARMarker3d.lisp: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../msg_gen/lisp/ARMarker3d.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 ../msg_gen/lisp/ARMarker3d.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 ../msg_gen/lisp/ARMarker3d.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 ../msg_gen/lisp/ARMarker3d.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -204,86 +258,32 @@ CMakeFiles/ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarkers.lisp
 ../msg_gen/lisp/ARMarker3d.lisp: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 ../msg_gen/lisp/ARMarker3d.lisp: /opt/ros/fuerte/share/rosbag/manifest.xml
 ../msg_gen/lisp/ARMarker3d.lisp: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../msg_gen/lisp/ARMarker3d.lisp: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../msg_gen/lisp/ARMarker3d.lisp: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+../msg_gen/lisp/ARMarker3d.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../msg_gen/lisp/ARMarker3d.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 ../msg_gen/lisp/ARMarker3d.lisp: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 ../msg_gen/lisp/ARMarker3d.lisp: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../msg_gen/lisp/ARMarker3d.lisp: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_3)
+../msg_gen/lisp/ARMarker3d.lisp: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/ARMarker3d.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_ARMarker3d.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker3d.msg
+	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker3d.msg
 
 ../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/ARMarker3d.lisp
 
 ../msg_gen/lisp/_package_ARMarker3d.lisp: ../msg_gen/lisp/ARMarker3d.lisp
 
-../msg_gen/lisp/ARMarkers.lisp: ../msg/ARMarkers.msg
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/roslib/bin/gendeps
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
-../msg_gen/lisp/ARMarkers.lisp: ../msg/ARMarker.msg
-../msg_gen/lisp/ARMarkers.lisp: ../manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/roslang/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/roscpp/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/rospy/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/sensor_msgs/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/vision_opencv/opencv2/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/vision_opencv/image_geometry/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/message_filters/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/stereo_msgs/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/bullet/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/rosconsole/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/geometry/angles/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/rostest/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/roswtf/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/geometry/tf/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/roslib/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/resource_retriever/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/ros/core/rosbuild/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/colladadom/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/urdf_interface/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/urdf_parser/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/collada_parser/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/urdf/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/rosbag/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
-../msg_gen/lisp/ARMarkers.lisp: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../msg_gen/lisp/ARMarkers.lisp: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/lisp/ARMarkers.lisp, ../msg_gen/lisp/_package.lisp, ../msg_gen/lisp/_package_ARMarkers.lisp"
-	/opt/ros/fuerte/share/roslisp/rosbuild/scripts/genmsg_lisp.py /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers.msg
-
-../msg_gen/lisp/_package.lisp: ../msg_gen/lisp/ARMarkers.lisp
-
-../msg_gen/lisp/_package_ARMarkers.lisp: ../msg_gen/lisp/ARMarkers.lisp
-
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ARMarker.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarker.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ARMarkers.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
+ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarkers.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ARMarkers3d.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarkers3d.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ARMarker3d.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
 ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarker3d.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/ARMarkers.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package.lisp
-ROSBUILD_genmsg_lisp: ../msg_gen/lisp/_package_ARMarkers.lisp
 ROSBUILD_genmsg_lisp: CMakeFiles/ROSBUILD_genmsg_lisp.dir/build.make
 .PHONY : ROSBUILD_genmsg_lisp
 
@@ -296,6 +296,6 @@ CMakeFiles/ROSBUILD_genmsg_lisp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_lisp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_lisp.dir/depend:
-	cd /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/ccny_vision/ar_target /home/test_user/usc-arm-calibration/ccny_vision/ar_target /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_lisp.dir/depend
 

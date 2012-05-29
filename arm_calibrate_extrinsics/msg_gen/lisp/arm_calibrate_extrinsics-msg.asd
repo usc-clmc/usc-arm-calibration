@@ -8,8 +8,8 @@
                :std_msgs-msg
 )
   :components ((:file "_package")
-    (:file "ARFrame" :depends-on ("_package_ARFrame"))
-    (:file "_package_ARFrame" :depends-on ("_package"))
     (:file "ARFrame3d" :depends-on ("_package_ARFrame3d"))
     (:file "_package_ARFrame3d" :depends-on ("_package"))
+    (:file "ARFrame" :depends-on ("_package_ARFrame"))
+    (:file "_package_ARFrame" :depends-on ("_package"))
   ))

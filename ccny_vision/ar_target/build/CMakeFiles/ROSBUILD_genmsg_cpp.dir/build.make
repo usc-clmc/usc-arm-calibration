@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/ccny_vision/ar_target
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build
 
 # Utility rule file for ROSBUILD_genmsg_cpp.
 
@@ -43,9 +43,9 @@ CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/ccny_vision/ar_target/bui
 include CMakeFiles/ROSBUILD_genmsg_cpp.dir/progress.make
 
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarker.h
+CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarkers.h
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarkers3d.h
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarker3d.h
-CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarkers.h
 
 ../msg_gen/cpp/include/ar_target/ARMarker.h: ../msg/ARMarker.msg
 ../msg_gen/cpp/include/ar_target/ARMarker.h: /opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py
@@ -74,7 +74,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarkers.h
 ../msg_gen/cpp/include/ar_target/ARMarker.h: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker.h: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker.h: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarker.h: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarker.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -86,14 +86,64 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarkers.h
 ../msg_gen/cpp/include/ar_target/ARMarker.h: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker.h: /opt/ros/fuerte/share/rosbag/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker.h: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarker.h: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarker.h: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarker.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarker.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker.h: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 ../msg_gen/cpp/include/ar_target/ARMarker.h: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../msg_gen/cpp/include/ar_target/ARMarker.h: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_1)
+../msg_gen/cpp/include/ar_target/ARMarker.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/ar_target/ARMarker.h"
-	/opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker.msg
+	/opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker.msg
+
+../msg_gen/cpp/include/ar_target/ARMarkers.h: ../msg/ARMarkers.msg
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/roslib/bin/gendeps
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
+../msg_gen/cpp/include/ar_target/ARMarkers.h: ../msg/ARMarker.msg
+../msg_gen/cpp/include/ar_target/ARMarkers.h: ../manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/roslang/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/roscpp/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/rospy/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/sensor_msgs/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/vision_opencv/opencv2/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/vision_opencv/image_geometry/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/message_filters/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/stereo_msgs/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/bullet/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/rosconsole/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/geometry/angles/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/rostest/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/roswtf/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/geometry/tf/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/roslib/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/resource_retriever/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/ros/core/rosbuild/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/colladadom/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/urdf_interface/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/urdf_parser/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/collada_parser/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/urdf/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/rosbag/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/std_msgs/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
+../msg_gen/cpp/include/ar_target/ARMarkers.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/ar_target/ARMarkers.h"
+	/opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers.msg
 
 ../msg_gen/cpp/include/ar_target/ARMarkers3d.h: ../msg/ARMarkers3d.msg
 ../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py
@@ -126,7 +176,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarkers.h
 ../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -138,14 +188,14 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarkers.h
 ../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /opt/ros/fuerte/share/rosbag/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 ../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_2)
+../msg_gen/cpp/include/ar_target/ARMarkers3d.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/ar_target/ARMarkers3d.h"
-	/opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers3d.msg
+	/opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers3d.msg
 
 ../msg_gen/cpp/include/ar_target/ARMarker3d.h: ../msg/ARMarker3d.msg
 ../msg_gen/cpp/include/ar_target/ARMarker3d.h: /opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py
@@ -176,7 +226,7 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarkers.h
 ../msg_gen/cpp/include/ar_target/ARMarker3d.h: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker3d.h: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker3d.h: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarker3d.h: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarker3d.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker3d.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker3d.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker3d.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -188,70 +238,20 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarkers.h
 ../msg_gen/cpp/include/ar_target/ARMarker3d.h: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker3d.h: /opt/ros/fuerte/share/rosbag/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker3d.h: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarker3d.h: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarker3d.h: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarker3d.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../msg_gen/cpp/include/ar_target/ARMarker3d.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 ../msg_gen/cpp/include/ar_target/ARMarker3d.h: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 ../msg_gen/cpp/include/ar_target/ARMarker3d.h: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../msg_gen/cpp/include/ar_target/ARMarker3d.h: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_3)
+../msg_gen/cpp/include/ar_target/ARMarker3d.h: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/ar_target/ARMarker3d.h"
-	/opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker3d.msg
-
-../msg_gen/cpp/include/ar_target/ARMarkers.h: ../msg/ARMarkers.msg
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/roslib/bin/gendeps
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
-../msg_gen/cpp/include/ar_target/ARMarkers.h: ../msg/ARMarker.msg
-../msg_gen/cpp/include/ar_target/ARMarkers.h: ../manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/roslang/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/roscpp/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/rospy/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/sensor_msgs/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/vision_opencv/opencv2/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/vision_opencv/image_geometry/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/message_filters/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/stereo_msgs/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/bullet/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/rosconsole/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/geometry/angles/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/rostest/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/roswtf/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/geometry/tf/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/roslib/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/resource_retriever/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/ros/core/rosbuild/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/colladadom/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/urdf_interface/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/urdf_parser/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/collada_parser/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/urdf/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/rosbag/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../msg_gen/cpp/include/ar_target/ARMarkers.h: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/ar_target/ARMarkers.h"
-	/opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers.msg
+	/opt/ros/fuerte/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker3d.msg
 
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarker.h
+ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarkers.h
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarkers3d.h
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarker3d.h
-ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/ar_target/ARMarkers.h
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp.dir/build.make
 .PHONY : ROSBUILD_genmsg_cpp
 
@@ -264,6 +264,6 @@ CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend:
-	cd /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/ccny_vision/ar_target /home/test_user/usc-arm-calibration/ccny_vision/ar_target /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend
 

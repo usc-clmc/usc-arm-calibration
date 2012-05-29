@@ -6,15 +6,15 @@ FILE(REMOVE_RECURSE
   "../msg_gen/lisp/ARMarker.lisp"
   "../msg_gen/lisp/_package.lisp"
   "../msg_gen/lisp/_package_ARMarker.lisp"
+  "../msg_gen/lisp/ARMarkers.lisp"
+  "../msg_gen/lisp/_package.lisp"
+  "../msg_gen/lisp/_package_ARMarkers.lisp"
   "../msg_gen/lisp/ARMarkers3d.lisp"
   "../msg_gen/lisp/_package.lisp"
   "../msg_gen/lisp/_package_ARMarkers3d.lisp"
   "../msg_gen/lisp/ARMarker3d.lisp"
   "../msg_gen/lisp/_package.lisp"
   "../msg_gen/lisp/_package_ARMarker3d.lisp"
-  "../msg_gen/lisp/ARMarkers.lisp"
-  "../msg_gen/lisp/_package.lisp"
-  "../msg_gen/lisp/_package_ARMarkers.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

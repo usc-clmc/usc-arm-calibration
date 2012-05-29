@@ -3,17 +3,17 @@
   (:export
    "<INERTIALPARAMETERS>"
    "INERTIALPARAMETERS"
+   "<STATUSREPORT>"
+   "STATUSREPORT"
    "<TASK>"
    "TASK"
-   "<OBJECTS>"
-   "OBJECTS"
    "<OBJECT>"
    "OBJECT"
    "<TASKS>"
    "TASKS"
+   "<OBJECTS>"
+   "OBJECTS"
    "<BOUNDINGBOX>"
    "BOUNDINGBOX"
-   "<STATUSREPORT>"
-   "STATUSREPORT"
   ))
 

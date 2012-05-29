@@ -1,2 +1,4 @@
 calib/
 cache
+build
+*.pyc

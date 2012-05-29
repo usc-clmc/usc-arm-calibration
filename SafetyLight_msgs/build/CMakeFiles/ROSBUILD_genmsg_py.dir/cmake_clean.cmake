@@ -4,9 +4,9 @@ FILE(REMOVE_RECURSE
   "../msg_gen"
   "CMakeFiles/ROSBUILD_genmsg_py"
   "../src/SafetyLight_msgs/msg/__init__.py"
-  "../src/SafetyLight_msgs/msg/_SetRed.py"
-  "../src/SafetyLight_msgs/msg/_SetGreen.py"
   "../src/SafetyLight_msgs/msg/_SetColor.py"
+  "../src/SafetyLight_msgs/msg/_SetGreen.py"
+  "../src/SafetyLight_msgs/msg/_SetRed.py"
   "../src/SafetyLight_msgs/msg/_SetYellow.py"
 )
 

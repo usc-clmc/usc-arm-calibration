@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/pier
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/pier/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/pier_ext.dir/depend.make
@@ -66,17 +66,17 @@ CMakeFiles/pier_ext.dir/src/pier_ext.o: /opt/ros/fuerte/stacks/geometry/tf/manif
 CMakeFiles/pier_ext.dir/src/pier_ext.o: /opt/ros/fuerte/share/rosparam/manifest.xml
 CMakeFiles/pier_ext.dir/src/pier_ext.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/pier_ext.dir/src/pier_ext.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/pier/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/pier_ext.dir/src/pier_ext.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/pier_ext.dir/src/pier_ext.o -c /home/test_user/usc-arm-calibration/pier/src/pier_ext.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/pier_ext.dir/src/pier_ext.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/src/pier_ext.cpp
 
 CMakeFiles/pier_ext.dir/src/pier_ext.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pier_ext.dir/src/pier_ext.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/pier/src/pier_ext.cpp > CMakeFiles/pier_ext.dir/src/pier_ext.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/src/pier_ext.cpp > CMakeFiles/pier_ext.dir/src/pier_ext.i
 
 CMakeFiles/pier_ext.dir/src/pier_ext.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pier_ext.dir/src/pier_ext.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/pier/src/pier_ext.cpp -o CMakeFiles/pier_ext.dir/src/pier_ext.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/src/pier_ext.cpp -o CMakeFiles/pier_ext.dir/src/pier_ext.s
 
 CMakeFiles/pier_ext.dir/src/pier_ext.o.requires:
 .PHONY : CMakeFiles/pier_ext.dir/src/pier_ext.o.requires
@@ -113,6 +113,6 @@ CMakeFiles/pier_ext.dir/clean:
 .PHONY : CMakeFiles/pier_ext.dir/clean
 
 CMakeFiles/pier_ext.dir/depend:
-	cd /home/test_user/usc-arm-calibration/pier/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/pier /home/test_user/usc-arm-calibration/pier /home/test_user/usc-arm-calibration/pier/build /home/test_user/usc-arm-calibration/pier/build /home/test_user/usc-arm-calibration/pier/build/CMakeFiles/pier_ext.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/build/CMakeFiles/pier_ext.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/pier_ext.dir/depend
 

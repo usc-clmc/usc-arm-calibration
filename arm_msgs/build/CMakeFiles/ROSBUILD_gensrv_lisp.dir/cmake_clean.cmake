@@ -6,15 +6,15 @@ FILE(REMOVE_RECURSE
   "../msg_gen"
   "../srv_gen"
   "CMakeFiles/ROSBUILD_gensrv_lisp"
+  "../srv_gen/lisp/GetTableCoeffs.lisp"
+  "../srv_gen/lisp/_package.lisp"
+  "../srv_gen/lisp/_package_GetTableCoeffs.lisp"
   "../srv_gen/lisp/FindObjectMulti.lisp"
   "../srv_gen/lisp/_package.lisp"
   "../srv_gen/lisp/_package_FindObjectMulti.lisp"
   "../srv_gen/lisp/FindObject.lisp"
   "../srv_gen/lisp/_package.lisp"
   "../srv_gen/lisp/_package_FindObject.lisp"
-  "../srv_gen/lisp/GetTableCoeffs.lisp"
-  "../srv_gen/lisp/_package.lisp"
-  "../srv_gen/lisp/_package_GetTableCoeffs.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

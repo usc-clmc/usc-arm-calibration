@@ -3,9 +3,9 @@
 
 CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o
  ../include/arm_dashboard_client/dashboard_client.h
- /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg_gen/cpp/include/SafetyLight_msgs/SetColor.h
- /home/test_user/usc-arm-calibration/arm_dashboard_client/src/dashboard_client.cpp
- /home/test_user/usc-arm-calibration/arm_msgs/msg_gen/cpp/include/arm_msgs/StatusReport.h
+ /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg_gen/cpp/include/SafetyLight_msgs/SetColor.h
+ /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/src/dashboard_client.cpp
+ /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg_gen/cpp/include/arm_msgs/StatusReport.h
  /opt/ros/fuerte/include/XmlRpcDecl.h
  /opt/ros/fuerte/include/XmlRpcValue.h
  /opt/ros/fuerte/include/ros/advertise_options.h

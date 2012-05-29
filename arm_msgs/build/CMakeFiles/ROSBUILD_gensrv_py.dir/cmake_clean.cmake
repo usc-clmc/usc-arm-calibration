@@ -7,9 +7,9 @@ FILE(REMOVE_RECURSE
   "../srv_gen"
   "CMakeFiles/ROSBUILD_gensrv_py"
   "../src/arm_msgs/srv/__init__.py"
+  "../src/arm_msgs/srv/_GetTableCoeffs.py"
   "../src/arm_msgs/srv/_FindObjectMulti.py"
   "../src/arm_msgs/srv/_FindObject.py"
-  "../src/arm_msgs/srv/_GetTableCoeffs.py"
 )
 
 # Per-language clean rules from dependency scanning.

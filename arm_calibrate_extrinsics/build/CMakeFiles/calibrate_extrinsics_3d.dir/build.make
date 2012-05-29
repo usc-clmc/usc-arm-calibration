@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/calibrate_extrinsics_3d.dir/depend.make
@@ -71,7 +71,7 @@ CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/f
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -83,40 +83,40 @@ CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/f
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/ccny_vision/ar_target/manifest.xml
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/arm_msgs/manifest.xml
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/manifest.xml
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/manifest.xml
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/share/actionlib_msgs/manifest.xml
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/share/actionlib/manifest.xml
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/arm_controller_msgs/manifest.xml
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/arm_behavior_actions/manifest.xml
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/SafetyLight_msgs/manifest.xml
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/arm_dashboard_client/manifest.xml
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/manifest.xml
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions/manifest.xml
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/manifest.xml
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/manifest.xml
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/stacks/geometry/tf_conversions/manifest.xml
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/stacks/robot_model/robot_state_publisher/manifest.xml
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/arm_head_control/manifest.xml
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/manifest.xml
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg_gen/generated
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/arm_msgs/msg_gen/generated
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/arm_msgs/srv_gen/generated
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/arm_controller_msgs/msg_gen/generated
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/arm_behavior_actions/msg_gen/generated
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg_gen/generated
-CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/test_user/usc-arm-calibration/arm_head_control/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg_gen/generated
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg_gen/generated
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/srv_gen/generated
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg_gen/generated
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions/msg_gen/generated
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg_gen/generated
+CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o -c /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/src/calibrate_extrinsics_3d.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/src/calibrate_extrinsics_3d.cpp
 
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/src/calibrate_extrinsics_3d.cpp > CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/src/calibrate_extrinsics_3d.cpp > CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.i
 
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/src/calibrate_extrinsics_3d.cpp -o CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/src/calibrate_extrinsics_3d.cpp -o CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.s
 
 CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o.requires:
 .PHONY : CMakeFiles/calibrate_extrinsics_3d.dir/src/calibrate_extrinsics_3d.o.requires
@@ -152,6 +152,6 @@ CMakeFiles/calibrate_extrinsics_3d.dir/clean:
 .PHONY : CMakeFiles/calibrate_extrinsics_3d.dir/clean
 
 CMakeFiles/calibrate_extrinsics_3d.dir/depend:
-	cd /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles/calibrate_extrinsics_3d.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles/calibrate_extrinsics_3d.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/calibrate_extrinsics_3d.dir/depend
 

@@ -7,12 +7,12 @@ FILE(REMOVE_RECURSE
   "../srv_gen"
   "CMakeFiles/ROSBUILD_genmsg_cpp"
   "../msg_gen/cpp/include/arm_msgs/InertialParameters.h"
+  "../msg_gen/cpp/include/arm_msgs/StatusReport.h"
   "../msg_gen/cpp/include/arm_msgs/Task.h"
-  "../msg_gen/cpp/include/arm_msgs/Objects.h"
   "../msg_gen/cpp/include/arm_msgs/Object.h"
   "../msg_gen/cpp/include/arm_msgs/Tasks.h"
+  "../msg_gen/cpp/include/arm_msgs/Objects.h"
   "../msg_gen/cpp/include/arm_msgs/BoundingBox.h"
-  "../msg_gen/cpp/include/arm_msgs/StatusReport.h"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -7,8 +7,8 @@ FILE(REMOVE_RECURSE
   "../srv_gen"
   "CMakeFiles/ROSBUILD_genmsg_py"
   "../src/arm_calibrate_extrinsics/msg/__init__.py"
-  "../src/arm_calibrate_extrinsics/msg/_ARFrame.py"
   "../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py"
+  "../src/arm_calibrate_extrinsics/msg/_ARFrame.py"
 )
 
 # Per-language clean rules from dependency scanning.

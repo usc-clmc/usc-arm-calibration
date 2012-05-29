@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/ccny_vision/ar_target
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/mk_patt.dir/depend.make
@@ -71,7 +71,7 @@ CMakeFiles/mk_patt.dir/src/mk_patt.o: /opt/ros/fuerte/share/ros/core/rosbuild/ma
 CMakeFiles/mk_patt.dir/src/mk_patt.o: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 CMakeFiles/mk_patt.dir/src/mk_patt.o: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 CMakeFiles/mk_patt.dir/src/mk_patt.o: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-CMakeFiles/mk_patt.dir/src/mk_patt.o: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+CMakeFiles/mk_patt.dir/src/mk_patt.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 CMakeFiles/mk_patt.dir/src/mk_patt.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 CMakeFiles/mk_patt.dir/src/mk_patt.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 CMakeFiles/mk_patt.dir/src/mk_patt.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -83,22 +83,22 @@ CMakeFiles/mk_patt.dir/src/mk_patt.o: /opt/ros/fuerte/stacks/robot_model/urdf/ma
 CMakeFiles/mk_patt.dir/src/mk_patt.o: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 CMakeFiles/mk_patt.dir/src/mk_patt.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/mk_patt.dir/src/mk_patt.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/mk_patt.dir/src/mk_patt.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-CMakeFiles/mk_patt.dir/src/mk_patt.o: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+CMakeFiles/mk_patt.dir/src/mk_patt.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+CMakeFiles/mk_patt.dir/src/mk_patt.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 CMakeFiles/mk_patt.dir/src/mk_patt.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/mk_patt.dir/src/mk_patt.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-CMakeFiles/mk_patt.dir/src/mk_patt.o: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/mk_patt.dir/src/mk_patt.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/mk_patt.dir/src/mk_patt.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/mk_patt.dir/src/mk_patt.o -c /home/test_user/usc-arm-calibration/ccny_vision/ar_target/src/mk_patt.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/mk_patt.dir/src/mk_patt.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/src/mk_patt.cpp
 
 CMakeFiles/mk_patt.dir/src/mk_patt.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mk_patt.dir/src/mk_patt.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/ccny_vision/ar_target/src/mk_patt.cpp > CMakeFiles/mk_patt.dir/src/mk_patt.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/src/mk_patt.cpp > CMakeFiles/mk_patt.dir/src/mk_patt.i
 
 CMakeFiles/mk_patt.dir/src/mk_patt.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mk_patt.dir/src/mk_patt.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/ccny_vision/ar_target/src/mk_patt.cpp -o CMakeFiles/mk_patt.dir/src/mk_patt.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/src/mk_patt.cpp -o CMakeFiles/mk_patt.dir/src/mk_patt.s
 
 CMakeFiles/mk_patt.dir/src/mk_patt.o.requires:
 .PHONY : CMakeFiles/mk_patt.dir/src/mk_patt.o.requires
@@ -134,6 +134,6 @@ CMakeFiles/mk_patt.dir/clean:
 .PHONY : CMakeFiles/mk_patt.dir/clean
 
 CMakeFiles/mk_patt.dir/depend:
-	cd /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/ccny_vision/ar_target /home/test_user/usc-arm-calibration/ccny_vision/ar_target /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles/mk_patt.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles/mk_patt.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/mk_patt.dir/depend
 

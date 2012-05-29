@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/usc_utilities
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/usc_utilities/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build
 
 # Utility rule file for ROSBUILD_genmsg_py.
 
@@ -45,9 +45,9 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 CMakeFiles/ROSBUILD_genmsg_py: ../src/usc_utilities/msg/__init__.py
 
 ../src/usc_utilities/msg/__init__.py: ../src/usc_utilities/msg/_AccumulatedTrialStatistics.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/usc_utilities/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/usc_utilities/msg/__init__.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/test_user/usc-arm-calibration/usc_utilities/msg/AccumulatedTrialStatistics.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg/AccumulatedTrialStatistics.msg
 
 ../src/usc_utilities/msg/_AccumulatedTrialStatistics.py: ../msg/AccumulatedTrialStatistics.msg
 ../src/usc_utilities/msg/_AccumulatedTrialStatistics.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -70,10 +70,10 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/usc_utilities/msg/__init__.py
 ../src/usc_utilities/msg/_AccumulatedTrialStatistics.py: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
 ../src/usc_utilities/msg/_AccumulatedTrialStatistics.py: /opt/ros/fuerte/share/rosbag/manifest.xml
 ../src/usc_utilities/msg/_AccumulatedTrialStatistics.py: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../src/usc_utilities/msg/_AccumulatedTrialStatistics.py: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/usc_utilities/build/CMakeFiles $(CMAKE_PROGRESS_2)
+../src/usc_utilities/msg/_AccumulatedTrialStatistics.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/usc_utilities/msg/_AccumulatedTrialStatistics.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/usc_utilities/msg/AccumulatedTrialStatistics.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg/AccumulatedTrialStatistics.msg
 
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
 ROSBUILD_genmsg_py: ../src/usc_utilities/msg/__init__.py
@@ -90,6 +90,6 @@ CMakeFiles/ROSBUILD_genmsg_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_py.dir/depend:
-	cd /home/test_user/usc-arm-calibration/usc_utilities/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/usc_utilities /home/test_user/usc-arm-calibration/usc_utilities /home/test_user/usc-arm-calibration/usc_utilities/build /home/test_user/usc-arm-calibration/usc_utilities/build /home/test_user/usc-arm-calibration/usc_utilities/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/depend
 

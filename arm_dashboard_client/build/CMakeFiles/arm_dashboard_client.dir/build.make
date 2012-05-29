@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/arm_dashboard_client
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/arm_dashboard_client/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/arm_dashboard_client.dir/depend.make
@@ -53,22 +53,22 @@ CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /opt/ros/fuerte/shar
 CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /opt/ros/fuerte/share/roscpp/manifest.xml
 CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /opt/ros/fuerte/share/rospy/manifest.xml
 CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /home/test_user/usc-arm-calibration/arm_msgs/manifest.xml
-CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /home/test_user/usc-arm-calibration/SafetyLight_msgs/manifest.xml
-CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /home/test_user/usc-arm-calibration/arm_msgs/msg_gen/generated
-CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /home/test_user/usc-arm-calibration/arm_msgs/srv_gen/generated
-CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_dashboard_client/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/manifest.xml
+CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/manifest.xml
+CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg_gen/generated
+CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/srv_gen/generated
+CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o -c /home/test_user/usc-arm-calibration/arm_dashboard_client/src/dashboard_client.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/src/dashboard_client.cpp
 
 CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/arm_dashboard_client/src/dashboard_client.cpp > CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/src/dashboard_client.cpp > CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.i
 
 CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/arm_dashboard_client/src/dashboard_client.cpp -o CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/src/dashboard_client.cpp -o CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.s
 
 CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o.requires:
 .PHONY : CMakeFiles/arm_dashboard_client.dir/src/dashboard_client.o.requires
@@ -104,6 +104,6 @@ CMakeFiles/arm_dashboard_client.dir/clean:
 .PHONY : CMakeFiles/arm_dashboard_client.dir/clean
 
 CMakeFiles/arm_dashboard_client.dir/depend:
-	cd /home/test_user/usc-arm-calibration/arm_dashboard_client/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/arm_dashboard_client /home/test_user/usc-arm-calibration/arm_dashboard_client /home/test_user/usc-arm-calibration/arm_dashboard_client/build /home/test_user/usc-arm-calibration/arm_dashboard_client/build /home/test_user/usc-arm-calibration/arm_dashboard_client/build/CMakeFiles/arm_dashboard_client.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/build/CMakeFiles/arm_dashboard_client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/arm_dashboard_client.dir/depend
 

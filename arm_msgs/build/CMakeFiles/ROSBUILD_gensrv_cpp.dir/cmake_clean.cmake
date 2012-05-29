@@ -6,9 +6,9 @@ FILE(REMOVE_RECURSE
   "../msg_gen"
   "../srv_gen"
   "CMakeFiles/ROSBUILD_gensrv_cpp"
+  "../srv_gen/cpp/include/arm_msgs/GetTableCoeffs.h"
   "../srv_gen/cpp/include/arm_msgs/FindObjectMulti.h"
   "../srv_gen/cpp/include/arm_msgs/FindObject.h"
-  "../srv_gen/cpp/include/arm_msgs/GetTableCoeffs.h"
 )
 
 # Per-language clean rules from dependency scanning.

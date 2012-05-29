@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/arm_controller_msgs
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/arm_controller_msgs/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build
 
 # Utility rule file for ROSBUILD_genmsg_py.
 
@@ -44,98 +44,107 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 
 CMakeFiles/ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/__init__.py
 
-../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_FingerForceControlGains.py
+../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_ResetBreakaway.py
 ../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensorStatus.py
+../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_FingerForceControlGains.py
+../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_CalibratePressureSensorsStatus.py
+../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_GraspStatus.py
+../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_PressureSensors.py
+../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_ControllerStatus.py
+../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py
+../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_Grasp.py
+../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_Acceleration.py
+../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py
+../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_CalibratePressureSensors.py
 ../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py
 ../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_StrainGauge.py
-../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_CalibratePressureSensorsStatus.py
-../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_ControllerStatus.py
-../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py
-../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py
-../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_Acceleration.py
-../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py
 ../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_EndEffectorState.py
-../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_GraspStatus.py
-../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_Grasp.py
-../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_CalibratePressureSensors.py
-../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_ResetBreakaway.py
-../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_PressureSensors.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_1)
+../src/arm_controller_msgs/msg/__init__.py: ../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/__init__.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/FingerForceControlGains.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/CalibrateForceTorqueSensorStatus.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/CalibrateForceTorqueSensor.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/StrainGauge.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/CalibratePressureSensorsStatus.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/ControllerStatus.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/ResetBreakawayStatus.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/IncreaseMaxFingerTorque.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/Acceleration.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/UpdateStrainGagesCalibration.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/EndEffectorState.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/GraspStatus.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/Grasp.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/CalibratePressureSensors.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/ResetBreakaway.msg /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/PressureSensors.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/ResetBreakaway.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/CalibrateForceTorqueSensorStatus.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/FingerForceControlGains.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/CalibratePressureSensorsStatus.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/GraspStatus.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/PressureSensors.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/ControllerStatus.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/UpdateStrainGagesCalibration.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/Grasp.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/Acceleration.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/ResetBreakawayStatus.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/CalibratePressureSensors.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/CalibrateForceTorqueSensor.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/StrainGauge.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/EndEffectorState.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/IncreaseMaxFingerTorque.msg
 
-../src/arm_controller_msgs/msg/_FingerForceControlGains.py: ../msg/FingerForceControlGains.msg
-../src/arm_controller_msgs/msg/_FingerForceControlGains.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_controller_msgs/msg/_FingerForceControlGains.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_controller_msgs/msg/_FingerForceControlGains.py: ../manifest.xml
-../src/arm_controller_msgs/msg/_FingerForceControlGains.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_FingerForceControlGains.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/FingerForceControlGains.msg
+../src/arm_controller_msgs/msg/_ResetBreakaway.py: ../msg/ResetBreakaway.msg
+../src/arm_controller_msgs/msg/_ResetBreakaway.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_controller_msgs/msg/_ResetBreakaway.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_controller_msgs/msg/_ResetBreakaway.py: ../manifest.xml
+../src/arm_controller_msgs/msg/_ResetBreakaway.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_ResetBreakaway.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/ResetBreakaway.msg
 
 ../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensorStatus.py: ../msg/CalibrateForceTorqueSensorStatus.msg
 ../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensorStatus.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
 ../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensorStatus.py: /opt/ros/fuerte/share/roslib/bin/gendeps
 ../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensorStatus.py: ../manifest.xml
 ../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensorStatus.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensorStatus.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/CalibrateForceTorqueSensorStatus.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/CalibrateForceTorqueSensorStatus.msg
 
-../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py: ../msg/CalibrateForceTorqueSensor.msg
-../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py: ../manifest.xml
-../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/CalibrateForceTorqueSensor.msg
-
-../src/arm_controller_msgs/msg/_StrainGauge.py: ../msg/StrainGauge.msg
-../src/arm_controller_msgs/msg/_StrainGauge.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_controller_msgs/msg/_StrainGauge.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_controller_msgs/msg/_StrainGauge.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
-../src/arm_controller_msgs/msg/_StrainGauge.py: ../manifest.xml
-../src/arm_controller_msgs/msg/_StrainGauge.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_StrainGauge.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/StrainGauge.msg
+../src/arm_controller_msgs/msg/_FingerForceControlGains.py: ../msg/FingerForceControlGains.msg
+../src/arm_controller_msgs/msg/_FingerForceControlGains.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_controller_msgs/msg/_FingerForceControlGains.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_controller_msgs/msg/_FingerForceControlGains.py: ../manifest.xml
+../src/arm_controller_msgs/msg/_FingerForceControlGains.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_FingerForceControlGains.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/FingerForceControlGains.msg
 
 ../src/arm_controller_msgs/msg/_CalibratePressureSensorsStatus.py: ../msg/CalibratePressureSensorsStatus.msg
 ../src/arm_controller_msgs/msg/_CalibratePressureSensorsStatus.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
 ../src/arm_controller_msgs/msg/_CalibratePressureSensorsStatus.py: /opt/ros/fuerte/share/roslib/bin/gendeps
 ../src/arm_controller_msgs/msg/_CalibratePressureSensorsStatus.py: ../manifest.xml
 ../src/arm_controller_msgs/msg/_CalibratePressureSensorsStatus.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_CalibratePressureSensorsStatus.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/CalibratePressureSensorsStatus.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/CalibratePressureSensorsStatus.msg
+
+../src/arm_controller_msgs/msg/_GraspStatus.py: ../msg/GraspStatus.msg
+../src/arm_controller_msgs/msg/_GraspStatus.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_controller_msgs/msg/_GraspStatus.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_controller_msgs/msg/_GraspStatus.py: ../manifest.xml
+../src/arm_controller_msgs/msg/_GraspStatus.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_GraspStatus.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/GraspStatus.msg
+
+../src/arm_controller_msgs/msg/_PressureSensors.py: ../msg/PressureSensors.msg
+../src/arm_controller_msgs/msg/_PressureSensors.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_controller_msgs/msg/_PressureSensors.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_controller_msgs/msg/_PressureSensors.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/arm_controller_msgs/msg/_PressureSensors.py: ../manifest.xml
+../src/arm_controller_msgs/msg/_PressureSensors.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_PressureSensors.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/PressureSensors.msg
 
 ../src/arm_controller_msgs/msg/_ControllerStatus.py: ../msg/ControllerStatus.msg
 ../src/arm_controller_msgs/msg/_ControllerStatus.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
 ../src/arm_controller_msgs/msg/_ControllerStatus.py: /opt/ros/fuerte/share/roslib/bin/gendeps
 ../src/arm_controller_msgs/msg/_ControllerStatus.py: ../manifest.xml
 ../src/arm_controller_msgs/msg/_ControllerStatus.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_ControllerStatus.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/ControllerStatus.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/ControllerStatus.msg
 
-../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py: ../msg/ResetBreakawayStatus.msg
-../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py: ../manifest.xml
-../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/ResetBreakawayStatus.msg
+../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py: ../msg/UpdateStrainGagesCalibration.msg
+../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py: ../manifest.xml
+../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/UpdateStrainGagesCalibration.msg
 
-../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py: ../msg/IncreaseMaxFingerTorque.msg
-../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py: ../manifest.xml
-../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/IncreaseMaxFingerTorque.msg
+../src/arm_controller_msgs/msg/_Grasp.py: ../msg/Grasp.msg
+../src/arm_controller_msgs/msg/_Grasp.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_controller_msgs/msg/_Grasp.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_controller_msgs/msg/_Grasp.py: ../manifest.xml
+../src/arm_controller_msgs/msg/_Grasp.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_Grasp.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/Grasp.msg
 
 ../src/arm_controller_msgs/msg/_Acceleration.py: ../msg/Acceleration.msg
 ../src/arm_controller_msgs/msg/_Acceleration.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -143,18 +152,46 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/__init__.py
 ../src/arm_controller_msgs/msg/_Acceleration.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
 ../src/arm_controller_msgs/msg/_Acceleration.py: ../manifest.xml
 ../src/arm_controller_msgs/msg/_Acceleration.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_Acceleration.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/Acceleration.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/Acceleration.msg
 
-../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py: ../msg/UpdateStrainGagesCalibration.msg
-../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py: ../manifest.xml
-../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_11)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/UpdateStrainGagesCalibration.msg
+../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py: ../msg/ResetBreakawayStatus.msg
+../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py: ../manifest.xml
+../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/ResetBreakawayStatus.msg
+
+../src/arm_controller_msgs/msg/_CalibratePressureSensors.py: ../msg/CalibratePressureSensors.msg
+../src/arm_controller_msgs/msg/_CalibratePressureSensors.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_controller_msgs/msg/_CalibratePressureSensors.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_controller_msgs/msg/_CalibratePressureSensors.py: ../manifest.xml
+../src/arm_controller_msgs/msg/_CalibratePressureSensors.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_CalibratePressureSensors.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/CalibratePressureSensors.msg
+
+../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py: ../msg/CalibrateForceTorqueSensor.msg
+../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py: ../manifest.xml
+../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/CalibrateForceTorqueSensor.msg
+
+../src/arm_controller_msgs/msg/_StrainGauge.py: ../msg/StrainGauge.msg
+../src/arm_controller_msgs/msg/_StrainGauge.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_controller_msgs/msg/_StrainGauge.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_controller_msgs/msg/_StrainGauge.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/arm_controller_msgs/msg/_StrainGauge.py: ../manifest.xml
+../src/arm_controller_msgs/msg/_StrainGauge.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_StrainGauge.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/StrainGauge.msg
 
 ../src/arm_controller_msgs/msg/_EndEffectorState.py: ../msg/EndEffectorState.msg
 ../src/arm_controller_msgs/msg/_EndEffectorState.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -167,74 +204,37 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/__init__.py
 ../src/arm_controller_msgs/msg/_EndEffectorState.py: /opt/ros/fuerte/share/geometry_msgs/msg/Point.msg
 ../src/arm_controller_msgs/msg/_EndEffectorState.py: ../manifest.xml
 ../src/arm_controller_msgs/msg/_EndEffectorState.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_EndEffectorState.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/EndEffectorState.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/EndEffectorState.msg
 
-../src/arm_controller_msgs/msg/_GraspStatus.py: ../msg/GraspStatus.msg
-../src/arm_controller_msgs/msg/_GraspStatus.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_controller_msgs/msg/_GraspStatus.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_controller_msgs/msg/_GraspStatus.py: ../manifest.xml
-../src/arm_controller_msgs/msg/_GraspStatus.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_13)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_GraspStatus.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/GraspStatus.msg
-
-../src/arm_controller_msgs/msg/_Grasp.py: ../msg/Grasp.msg
-../src/arm_controller_msgs/msg/_Grasp.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_controller_msgs/msg/_Grasp.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_controller_msgs/msg/_Grasp.py: ../manifest.xml
-../src/arm_controller_msgs/msg/_Grasp.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_14)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_Grasp.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/Grasp.msg
-
-../src/arm_controller_msgs/msg/_CalibratePressureSensors.py: ../msg/CalibratePressureSensors.msg
-../src/arm_controller_msgs/msg/_CalibratePressureSensors.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_controller_msgs/msg/_CalibratePressureSensors.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_controller_msgs/msg/_CalibratePressureSensors.py: ../manifest.xml
-../src/arm_controller_msgs/msg/_CalibratePressureSensors.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_15)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_CalibratePressureSensors.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/CalibratePressureSensors.msg
-
-../src/arm_controller_msgs/msg/_ResetBreakaway.py: ../msg/ResetBreakaway.msg
-../src/arm_controller_msgs/msg/_ResetBreakaway.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_controller_msgs/msg/_ResetBreakaway.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_controller_msgs/msg/_ResetBreakaway.py: ../manifest.xml
-../src/arm_controller_msgs/msg/_ResetBreakaway.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_16)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_ResetBreakaway.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/ResetBreakaway.msg
-
-../src/arm_controller_msgs/msg/_PressureSensors.py: ../msg/PressureSensors.msg
-../src/arm_controller_msgs/msg/_PressureSensors.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_controller_msgs/msg/_PressureSensors.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_controller_msgs/msg/_PressureSensors.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
-../src/arm_controller_msgs/msg/_PressureSensors.py: ../manifest.xml
-../src/arm_controller_msgs/msg/_PressureSensors.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_17)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_PressureSensors.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_controller_msgs/msg/PressureSensors.msg
+../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py: ../msg/IncreaseMaxFingerTorque.msg
+../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py: ../manifest.xml
+../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg/IncreaseMaxFingerTorque.msg
 
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
 ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/__init__.py
-ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_FingerForceControlGains.py
+ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_ResetBreakaway.py
 ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensorStatus.py
+ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_FingerForceControlGains.py
+ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_CalibratePressureSensorsStatus.py
+ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_GraspStatus.py
+ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_PressureSensors.py
+ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_ControllerStatus.py
+ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py
+ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_Grasp.py
+ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_Acceleration.py
+ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py
+ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_CalibratePressureSensors.py
 ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_CalibrateForceTorqueSensor.py
 ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_StrainGauge.py
-ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_CalibratePressureSensorsStatus.py
-ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_ControllerStatus.py
-ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_ResetBreakawayStatus.py
-ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py
-ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_Acceleration.py
-ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_UpdateStrainGagesCalibration.py
 ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_EndEffectorState.py
-ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_GraspStatus.py
-ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_Grasp.py
-ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_CalibratePressureSensors.py
-ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_ResetBreakaway.py
-ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_PressureSensors.py
+ROSBUILD_genmsg_py: ../src/arm_controller_msgs/msg/_IncreaseMaxFingerTorque.py
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py.dir/build.make
 .PHONY : ROSBUILD_genmsg_py
 
@@ -247,6 +247,6 @@ CMakeFiles/ROSBUILD_genmsg_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_py.dir/depend:
-	cd /home/test_user/usc-arm-calibration/arm_controller_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/arm_controller_msgs /home/test_user/usc-arm-calibration/arm_controller_msgs /home/test_user/usc-arm-calibration/arm_controller_msgs/build /home/test_user/usc-arm-calibration/arm_controller_msgs/build /home/test_user/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/depend
 

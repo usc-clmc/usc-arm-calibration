@@ -1,0 +1,418 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Installation (tested on ubuntu 12.04)
+\end_layout
+
+\begin_layout Itemize
+install fuerte from debs
+\end_layout
+
+\begin_layout Itemize
+get the latest code from https://github.com/usc-clmc/usc-arm-calibration
+\end_layout
+
+\begin_layout Itemize
+install the scipy machine learning toolkit: sudo apt-get install python-sklearn
+\end_layout
+
+\begin_layout Section
+Running the calibration on a specific bagfile
+\end_layout
+
+\begin_layout Enumerate
+Collect a calibration bagfile (peter, want to fill this in a bit?) This
+ process involves putting the calibration poster with AR markers on the
+ table, then moving the head to a bunch of poses.
+ At each pose, the 3D position (in camera frame) of any markers which can
+ be seen by both the left and right bumblebee cameras is recorded.
+\end_layout
+
+\begin_layout Enumerate
+Run the calibration script on the resulting bagfile
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+make sure you have a roscore running (the script publishes rviz markers
+ to help visualize the optimization)
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+rosrun arm_fiducial_cal scripts/calibrate.py <bagfile_filename>
+\end_layout
+
+\end_deeper
+\begin_layout Section
+What the calibration script does:
+\end_layout
+
+\begin_layout Subsection
+Calibrating the rigid transforms
+\end_layout
+
+\begin_layout Standard
+First, we need to name the transforms we care about:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{T}^{B}$
+\end_inset
+
+is the transform from the target frame to the robot base frame.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{C}^{P}$
+\end_inset
+
+ is the transform from the left bumblebee frame to the top-of-pan-tilt frame.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{P}^{B}$
+\end_inset
+
+ is the transform from the top-of-pan-tilt frame to to the robot base.
+\end_layout
+
+\begin_layout Standard
+During this calibration, we're going to solve for 
+\begin_inset Formula $H_{T}^{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $H_{P}^{C}$
+\end_inset
+
+.
+ We assume that 
+\begin_inset Formula $H_{B}^{P}$
+\end_inset
+
+is known (that the joint angles and kinematic model is correct).
+ Lets say that we see a fiducial with the stereo pair.
+ We'll denote the 3D position in camera frame as seen by the camera 
+\begin_inset Formula $p_{cam}$
+\end_inset
+
+, and the position of that fiducial in the target frame (known since we
+ designed the target) as 
+\begin_inset Formula $p_{target}$
+\end_inset
+
+.
+ We will denote the (not yet calculated) position of this point in the robot's
+ base frame as 
+\begin_inset Formula $p_{base}$
+\end_inset
+
+.
+ There are two ways that we can calculate the 3D position of this point
+ in base frame.
+ First, if we know 
+\begin_inset Formula $H_{P}^{B}$
+\end_inset
+
+ (target to base transform), then we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p_{base}=H_{T}^{B}p_{target}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Second, if we know 
+\begin_inset Formula $H_{P}^{B}$
+\end_inset
+
+ (bumblebee to top-of-pan-tilt transform), we have
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p_{base}=H_{P}^{B}H_{C}^{P}p_{cam}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If our model were perfect, these two would be the same point in base frame.
+ But it isn't so we can calculate an error for the position of this particular
+ fiducial in this particular head pose:
+\begin_inset Formula 
+\[
+err=|H_{P}^{B}H_{C}^{P}p_{cam}-H_{T}^{B}p_{target}|
+\]
+
+\end_inset
+
+Since we actually have observed a bunch of different fiducials from a bunch
+ of different head poses, we use the sum of these errors:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+err=\sum|H_{P}^{B}H_{C}^{P}p_{cam}-H_{T}^{B}p_{target}|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we have two unknown transforms we need to solve for: 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $H_{C}^{P}$
+\end_inset
+
+ and 
+\begin_inset Formula $H_{T}^{B}$
+\end_inset
+
+.
+ First we fix 
+\begin_inset Formula $H_{C}^{P}$
+\end_inset
+
+ (camera to top-of-pan-tilt) and solve for 
+\begin_inset Formula $H_{T}^{B}$
+\end_inset
+
+ (target to base) by minimizing the sum of errrors using a nonlinear optimizer.
+ Next, we assume this estimated 
+\begin_inset Formula $H_{T}^{B}$
+\end_inset
+
+ is correct, and do the same thing to solve for 
+\begin_inset Formula $H_{C}^{P}$
+\end_inset
+
+.
+ Then we repeat this a couple times, fixing one and solving for the other,
+ so that they can converge to some nice values.
+ 
+\end_layout
+
+\begin_layout Subsection
+Adding a GP correction
+\end_layout
+
+\begin_layout Standard
+In reality, the rigid kinematics model doesn't perfectly model the behavior
+ of the shitty pan-tilt unit.
+ To account for this, we introduce a new transform, 
+\begin_inset Formula $H_{G}^{C}$
+\end_inset
+
+.
+ This is a transform froma corrected camera frame (G) to the camera frame
+ the rigid kinematics model came up with (C).
+ For any head position in which we saw more than 3 non-colinear fiducials,
+ we can calculate the transform that minimizes the error that remains after
+ calibrating the rigid kinematics model.
+ For now we assume that the bottom pan tilt is fixed, and that the error
+ transform 
+\begin_inset Formula $H_{G}^{C}$
+\end_inset
+
+ is a function of the roll, pitch, and yaw of the camera in the base frame.
+ This gives us
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H_{G}^{C}=f(roll,pitch,yaw)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We model this function f as a Gaussian process.
+ Actually we need more than one, since the transform is 6 dimensional.
+ We use euler angles plus a translation to represent the transform, and
+ estimate a separate GP for each of (roll, pitch, yaw, x0, y0, z0) of 
+\begin_inset Formula $H_{G}^{C}$
+\end_inset
+
+.
+ These should be small values, since they're just corrections.
+ The choice of a GP here isn't actually that important; we're just using
+ it to interpolate between each of the poses we used when we collected the
+ calibration data.
+\end_layout
+
+\begin_layout Section
+Understanding the output text of the calibration script
+\end_layout
+
+\begin_layout Standard
+It helps to run the script in a wide terminal (120 columns or more) to see
+ the output clearly.
+ The calibration script prints out, in order:
+\end_layout
+
+\begin_layout Itemize
+Each of the frames (a single head pose) it finds in the bagfile, and the
+ ID number of each AR marker it saw in this pose.
+ If there are less than 3 markers visible, the frame is ignored, since we
+ can't compute a 6DOF camera to calibration target transform.
+ Most frames should have 3 to 10 markers visible.
+\end_layout
+
+\begin_layout Itemize
+Results of the optimization for the base to target and the camera to top-of-pan-
+tilt 6DOF transforms.
+ First the base to target transform is optimized, then the camera to top-of-pan-
+tilt transform is optimized.
+ Then we repeat this a few times.
+ For each optimization, during the optimization you should see a few lines
+ that look like: 400 : -0.896 0.670 0.813 -0.055 0.009 0.078 : 0.02
+\begin_inset Quotes erd
+\end_inset
+
+.
+ These are 
+\begin_inset Quotes eld
+\end_inset
+
+<optimization iteration>: <roll> <pitch> <yaw> <x0> <y0> <z0>: <error>
+\begin_inset Quotes erd
+\end_inset
+
+.
+ For the table to base transform, z0 should be about 0.79 meters.
+ At the end of each optimization, some statistics about the optimization
+ are printed.
+\end_layout
+
+\begin_layout Itemize
+Inputs and outputs for the Gaussian process correction are printed:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+These look like: Frame 1: n_markers=9 spread=0.48: -2.376 -0.013 0.488 -> 0.016
+ 0.003 -0.006 0.013 -0.011 0.013
+\end_layout
+
+\begin_layout Itemize
+The fields are: <frame number>: <num_visible_markers> <spread>: <GP input
+ vector> -> output of each of the 6 GP's corrections for each of roll, pitch,
+ yaw, x, y, and z for this frame.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+spread
+\begin_inset Quotes erd
+\end_inset
+
+ is a number that tries to capture how spread out (as in not co-linear)
+ the visible markers are.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Files the calibration script outputs
+\end_layout
+
+\begin_layout Standard
+In addition to a couple of USC specific files which should probably get
+ deprecated at some point, the script updates the urdf in arm_robot_model/models
+/sensorsValues.urdf.xacro.
+ It also outputs the training data of the correction GP to arm_fiducial_cal/cali
+b/correction_gp.yaml
+\end_layout
+
+\end_body
+\end_document

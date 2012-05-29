@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/arm_behavior_actions
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/arm_behavior_actions/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions/build
 
 # Utility rule file for clean-test-results.
 
@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/arm_behavior_actions/buil
 include CMakeFiles/clean-test-results.dir/progress.make
 
 CMakeFiles/clean-test-results:
-	if ! rm -rf /home/test_user/.ros/test_results/arm_behavior_actions; then echo WARNING:\ failed\ to\ remove\ test-results\ directory ; fi
+	if ! rm -rf /home/jbinney/.ros/test_results/arm_behavior_actions; then echo WARNING:\ failed\ to\ remove\ test-results\ directory ; fi
 
 clean-test-results: CMakeFiles/clean-test-results
 clean-test-results: CMakeFiles/clean-test-results.dir/build.make
@@ -58,6 +58,6 @@ CMakeFiles/clean-test-results.dir/clean:
 .PHONY : CMakeFiles/clean-test-results.dir/clean
 
 CMakeFiles/clean-test-results.dir/depend:
-	cd /home/test_user/usc-arm-calibration/arm_behavior_actions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/arm_behavior_actions /home/test_user/usc-arm-calibration/arm_behavior_actions /home/test_user/usc-arm-calibration/arm_behavior_actions/build /home/test_user/usc-arm-calibration/arm_behavior_actions/build /home/test_user/usc-arm-calibration/arm_behavior_actions/build/CMakeFiles/clean-test-results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions/build/CMakeFiles/clean-test-results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean-test-results.dir/depend
 

@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/ccny_vision/ar_target
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build
 
 # Utility rule file for ROSBUILD_gensrv_cpp.
 
@@ -57,6 +57,6 @@ CMakeFiles/ROSBUILD_gensrv_cpp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_gensrv_cpp.dir/clean
 
 CMakeFiles/ROSBUILD_gensrv_cpp.dir/depend:
-	cd /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/ccny_vision/ar_target /home/test_user/usc-arm-calibration/ccny_vision/ar_target /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles/ROSBUILD_gensrv_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles/ROSBUILD_gensrv_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_gensrv_cpp.dir/depend
 

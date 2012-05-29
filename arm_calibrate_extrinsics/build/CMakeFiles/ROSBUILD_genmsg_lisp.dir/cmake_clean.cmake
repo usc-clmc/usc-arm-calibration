@@ -6,12 +6,12 @@ FILE(REMOVE_RECURSE
   "../msg_gen"
   "../srv_gen"
   "CMakeFiles/ROSBUILD_genmsg_lisp"
-  "../msg_gen/lisp/ARFrame.lisp"
-  "../msg_gen/lisp/_package.lisp"
-  "../msg_gen/lisp/_package_ARFrame.lisp"
   "../msg_gen/lisp/ARFrame3d.lisp"
   "../msg_gen/lisp/_package.lisp"
   "../msg_gen/lisp/_package_ARFrame3d.lisp"
+  "../msg_gen/lisp/ARFrame.lisp"
+  "../msg_gen/lisp/_package.lisp"
+  "../msg_gen/lisp/_package_ARFrame.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

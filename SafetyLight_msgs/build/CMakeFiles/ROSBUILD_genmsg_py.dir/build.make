@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/SafetyLight_msgs
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/SafetyLight_msgs/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build
 
 # Utility rule file for ROSBUILD_genmsg_py.
 
@@ -44,33 +44,13 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 
 CMakeFiles/ROSBUILD_genmsg_py: ../src/SafetyLight_msgs/msg/__init__.py
 
-../src/SafetyLight_msgs/msg/__init__.py: ../src/SafetyLight_msgs/msg/_SetRed.py
-../src/SafetyLight_msgs/msg/__init__.py: ../src/SafetyLight_msgs/msg/_SetGreen.py
 ../src/SafetyLight_msgs/msg/__init__.py: ../src/SafetyLight_msgs/msg/_SetColor.py
+../src/SafetyLight_msgs/msg/__init__.py: ../src/SafetyLight_msgs/msg/_SetGreen.py
+../src/SafetyLight_msgs/msg/__init__.py: ../src/SafetyLight_msgs/msg/_SetRed.py
 ../src/SafetyLight_msgs/msg/__init__.py: ../src/SafetyLight_msgs/msg/_SetYellow.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/SafetyLight_msgs/msg/__init__.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg/SetRed.msg /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg/SetGreen.msg /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg/SetColor.msg /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg/SetYellow.msg
-
-../src/SafetyLight_msgs/msg/_SetRed.py: ../msg/SetRed.msg
-../src/SafetyLight_msgs/msg/_SetRed.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/SafetyLight_msgs/msg/_SetRed.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/SafetyLight_msgs/msg/_SetRed.py: ../manifest.xml
-../src/SafetyLight_msgs/msg/_SetRed.py: /opt/ros/fuerte/share/roslang/manifest.xml
-../src/SafetyLight_msgs/msg/_SetRed.py: /opt/ros/fuerte/share/roscpp/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/SafetyLight_msgs/msg/_SetRed.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg/SetRed.msg
-
-../src/SafetyLight_msgs/msg/_SetGreen.py: ../msg/SetGreen.msg
-../src/SafetyLight_msgs/msg/_SetGreen.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/SafetyLight_msgs/msg/_SetGreen.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/SafetyLight_msgs/msg/_SetGreen.py: ../manifest.xml
-../src/SafetyLight_msgs/msg/_SetGreen.py: /opt/ros/fuerte/share/roslang/manifest.xml
-../src/SafetyLight_msgs/msg/_SetGreen.py: /opt/ros/fuerte/share/roscpp/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/SafetyLight_msgs/msg/_SetGreen.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg/SetGreen.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg/SetColor.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg/SetGreen.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg/SetRed.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg/SetYellow.msg
 
 ../src/SafetyLight_msgs/msg/_SetColor.py: ../msg/SetColor.msg
 ../src/SafetyLight_msgs/msg/_SetColor.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -78,9 +58,29 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/SafetyLight_msgs/msg/__init__.py
 ../src/SafetyLight_msgs/msg/_SetColor.py: ../manifest.xml
 ../src/SafetyLight_msgs/msg/_SetColor.py: /opt/ros/fuerte/share/roslang/manifest.xml
 ../src/SafetyLight_msgs/msg/_SetColor.py: /opt/ros/fuerte/share/roscpp/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/SafetyLight_msgs/msg/_SetColor.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg/SetColor.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg/SetColor.msg
+
+../src/SafetyLight_msgs/msg/_SetGreen.py: ../msg/SetGreen.msg
+../src/SafetyLight_msgs/msg/_SetGreen.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/SafetyLight_msgs/msg/_SetGreen.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/SafetyLight_msgs/msg/_SetGreen.py: ../manifest.xml
+../src/SafetyLight_msgs/msg/_SetGreen.py: /opt/ros/fuerte/share/roslang/manifest.xml
+../src/SafetyLight_msgs/msg/_SetGreen.py: /opt/ros/fuerte/share/roscpp/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/SafetyLight_msgs/msg/_SetGreen.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg/SetGreen.msg
+
+../src/SafetyLight_msgs/msg/_SetRed.py: ../msg/SetRed.msg
+../src/SafetyLight_msgs/msg/_SetRed.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/SafetyLight_msgs/msg/_SetRed.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/SafetyLight_msgs/msg/_SetRed.py: ../manifest.xml
+../src/SafetyLight_msgs/msg/_SetRed.py: /opt/ros/fuerte/share/roslang/manifest.xml
+../src/SafetyLight_msgs/msg/_SetRed.py: /opt/ros/fuerte/share/roscpp/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/SafetyLight_msgs/msg/_SetRed.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg/SetRed.msg
 
 ../src/SafetyLight_msgs/msg/_SetYellow.py: ../msg/SetYellow.msg
 ../src/SafetyLight_msgs/msg/_SetYellow.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -88,15 +88,15 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/SafetyLight_msgs/msg/__init__.py
 ../src/SafetyLight_msgs/msg/_SetYellow.py: ../manifest.xml
 ../src/SafetyLight_msgs/msg/_SetYellow.py: /opt/ros/fuerte/share/roslang/manifest.xml
 ../src/SafetyLight_msgs/msg/_SetYellow.py: /opt/ros/fuerte/share/roscpp/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/SafetyLight_msgs/msg/_SetYellow.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg/SetYellow.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg/SetYellow.msg
 
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
 ROSBUILD_genmsg_py: ../src/SafetyLight_msgs/msg/__init__.py
-ROSBUILD_genmsg_py: ../src/SafetyLight_msgs/msg/_SetRed.py
-ROSBUILD_genmsg_py: ../src/SafetyLight_msgs/msg/_SetGreen.py
 ROSBUILD_genmsg_py: ../src/SafetyLight_msgs/msg/_SetColor.py
+ROSBUILD_genmsg_py: ../src/SafetyLight_msgs/msg/_SetGreen.py
+ROSBUILD_genmsg_py: ../src/SafetyLight_msgs/msg/_SetRed.py
 ROSBUILD_genmsg_py: ../src/SafetyLight_msgs/msg/_SetYellow.py
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py.dir/build.make
 .PHONY : ROSBUILD_genmsg_py
@@ -110,6 +110,6 @@ CMakeFiles/ROSBUILD_genmsg_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_py.dir/depend:
-	cd /home/test_user/usc-arm-calibration/SafetyLight_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/SafetyLight_msgs /home/test_user/usc-arm-calibration/SafetyLight_msgs /home/test_user/usc-arm-calibration/SafetyLight_msgs/build /home/test_user/usc-arm-calibration/SafetyLight_msgs/build /home/test_user/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/depend
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/test_user/usc-arm-calibration/pier/src/pier_ext.cpp
+/home/jbinney/ws/arm/stacks/usc-arm-calibration/pier/src/pier_ext.cpp
 iostream
 -
 boost/python.hpp

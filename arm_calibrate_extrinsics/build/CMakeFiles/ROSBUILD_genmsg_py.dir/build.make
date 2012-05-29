@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build
 
 # Utility rule file for ROSBUILD_genmsg_py.
 
@@ -44,11 +44,88 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 
 CMakeFiles/ROSBUILD_genmsg_py: ../src/arm_calibrate_extrinsics/msg/__init__.py
 
-../src/arm_calibrate_extrinsics/msg/__init__.py: ../src/arm_calibrate_extrinsics/msg/_ARFrame.py
 ../src/arm_calibrate_extrinsics/msg/__init__.py: ../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles $(CMAKE_PROGRESS_1)
+../src/arm_calibrate_extrinsics/msg/__init__.py: ../src/arm_calibrate_extrinsics/msg/_ARFrame.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_calibrate_extrinsics/msg/__init__.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/msg/ARFrame.msg /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/msg/ARFrame3d.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/msg/ARFrame3d.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/msg/ARFrame.msg
+
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: ../msg/ARFrame3d.msg
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/sensor_msgs/msg/Image.msg
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker3d.msg
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/geometry_msgs/msg/Vector3.msg
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/geometry_msgs/msg/Pose.msg
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/sensor_msgs/msg/PointField.msg
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/sensor_msgs/msg/PointCloud2.msg
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/geometry_msgs/msg/Point.msg
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/sensor_msgs/msg/CameraInfo.msg
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/sensor_msgs/msg/RegionOfInterest.msg
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/geometry_msgs/msg/Transform.msg
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: ../manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/roslang/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/roscpp/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/rospy/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/sensor_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/vision_opencv/opencv2/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/vision_opencv/image_geometry/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/message_filters/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/stereo_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/bullet/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/rosconsole/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/geometry/angles/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/rostest/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/roswtf/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/geometry/tf/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/roslib/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/resource_retriever/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/ros/core/rosbuild/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/colladadom/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/urdf_interface/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/urdf_parser/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/collada_parser/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/urdf/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/rosbag/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/std_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/actionlib_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/actionlib/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/geometry/tf_conversions/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/robot_state_publisher/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/srv_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions/msg_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/msg/ARFrame3d.msg
 
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: ../msg/ARFrame.msg
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -85,7 +162,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/arm_calibrate_extrinsics/msg/__init__.py
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -97,114 +174,37 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/arm_calibrate_extrinsics/msg/__init__.py
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/share/rosbag/manifest.xml
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/ccny_vision/ar_target/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/arm_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/manifest.xml
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/share/actionlib_msgs/manifest.xml
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/share/actionlib/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/arm_controller_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/arm_behavior_actions/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/SafetyLight_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/arm_dashboard_client/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_dashboard_client/manifest.xml
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/stacks/geometry/tf_conversions/manifest.xml
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/stacks/robot_model/robot_state_publisher/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/arm_head_control/manifest.xml
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/manifest.xml
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 ../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/arm_msgs/msg_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/arm_msgs/srv_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/arm_controller_msgs/msg_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/arm_behavior_actions/msg_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/test_user/usc-arm-calibration/arm_head_control/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles $(CMAKE_PROGRESS_2)
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/srv_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_controller_msgs/msg_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_behavior_actions/msg_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/msg_gen/generated
+../src/arm_calibrate_extrinsics/msg/_ARFrame.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_calibrate_extrinsics/msg/_ARFrame.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/msg/ARFrame.msg
-
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: ../msg/ARFrame3d.msg
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/sensor_msgs/msg/Image.msg
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker3d.msg
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/geometry_msgs/msg/Vector3.msg
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/geometry_msgs/msg/Pose.msg
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/sensor_msgs/msg/PointField.msg
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/sensor_msgs/msg/PointCloud2.msg
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/geometry_msgs/msg/Point.msg
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/sensor_msgs/msg/CameraInfo.msg
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/sensor_msgs/msg/RegionOfInterest.msg
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/geometry_msgs/msg/Transform.msg
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: ../manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/roslang/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/roscpp/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/rospy/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/sensor_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/vision_opencv/opencv2/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/vision_opencv/image_geometry/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/message_filters/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/stereo_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/bullet/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/rosconsole/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/geometry/angles/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/rostest/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/roswtf/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/geometry/tf/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/roslib/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/resource_retriever/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/ros/core/rosbuild/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/colladadom/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/urdf_interface/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/urdf_parser/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/collada_parser/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/urdf/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/rosbag/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/ccny_vision/ar_target/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/arm_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/actionlib_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/share/actionlib/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/arm_controller_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/arm_behavior_actions/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/SafetyLight_msgs/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/arm_dashboard_client/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/geometry/tf_conversions/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/robot_model/robot_state_publisher/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/arm_head_control/manifest.xml
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/arm_msgs/msg_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/arm_msgs/srv_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/arm_controller_msgs/msg_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/arm_behavior_actions/msg_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/SafetyLight_msgs/msg_gen/generated
-../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py: /home/test_user/usc-arm-calibration/arm_head_control/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/msg/ARFrame3d.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/msg/ARFrame.msg
 
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
 ROSBUILD_genmsg_py: ../src/arm_calibrate_extrinsics/msg/__init__.py
-ROSBUILD_genmsg_py: ../src/arm_calibrate_extrinsics/msg/_ARFrame.py
 ROSBUILD_genmsg_py: ../src/arm_calibrate_extrinsics/msg/_ARFrame3d.py
+ROSBUILD_genmsg_py: ../src/arm_calibrate_extrinsics/msg/_ARFrame.py
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py.dir/build.make
 .PHONY : ROSBUILD_genmsg_py
 
@@ -217,6 +217,6 @@ CMakeFiles/ROSBUILD_genmsg_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_py.dir/depend:
-	cd /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build /home/test_user/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_calibrate_extrinsics/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/depend
 

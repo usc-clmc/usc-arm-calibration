@@ -8,7 +8,7 @@
 
 ../include/arm_head_control/linuxser.h
 
-/home/test_user/usc-arm-calibration/arm_head_control/src/linuxser.c
+/home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/src/linuxser.c
 stdio.h
 -
 stdlib.h

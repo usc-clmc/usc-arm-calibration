@@ -3,11 +3,11 @@
   (:export
    "<ARMARKER>"
    "ARMARKER"
+   "<ARMARKERS>"
+   "ARMARKERS"
    "<ARMARKERS3D>"
    "ARMARKERS3D"
    "<ARMARKER3D>"
    "ARMARKER3D"
-   "<ARMARKERS>"
-   "ARMARKERS"
   ))
 

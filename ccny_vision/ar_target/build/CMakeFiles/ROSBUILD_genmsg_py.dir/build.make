@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/ccny_vision/ar_target
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build
 
 # Utility rule file for ROSBUILD_genmsg_py.
 
@@ -45,12 +45,12 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 CMakeFiles/ROSBUILD_genmsg_py: ../src/ar_target/msg/__init__.py
 
 ../src/ar_target/msg/__init__.py: ../src/ar_target/msg/_ARMarker.py
+../src/ar_target/msg/__init__.py: ../src/ar_target/msg/_ARMarkers.py
 ../src/ar_target/msg/__init__.py: ../src/ar_target/msg/_ARMarkers3d.py
 ../src/ar_target/msg/__init__.py: ../src/ar_target/msg/_ARMarker3d.py
-../src/ar_target/msg/__init__.py: ../src/ar_target/msg/_ARMarkers.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/ar_target/msg/__init__.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker.msg /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers3d.msg /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker3d.msg /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers3d.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker3d.msg
 
 ../src/ar_target/msg/_ARMarker.py: ../msg/ARMarker.msg
 ../src/ar_target/msg/_ARMarker.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -79,7 +79,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/ar_target/msg/__init__.py
 ../src/ar_target/msg/_ARMarker.py: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 ../src/ar_target/msg/_ARMarker.py: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 ../src/ar_target/msg/_ARMarker.py: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../src/ar_target/msg/_ARMarker.py: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../src/ar_target/msg/_ARMarker.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 ../src/ar_target/msg/_ARMarker.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 ../src/ar_target/msg/_ARMarker.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 ../src/ar_target/msg/_ARMarker.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -91,14 +91,64 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/ar_target/msg/__init__.py
 ../src/ar_target/msg/_ARMarker.py: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 ../src/ar_target/msg/_ARMarker.py: /opt/ros/fuerte/share/rosbag/manifest.xml
 ../src/ar_target/msg/_ARMarker.py: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../src/ar_target/msg/_ARMarker.py: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../src/ar_target/msg/_ARMarker.py: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+../src/ar_target/msg/_ARMarker.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../src/ar_target/msg/_ARMarker.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 ../src/ar_target/msg/_ARMarker.py: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 ../src/ar_target/msg/_ARMarker.py: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../src/ar_target/msg/_ARMarker.py: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_2)
+../src/ar_target/msg/_ARMarker.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/ar_target/msg/_ARMarker.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker.msg
+
+../src/ar_target/msg/_ARMarkers.py: ../msg/ARMarkers.msg
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
+../src/ar_target/msg/_ARMarkers.py: ../msg/ARMarker.msg
+../src/ar_target/msg/_ARMarkers.py: ../manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/roslang/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/roscpp/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/rospy/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/sensor_msgs/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/vision_opencv/opencv2/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/vision_opencv/image_geometry/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/message_filters/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/stereo_msgs/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/bullet/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/rosconsole/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/geometry/angles/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/rostest/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/roswtf/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/geometry/tf/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/roslib/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/resource_retriever/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/ros/core/rosbuild/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/colladadom/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/urdf_interface/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/urdf_parser/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/collada_parser/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/urdf/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/rosbag/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/std_msgs/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
+../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
+../src/ar_target/msg/_ARMarkers.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/ar_target/msg/_ARMarkers.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers.msg
 
 ../src/ar_target/msg/_ARMarkers3d.py: ../msg/ARMarkers3d.msg
 ../src/ar_target/msg/_ARMarkers3d.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -131,7 +181,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/ar_target/msg/__init__.py
 ../src/ar_target/msg/_ARMarkers3d.py: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 ../src/ar_target/msg/_ARMarkers3d.py: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 ../src/ar_target/msg/_ARMarkers3d.py: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../src/ar_target/msg/_ARMarkers3d.py: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../src/ar_target/msg/_ARMarkers3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 ../src/ar_target/msg/_ARMarkers3d.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 ../src/ar_target/msg/_ARMarkers3d.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 ../src/ar_target/msg/_ARMarkers3d.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -143,14 +193,14 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/ar_target/msg/__init__.py
 ../src/ar_target/msg/_ARMarkers3d.py: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 ../src/ar_target/msg/_ARMarkers3d.py: /opt/ros/fuerte/share/rosbag/manifest.xml
 ../src/ar_target/msg/_ARMarkers3d.py: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../src/ar_target/msg/_ARMarkers3d.py: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../src/ar_target/msg/_ARMarkers3d.py: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+../src/ar_target/msg/_ARMarkers3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../src/ar_target/msg/_ARMarkers3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 ../src/ar_target/msg/_ARMarkers3d.py: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 ../src/ar_target/msg/_ARMarkers3d.py: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../src/ar_target/msg/_ARMarkers3d.py: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_3)
+../src/ar_target/msg/_ARMarkers3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/ar_target/msg/_ARMarkers3d.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers3d.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers3d.msg
 
 ../src/ar_target/msg/_ARMarker3d.py: ../msg/ARMarker3d.msg
 ../src/ar_target/msg/_ARMarker3d.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -181,7 +231,7 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/ar_target/msg/__init__.py
 ../src/ar_target/msg/_ARMarker3d.py: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 ../src/ar_target/msg/_ARMarker3d.py: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 ../src/ar_target/msg/_ARMarker3d.py: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../src/ar_target/msg/_ARMarker3d.py: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+../src/ar_target/msg/_ARMarker3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 ../src/ar_target/msg/_ARMarker3d.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 ../src/ar_target/msg/_ARMarker3d.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 ../src/ar_target/msg/_ARMarker3d.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -193,71 +243,21 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/ar_target/msg/__init__.py
 ../src/ar_target/msg/_ARMarker3d.py: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 ../src/ar_target/msg/_ARMarker3d.py: /opt/ros/fuerte/share/rosbag/manifest.xml
 ../src/ar_target/msg/_ARMarker3d.py: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../src/ar_target/msg/_ARMarker3d.py: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../src/ar_target/msg/_ARMarker3d.py: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+../src/ar_target/msg/_ARMarker3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+../src/ar_target/msg/_ARMarker3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 ../src/ar_target/msg/_ARMarker3d.py: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 ../src/ar_target/msg/_ARMarker3d.py: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../src/ar_target/msg/_ARMarker3d.py: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_4)
+../src/ar_target/msg/_ARMarker3d.py: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/ar_target/msg/_ARMarker3d.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker3d.msg
-
-../src/ar_target/msg/_ARMarkers.py: ../msg/ARMarkers.msg
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
-../src/ar_target/msg/_ARMarkers.py: ../msg/ARMarker.msg
-../src/ar_target/msg/_ARMarkers.py: ../manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/roslang/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/roscpp/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/rospy/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/sensor_msgs/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/vision_opencv/opencv2/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/vision_opencv/image_geometry/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/message_filters/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/stereo_msgs/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/bullet/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/rosconsole/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/geometry/angles/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/rostest/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/roswtf/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/geometry/tf/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/roslib/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/resource_retriever/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/ros/core/rosbuild/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/colladadom/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/urdf_interface/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/urdf_parser/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/collada_parser/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/urdf/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/rosbag/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/share/std_msgs/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
-../src/ar_target/msg/_ARMarkers.py: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-../src/ar_target/msg/_ARMarkers.py: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/ar_target/msg/_ARMarkers.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarkers.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/msg/ARMarker3d.msg
 
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
 ROSBUILD_genmsg_py: ../src/ar_target/msg/__init__.py
 ROSBUILD_genmsg_py: ../src/ar_target/msg/_ARMarker.py
+ROSBUILD_genmsg_py: ../src/ar_target/msg/_ARMarkers.py
 ROSBUILD_genmsg_py: ../src/ar_target/msg/_ARMarkers3d.py
 ROSBUILD_genmsg_py: ../src/ar_target/msg/_ARMarker3d.py
-ROSBUILD_genmsg_py: ../src/ar_target/msg/_ARMarkers.py
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py.dir/build.make
 .PHONY : ROSBUILD_genmsg_py
 
@@ -270,6 +270,6 @@ CMakeFiles/ROSBUILD_genmsg_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_py.dir/depend:
-	cd /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/ccny_vision/ar_target /home/test_user/usc-arm-calibration/ccny_vision/ar_target /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/depend
 

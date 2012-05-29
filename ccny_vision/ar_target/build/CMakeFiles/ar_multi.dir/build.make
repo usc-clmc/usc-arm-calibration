@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/ccny_vision/ar_target
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ar_multi.dir/depend.make
@@ -71,7 +71,7 @@ CMakeFiles/ar_multi.dir/src/ar_multi.o: /opt/ros/fuerte/share/ros/core/rosbuild/
 CMakeFiles/ar_multi.dir/src/ar_multi.o: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_multi.o: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_multi.o: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-CMakeFiles/ar_multi.dir/src/ar_multi.o: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+CMakeFiles/ar_multi.dir/src/ar_multi.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_multi.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_multi.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_multi.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -83,22 +83,22 @@ CMakeFiles/ar_multi.dir/src/ar_multi.o: /opt/ros/fuerte/stacks/robot_model/urdf/
 CMakeFiles/ar_multi.dir/src/ar_multi.o: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_multi.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_multi.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/ar_multi.dir/src/ar_multi.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-CMakeFiles/ar_multi.dir/src/ar_multi.o: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+CMakeFiles/ar_multi.dir/src/ar_multi.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+CMakeFiles/ar_multi.dir/src/ar_multi.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_multi.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/ar_multi.dir/src/ar_multi.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-CMakeFiles/ar_multi.dir/src/ar_multi.o: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/ar_multi.dir/src/ar_multi.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ar_multi.dir/src/ar_multi.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/ar_multi.dir/src/ar_multi.o -c /home/test_user/usc-arm-calibration/ccny_vision/ar_target/src/ar_multi.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/ar_multi.dir/src/ar_multi.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/src/ar_multi.cpp
 
 CMakeFiles/ar_multi.dir/src/ar_multi.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ar_multi.dir/src/ar_multi.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/ccny_vision/ar_target/src/ar_multi.cpp > CMakeFiles/ar_multi.dir/src/ar_multi.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/src/ar_multi.cpp > CMakeFiles/ar_multi.dir/src/ar_multi.i
 
 CMakeFiles/ar_multi.dir/src/ar_multi.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ar_multi.dir/src/ar_multi.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/ccny_vision/ar_target/src/ar_multi.cpp -o CMakeFiles/ar_multi.dir/src/ar_multi.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/src/ar_multi.cpp -o CMakeFiles/ar_multi.dir/src/ar_multi.s
 
 CMakeFiles/ar_multi.dir/src/ar_multi.o.requires:
 .PHONY : CMakeFiles/ar_multi.dir/src/ar_multi.o.requires
@@ -134,7 +134,7 @@ CMakeFiles/ar_multi.dir/src/ar_base.o: /opt/ros/fuerte/share/ros/core/rosbuild/m
 CMakeFiles/ar_multi.dir/src/ar_base.o: /opt/ros/fuerte/stacks/pluginlib/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_base.o: /opt/ros/fuerte/stacks/image_common/image_transport/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_base.o: /opt/ros/fuerte/stacks/vision_opencv/cv_bridge/manifest.xml
-CMakeFiles/ar_multi.dir/src/ar_base.o: /home/test_user/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
+CMakeFiles/ar_multi.dir/src/ar_base.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/artoolkit/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_base.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/orocos_kdl/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_base.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/python_orocos_kdl/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_base.o: /opt/ros/fuerte/stacks/orocos_kinematics_dynamics/kdl/manifest.xml
@@ -146,22 +146,22 @@ CMakeFiles/ar_multi.dir/src/ar_base.o: /opt/ros/fuerte/stacks/robot_model/urdf/m
 CMakeFiles/ar_multi.dir/src/ar_base.o: /opt/ros/fuerte/stacks/robot_model/kdl_parser/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_base.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_base.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/ar_multi.dir/src/ar_base.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-CMakeFiles/ar_multi.dir/src/ar_base.o: /home/test_user/usc-arm-calibration/usc_utilities/manifest.xml
+CMakeFiles/ar_multi.dir/src/ar_base.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+CMakeFiles/ar_multi.dir/src/ar_base.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/manifest.xml
 CMakeFiles/ar_multi.dir/src/ar_base.o: /opt/ros/fuerte/stacks/geometry/tf/msg_gen/generated
 CMakeFiles/ar_multi.dir/src/ar_base.o: /opt/ros/fuerte/stacks/geometry/tf/srv_gen/generated
-CMakeFiles/ar_multi.dir/src/ar_base.o: /home/test_user/usc-arm-calibration/usc_utilities/msg_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_2)
+CMakeFiles/ar_multi.dir/src/ar_base.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/msg_gen/generated
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ar_multi.dir/src/ar_base.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/ar_multi.dir/src/ar_base.o -c /home/test_user/usc-arm-calibration/ccny_vision/ar_target/src/ar_base.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/ar_multi.dir/src/ar_base.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/src/ar_base.cpp
 
 CMakeFiles/ar_multi.dir/src/ar_base.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ar_multi.dir/src/ar_base.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/ccny_vision/ar_target/src/ar_base.cpp > CMakeFiles/ar_multi.dir/src/ar_base.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/src/ar_base.cpp > CMakeFiles/ar_multi.dir/src/ar_base.i
 
 CMakeFiles/ar_multi.dir/src/ar_base.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ar_multi.dir/src/ar_base.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/ccny_vision/ar_target/src/ar_base.cpp -o CMakeFiles/ar_multi.dir/src/ar_base.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -DBT_USE_DOUBLE_PRECISION -DBT_EULER_DEFAULT_ZYX -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/src/ar_base.cpp -o CMakeFiles/ar_multi.dir/src/ar_base.s
 
 CMakeFiles/ar_multi.dir/src/ar_base.o.requires:
 .PHONY : CMakeFiles/ar_multi.dir/src/ar_base.o.requires
@@ -200,6 +200,6 @@ CMakeFiles/ar_multi.dir/clean:
 .PHONY : CMakeFiles/ar_multi.dir/clean
 
 CMakeFiles/ar_multi.dir/depend:
-	cd /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/ccny_vision/ar_target /home/test_user/usc-arm-calibration/ccny_vision/ar_target /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build /home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles/ar_multi.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/CMakeFiles/ar_multi.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ar_multi.dir/depend
 

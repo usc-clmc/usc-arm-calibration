@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/arm_head_control
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/arm_head_control/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build
 
 # Utility rule file for ROSBUILD_gensrv_lisp.
 
@@ -57,6 +57,6 @@ CMakeFiles/ROSBUILD_gensrv_lisp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_gensrv_lisp.dir/clean
 
 CMakeFiles/ROSBUILD_gensrv_lisp.dir/depend:
-	cd /home/test_user/usc-arm-calibration/arm_head_control/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/arm_head_control /home/test_user/usc-arm-calibration/arm_head_control /home/test_user/usc-arm-calibration/arm_head_control/build /home/test_user/usc-arm-calibration/arm_head_control/build /home/test_user/usc-arm-calibration/arm_head_control/build/CMakeFiles/ROSBUILD_gensrv_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_head_control/build/CMakeFiles/ROSBUILD_gensrv_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_gensrv_lisp.dir/depend
 

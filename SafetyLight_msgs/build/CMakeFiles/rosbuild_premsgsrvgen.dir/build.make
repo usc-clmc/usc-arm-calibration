@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/SafetyLight_msgs
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/SafetyLight_msgs/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build
 
 # Utility rule file for rosbuild_premsgsrvgen.
 
@@ -57,6 +57,6 @@ CMakeFiles/rosbuild_premsgsrvgen.dir/clean:
 .PHONY : CMakeFiles/rosbuild_premsgsrvgen.dir/clean
 
 CMakeFiles/rosbuild_premsgsrvgen.dir/depend:
-	cd /home/test_user/usc-arm-calibration/SafetyLight_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/SafetyLight_msgs /home/test_user/usc-arm-calibration/SafetyLight_msgs /home/test_user/usc-arm-calibration/SafetyLight_msgs/build /home/test_user/usc-arm-calibration/SafetyLight_msgs/build /home/test_user/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles/rosbuild_premsgsrvgen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/SafetyLight_msgs/build/CMakeFiles/rosbuild_premsgsrvgen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rosbuild_premsgsrvgen.dir/depend
 

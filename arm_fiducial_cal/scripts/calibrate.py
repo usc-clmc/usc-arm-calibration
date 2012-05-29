@@ -3,6 +3,7 @@ import roslib; roslib.load_manifest('arm_fiducial_cal')
 import sys, os.path, time, shelve
 import numpy as np
 from scipy import linalg, optimize
+from sklearn import gaussian_process
 from matplotlib import pyplot as plt
 import rospy, rosbag
 from tf import transformations
@@ -42,7 +43,7 @@ for f_i in range(len(frames)):
 
 print ''
 print '===================================================================='
-print 'Optimizing calibration target position'
+print 'Optimizing 6DOF transforms'
 print '===================================================================='
 
 tf_target_points = params.tf_target_points
@@ -50,9 +51,15 @@ est_base_H_target = params.initial_base_H_target
 est_cam_H_neck = params.initial_cam_H_neck
 for opt_i in range(2):
     # optimize only the base to target transform
+    print ''
+    print 'Optimizing base to target transform'
     opt = FCOptimizer(frames, tf_target_points, est_base_H_target, est_cam_H_neck, opt_frame='target')
     est_base_H_target, est_cam_H_neck = opt.optimize()
 
+    # assuming the base to target transform we just computed is correct, optimize
+    # the top-of-pan-tilt to left bumblebee transform
+    print ''
+    print 'Optimizing camera to top-of-pan-tilt transform'
     opt = FCOptimizer(frames, tf_target_points, est_base_H_target, est_cam_H_neck, opt_frame='cam')
     est_base_H_target, est_cam_H_neck = opt.optimize()
 
@@ -61,19 +68,16 @@ print '===================================================================='
 print 'Calibration Results:'
 print '===================================================================='
 
-
+# print some statisticas about the optimization
 est_bf_target_points = geom.transform_points(params.tf_target_points, est_base_H_target)
 average_table_z = est_bf_target_points[:,2].mean()
-
 print 'Target average z=%f' % average_table_z
-
 opt.print_stats()
 
-# write out the resulting cal file to a urdf
+# write out the resulting cal file to the urdf
 urdf_path = os.path.join(
     roslib.packages.get_pkg_dir("arm_robot_model"), "models/sensorsValues.urdf.xacro")
-
-print 'Cal Successful! Wrote result to URDF to %s' % urdf_path
+print 'Cal Successful! Writing result to URDF to %s' % urdf_path
 bb_left_neck_tf = ros_util.matrix_to_transform(linalg.inv(est_cam_H_neck))
 update_sensors_values_urdf(urdf_path, bb_left_neck_tf, None, None, None)
 
@@ -84,7 +88,7 @@ table_height_f  = open(table_height_path, 'w')
 print >> table_height_f, '%0.3f' % average_table_z
 table_height_f.close()
 
-# write out table bounds for arm_fiducial_cal
+# write out the table bounds (used to crop point clouds)
 table_xmax, table_ymax, table_zmax = est_bf_target_points.max(axis=0)
 table_xmin, table_ymin, table_zmin = est_bf_target_points.min(axis=0)
 table_xmax += .0375
@@ -129,6 +133,7 @@ for f_i, f in enumerate(frames):
     vi = bf_marker_points[1] - bf_marker_points[0]
     vi /= linalg.norm(vi)
     spread = 0.0
+
     for bf_p in bf_marker_points[2:]:
         vj = bf_p - bf_marker_points[0]
         bf_p_proj = np.dot(vj, vi) * vj + bf_marker_points[0]
@@ -162,7 +167,29 @@ for f_i, f in enumerate(frames):
         ' '.join(['%6.3f' % p for p in est_params]))
 
     upright_frames.append(f)
+gp_training_inputs = np.array(gp_training_inputs)
+gp_training_outputs = np.array(gp_training_outputs)
 
+# learn a correction gp for each of roll, pitch, yaw, x, y, z
+correction_gps = []
+for d in range(gp_training_outputs.shape[1]):
+    gp = gaussian_process.GaussianProcess(theta0=1., thetaL=None, thetaU=None)
+    gp.fit(gp_training_inputs, gp_training_outputs[:,d])
+    correction_gps.append(gp)
+
+# output gp inputs, gp outputs, and hyper-params to a yaml file
+yamlfile_path = os.path.join(
+    roslib.packages.get_pkg_dir("arm_fiducial_cal"), "calib/correction_gp.yaml")
+yamlfile = open(yamlfile_path, 'w+')
+print >> yamlfile, '% training inputs are roll, pitch, yaw of head pose in base frame'
+print >> yamlfile, 'gp_training_inputs:'
+for vec in gp_training_inputs:
+    print >> yamlfile, '\t-[' + ', '.join(['%7.3f' % x for x in vec]) + ']'
+print >> yamlfile, '% training outputs are corrections for roll, pitch, yaw, x, y, z'
+print >> yamlfile, 'gp_training_outputs:'
+for vec in gp_training_outputs:
+    print >> yamlfile, '\t-[' + ', '.join(['%7.3f' % x for x in vec]) + ']'
+yamlfile.close()
 
 # for our own purposes, save the estimated transform in a shelf
 cache_dir = roslib.packages.get_pkg_subdir('arm_fiducial_cal', 'cache')
@@ -170,13 +197,13 @@ s = store.Store(cache_dir)
 s['frames'] = frames
 s['est_base_H_target'] = est_base_H_target
 s['est_cam_H_neck'] = est_cam_H_neck
-s['gp_training_inputs'] = np.array(gp_training_inputs)
-s['gp_training_outputs'] = np.array(gp_training_outputs)
+s['gp_training_inputs'] = gp_training_inputs
+s['gp_training_outputs'] = gp_training_outputs
 s['upright_frames'] = upright_frames
 
 # make sure rviz gets all of the markers we published
 for ii in range(10):  
-    if rospy.is_shutdown():
+    if not rospy.is_shutdown():
         fcviz.update()
         rospy.sleep(0.1)
 

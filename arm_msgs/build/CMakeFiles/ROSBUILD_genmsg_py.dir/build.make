@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/arm_msgs
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/arm_msgs/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/build
 
 # Utility rule file for ROSBUILD_genmsg_py.
 
@@ -45,15 +45,15 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 CMakeFiles/ROSBUILD_genmsg_py: ../src/arm_msgs/msg/__init__.py
 
 ../src/arm_msgs/msg/__init__.py: ../src/arm_msgs/msg/_InertialParameters.py
+../src/arm_msgs/msg/__init__.py: ../src/arm_msgs/msg/_StatusReport.py
 ../src/arm_msgs/msg/__init__.py: ../src/arm_msgs/msg/_Task.py
-../src/arm_msgs/msg/__init__.py: ../src/arm_msgs/msg/_Objects.py
 ../src/arm_msgs/msg/__init__.py: ../src/arm_msgs/msg/_Object.py
 ../src/arm_msgs/msg/__init__.py: ../src/arm_msgs/msg/_Tasks.py
+../src/arm_msgs/msg/__init__.py: ../src/arm_msgs/msg/_Objects.py
 ../src/arm_msgs/msg/__init__.py: ../src/arm_msgs/msg/_BoundingBox.py
-../src/arm_msgs/msg/__init__.py: ../src/arm_msgs/msg/_StatusReport.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_msgs/msg/__init__.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/test_user/usc-arm-calibration/arm_msgs/msg/InertialParameters.msg /home/test_user/usc-arm-calibration/arm_msgs/msg/Task.msg /home/test_user/usc-arm-calibration/arm_msgs/msg/Objects.msg /home/test_user/usc-arm-calibration/arm_msgs/msg/Object.msg /home/test_user/usc-arm-calibration/arm_msgs/msg/Tasks.msg /home/test_user/usc-arm-calibration/arm_msgs/msg/BoundingBox.msg /home/test_user/usc-arm-calibration/arm_msgs/msg/StatusReport.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/InertialParameters.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/StatusReport.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/Task.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/Object.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/Tasks.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/Objects.msg /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/BoundingBox.msg
 
 ../src/arm_msgs/msg/_InertialParameters.py: ../msg/InertialParameters.msg
 ../src/arm_msgs/msg/_InertialParameters.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -63,9 +63,20 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/arm_msgs/msg/__init__.py
 ../src/arm_msgs/msg/_InertialParameters.py: /opt/ros/fuerte/share/roslang/manifest.xml
 ../src/arm_msgs/msg/_InertialParameters.py: /opt/ros/fuerte/share/roscpp/manifest.xml
 ../src/arm_msgs/msg/_InertialParameters.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_msgs/msg/_InertialParameters.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_msgs/msg/InertialParameters.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/InertialParameters.msg
+
+../src/arm_msgs/msg/_StatusReport.py: ../msg/StatusReport.msg
+../src/arm_msgs/msg/_StatusReport.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_msgs/msg/_StatusReport.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_msgs/msg/_StatusReport.py: ../manifest.xml
+../src/arm_msgs/msg/_StatusReport.py: /opt/ros/fuerte/share/roslang/manifest.xml
+../src/arm_msgs/msg/_StatusReport.py: /opt/ros/fuerte/share/roscpp/manifest.xml
+../src/arm_msgs/msg/_StatusReport.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_msgs/msg/_StatusReport.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/StatusReport.msg
 
 ../src/arm_msgs/msg/_Task.py: ../msg/Task.msg
 ../src/arm_msgs/msg/_Task.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -74,9 +85,38 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/arm_msgs/msg/__init__.py
 ../src/arm_msgs/msg/_Task.py: /opt/ros/fuerte/share/roslang/manifest.xml
 ../src/arm_msgs/msg/_Task.py: /opt/ros/fuerte/share/roscpp/manifest.xml
 ../src/arm_msgs/msg/_Task.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_msgs/msg/_Task.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_msgs/msg/Task.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/Task.msg
+
+../src/arm_msgs/msg/_Object.py: ../msg/Object.msg
+../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/geometry_msgs/msg/PoseWithCovariance.msg
+../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
+../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/geometry_msgs/msg/PoseWithCovarianceStamped.msg
+../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
+../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/geometry_msgs/msg/Pose.msg
+../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/geometry_msgs/msg/Point.msg
+../src/arm_msgs/msg/_Object.py: ../manifest.xml
+../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/roslang/manifest.xml
+../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/roscpp/manifest.xml
+../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_msgs/msg/_Object.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/Object.msg
+
+../src/arm_msgs/msg/_Tasks.py: ../msg/Tasks.msg
+../src/arm_msgs/msg/_Tasks.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/arm_msgs/msg/_Tasks.py: /opt/ros/fuerte/share/roslib/bin/gendeps
+../src/arm_msgs/msg/_Tasks.py: ../msg/Task.msg
+../src/arm_msgs/msg/_Tasks.py: ../manifest.xml
+../src/arm_msgs/msg/_Tasks.py: /opt/ros/fuerte/share/roslang/manifest.xml
+../src/arm_msgs/msg/_Tasks.py: /opt/ros/fuerte/share/roscpp/manifest.xml
+../src/arm_msgs/msg/_Tasks.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_msgs/msg/_Tasks.py"
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/Tasks.msg
 
 ../src/arm_msgs/msg/_Objects.py: ../msg/Objects.msg
 ../src/arm_msgs/msg/_Objects.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -92,38 +132,9 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/arm_msgs/msg/__init__.py
 ../src/arm_msgs/msg/_Objects.py: /opt/ros/fuerte/share/roslang/manifest.xml
 ../src/arm_msgs/msg/_Objects.py: /opt/ros/fuerte/share/roscpp/manifest.xml
 ../src/arm_msgs/msg/_Objects.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_msgs/msg/_Objects.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_msgs/msg/Objects.msg
-
-../src/arm_msgs/msg/_Object.py: ../msg/Object.msg
-../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/geometry_msgs/msg/PoseWithCovariance.msg
-../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/geometry_msgs/msg/Quaternion.msg
-../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/geometry_msgs/msg/PoseWithCovarianceStamped.msg
-../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/std_msgs/msg/Header.msg
-../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/geometry_msgs/msg/Pose.msg
-../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/geometry_msgs/msg/Point.msg
-../src/arm_msgs/msg/_Object.py: ../manifest.xml
-../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/roslang/manifest.xml
-../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/roscpp/manifest.xml
-../src/arm_msgs/msg/_Object.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_msgs/msg/_Object.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_msgs/msg/Object.msg
-
-../src/arm_msgs/msg/_Tasks.py: ../msg/Tasks.msg
-../src/arm_msgs/msg/_Tasks.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_msgs/msg/_Tasks.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_msgs/msg/_Tasks.py: ../msg/Task.msg
-../src/arm_msgs/msg/_Tasks.py: ../manifest.xml
-../src/arm_msgs/msg/_Tasks.py: /opt/ros/fuerte/share/roslang/manifest.xml
-../src/arm_msgs/msg/_Tasks.py: /opt/ros/fuerte/share/roscpp/manifest.xml
-../src/arm_msgs/msg/_Tasks.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_msgs/msg/_Tasks.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_msgs/msg/Tasks.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/Objects.msg
 
 ../src/arm_msgs/msg/_BoundingBox.py: ../msg/BoundingBox.msg
 ../src/arm_msgs/msg/_BoundingBox.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
@@ -133,30 +144,19 @@ CMakeFiles/ROSBUILD_genmsg_py: ../src/arm_msgs/msg/__init__.py
 ../src/arm_msgs/msg/_BoundingBox.py: /opt/ros/fuerte/share/roslang/manifest.xml
 ../src/arm_msgs/msg/_BoundingBox.py: /opt/ros/fuerte/share/roscpp/manifest.xml
 ../src/arm_msgs/msg/_BoundingBox.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_msgs/msg/_BoundingBox.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_msgs/msg/BoundingBox.msg
-
-../src/arm_msgs/msg/_StatusReport.py: ../msg/StatusReport.msg
-../src/arm_msgs/msg/_StatusReport.py: /opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/arm_msgs/msg/_StatusReport.py: /opt/ros/fuerte/share/roslib/bin/gendeps
-../src/arm_msgs/msg/_StatusReport.py: ../manifest.xml
-../src/arm_msgs/msg/_StatusReport.py: /opt/ros/fuerte/share/roslang/manifest.xml
-../src/arm_msgs/msg/_StatusReport.py: /opt/ros/fuerte/share/roscpp/manifest.xml
-../src/arm_msgs/msg/_StatusReport.py: /opt/ros/fuerte/share/geometry_msgs/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/arm_msgs/build/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/arm_msgs/msg/_StatusReport.py"
-	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/test_user/usc-arm-calibration/arm_msgs/msg/StatusReport.msg
+	/opt/ros/fuerte/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/msg/BoundingBox.msg
 
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
 ROSBUILD_genmsg_py: ../src/arm_msgs/msg/__init__.py
 ROSBUILD_genmsg_py: ../src/arm_msgs/msg/_InertialParameters.py
+ROSBUILD_genmsg_py: ../src/arm_msgs/msg/_StatusReport.py
 ROSBUILD_genmsg_py: ../src/arm_msgs/msg/_Task.py
-ROSBUILD_genmsg_py: ../src/arm_msgs/msg/_Objects.py
 ROSBUILD_genmsg_py: ../src/arm_msgs/msg/_Object.py
 ROSBUILD_genmsg_py: ../src/arm_msgs/msg/_Tasks.py
+ROSBUILD_genmsg_py: ../src/arm_msgs/msg/_Objects.py
 ROSBUILD_genmsg_py: ../src/arm_msgs/msg/_BoundingBox.py
-ROSBUILD_genmsg_py: ../src/arm_msgs/msg/_StatusReport.py
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py.dir/build.make
 .PHONY : ROSBUILD_genmsg_py
 
@@ -169,6 +169,6 @@ CMakeFiles/ROSBUILD_genmsg_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_py.dir/depend:
-	cd /home/test_user/usc-arm-calibration/arm_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/arm_msgs /home/test_user/usc-arm-calibration/arm_msgs /home/test_user/usc-arm-calibration/arm_msgs/build /home/test_user/usc-arm-calibration/arm_msgs/build /home/test_user/usc-arm-calibration/arm_msgs/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/arm_msgs/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/depend
 

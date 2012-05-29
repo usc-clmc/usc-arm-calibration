@@ -7,8 +7,8 @@ CMakeFiles/ar_synchronize.dir/src/ar_synchronize.o: ../msg_gen/cpp/include/ar_ta
 CMakeFiles/ar_synchronize.dir/src/ar_synchronize.o: ../msg_gen/cpp/include/ar_target/ARMarkers.h
 CMakeFiles/ar_synchronize.dir/src/ar_synchronize.o: ../msg_gen/cpp/include/ar_target/ARMarkers3d.h
 CMakeFiles/ar_synchronize.dir/src/ar_synchronize.o: ../src/ar_synchronize.cpp
-CMakeFiles/ar_synchronize.dir/src/ar_synchronize.o: /home/test_user/usc-arm-calibration/usc_utilities/include/usc_utilities/assert.h
-CMakeFiles/ar_synchronize.dir/src/ar_synchronize.o: /home/test_user/usc-arm-calibration/usc_utilities/include/usc_utilities/param_server.h
+CMakeFiles/ar_synchronize.dir/src/ar_synchronize.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/include/usc_utilities/assert.h
+CMakeFiles/ar_synchronize.dir/src/ar_synchronize.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/include/usc_utilities/param_server.h
 CMakeFiles/ar_synchronize.dir/src/ar_synchronize.o: /opt/ros/fuerte/include/XmlRpcDecl.h
 CMakeFiles/ar_synchronize.dir/src/ar_synchronize.o: /opt/ros/fuerte/include/XmlRpcValue.h
 CMakeFiles/ar_synchronize.dir/src/ar_synchronize.o: /opt/ros/fuerte/include/geometry_msgs/Point.h

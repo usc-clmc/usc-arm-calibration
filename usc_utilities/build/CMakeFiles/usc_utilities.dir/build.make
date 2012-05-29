@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/test_user/usc-arm-calibration/usc_utilities
+CMAKE_SOURCE_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/test_user/usc-arm-calibration/usc_utilities/build
+CMAKE_BINARY_DIR = /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/usc_utilities.dir/depend.make
@@ -66,18 +66,18 @@ CMakeFiles/usc_utilities.dir/src/accumulator.o: /opt/ros/fuerte/share/sensor_msg
 CMakeFiles/usc_utilities.dir/src/accumulator.o: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
 CMakeFiles/usc_utilities.dir/src/accumulator.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/usc_utilities.dir/src/accumulator.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/usc_utilities.dir/src/accumulator.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/usc_utilities/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/usc_utilities.dir/src/accumulator.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/usc_utilities.dir/src/accumulator.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/usc_utilities.dir/src/accumulator.o -c /home/test_user/usc-arm-calibration/usc_utilities/src/accumulator.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/usc_utilities.dir/src/accumulator.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/accumulator.cpp
 
 CMakeFiles/usc_utilities.dir/src/accumulator.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/usc_utilities.dir/src/accumulator.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/usc_utilities/src/accumulator.cpp > CMakeFiles/usc_utilities.dir/src/accumulator.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/accumulator.cpp > CMakeFiles/usc_utilities.dir/src/accumulator.i
 
 CMakeFiles/usc_utilities.dir/src/accumulator.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/usc_utilities.dir/src/accumulator.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/usc_utilities/src/accumulator.cpp -o CMakeFiles/usc_utilities.dir/src/accumulator.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/accumulator.cpp -o CMakeFiles/usc_utilities.dir/src/accumulator.s
 
 CMakeFiles/usc_utilities.dir/src/accumulator.o.requires:
 .PHONY : CMakeFiles/usc_utilities.dir/src/accumulator.o.requires
@@ -108,18 +108,18 @@ CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.o: /opt/ros/fuerte/share/sens
 CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.o: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
 CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/usc_utilities/build/CMakeFiles $(CMAKE_PROGRESS_2)
+CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.o -c /home/test_user/usc-arm-calibration/usc_utilities/src/kdl_chain_wrapper.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/kdl_chain_wrapper.cpp
 
 CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/usc_utilities/src/kdl_chain_wrapper.cpp > CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/kdl_chain_wrapper.cpp > CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.i
 
 CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/usc_utilities/src/kdl_chain_wrapper.cpp -o CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/kdl_chain_wrapper.cpp -o CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.s
 
 CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.o.requires:
 .PHONY : CMakeFiles/usc_utilities.dir/src/kdl_chain_wrapper.o.requires
@@ -150,18 +150,18 @@ CMakeFiles/usc_utilities.dir/src/rviz_publisher.o: /opt/ros/fuerte/share/sensor_
 CMakeFiles/usc_utilities.dir/src/rviz_publisher.o: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
 CMakeFiles/usc_utilities.dir/src/rviz_publisher.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/usc_utilities.dir/src/rviz_publisher.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/usc_utilities.dir/src/rviz_publisher.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/usc_utilities/build/CMakeFiles $(CMAKE_PROGRESS_3)
+CMakeFiles/usc_utilities.dir/src/rviz_publisher.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/usc_utilities.dir/src/rviz_publisher.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/usc_utilities.dir/src/rviz_publisher.o -c /home/test_user/usc-arm-calibration/usc_utilities/src/rviz_publisher.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/usc_utilities.dir/src/rviz_publisher.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/rviz_publisher.cpp
 
 CMakeFiles/usc_utilities.dir/src/rviz_publisher.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/usc_utilities.dir/src/rviz_publisher.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/usc_utilities/src/rviz_publisher.cpp > CMakeFiles/usc_utilities.dir/src/rviz_publisher.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/rviz_publisher.cpp > CMakeFiles/usc_utilities.dir/src/rviz_publisher.i
 
 CMakeFiles/usc_utilities.dir/src/rviz_publisher.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/usc_utilities.dir/src/rviz_publisher.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/usc_utilities/src/rviz_publisher.cpp -o CMakeFiles/usc_utilities.dir/src/rviz_publisher.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/rviz_publisher.cpp -o CMakeFiles/usc_utilities.dir/src/rviz_publisher.s
 
 CMakeFiles/usc_utilities.dir/src/rviz_publisher.o.requires:
 .PHONY : CMakeFiles/usc_utilities.dir/src/rviz_publisher.o.requires
@@ -192,18 +192,18 @@ CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.o: /opt/ros/fuerte/share
 CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.o: /opt/ros/fuerte/share/visualization_msgs/manifest.xml
 CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.o: /opt/ros/fuerte/share/rosbag/manifest.xml
 CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.o: /opt/ros/fuerte/share/std_msgs/manifest.xml
-CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.o: /home/test_user/usc-arm-calibration/bspline/manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/test_user/usc-arm-calibration/usc_utilities/build/CMakeFiles $(CMAKE_PROGRESS_4)
+CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.o: /home/jbinney/ws/arm/stacks/usc-arm-calibration/bspline/manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.o -c /home/test_user/usc-arm-calibration/usc_utilities/src/sl_config_file_handler.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.o -c /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/sl_config_file_handler.cpp
 
 CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/test_user/usc-arm-calibration/usc_utilities/src/sl_config_file_handler.cpp > CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/sl_config_file_handler.cpp > CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.i
 
 CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/test_user/usc-arm-calibration/usc_utilities/src/sl_config_file_handler.cpp -o CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/src/sl_config_file_handler.cpp -o CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.s
 
 CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.o.requires:
 .PHONY : CMakeFiles/usc_utilities.dir/src/sl_config_file_handler.o.requires
@@ -248,6 +248,6 @@ CMakeFiles/usc_utilities.dir/clean:
 .PHONY : CMakeFiles/usc_utilities.dir/clean
 
 CMakeFiles/usc_utilities.dir/depend:
-	cd /home/test_user/usc-arm-calibration/usc_utilities/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/test_user/usc-arm-calibration/usc_utilities /home/test_user/usc-arm-calibration/usc_utilities /home/test_user/usc-arm-calibration/usc_utilities/build /home/test_user/usc-arm-calibration/usc_utilities/build /home/test_user/usc-arm-calibration/usc_utilities/build/CMakeFiles/usc_utilities.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build /home/jbinney/ws/arm/stacks/usc-arm-calibration/usc_utilities/build/CMakeFiles/usc_utilities.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/usc_utilities.dir/depend
 

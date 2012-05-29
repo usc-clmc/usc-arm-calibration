@@ -1,4 +1,4 @@
-# Install script for directory: /home/test_user/usc-arm-calibration/ccny_vision/ar_target
+# Install script for directory: /home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/test_user/usc-arm-calibration/ccny_vision/ar_target/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/jbinney/ws/arm/stacks/usc-arm-calibration/ccny_vision/ar_target/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)
