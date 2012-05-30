@@ -181,14 +181,15 @@ for d in range(gp_training_outputs.shape[1]):
 yamlfile_path = os.path.join(
     roslib.packages.get_pkg_dir("arm_fiducial_cal"), "calib/correction_gp.yaml")
 yamlfile = open(yamlfile_path, 'w+')
-print >> yamlfile, '% training inputs are roll, pitch, yaw of head pose in base frame'
+print >> yamlfile, '# training inputs are roll, pitch, yaw of head pose in base frame'
 print >> yamlfile, 'gp_training_inputs:'
 for vec in gp_training_inputs:
-    print >> yamlfile, '\t-[' + ', '.join(['%7.3f' % x for x in vec]) + ']'
-print >> yamlfile, '% training outputs are corrections for roll, pitch, yaw, x, y, z'
+    print >> yamlfile, '    -[' + ', '.join(['%7.3f' % x for x in vec]) + ']'
+print >> yamlfile, '# training outputs are corrections for roll, pitch, yaw, x, y, z'
+print >> yamlfile, '# of the frame of the top of the pan tilt unit'
 print >> yamlfile, 'gp_training_outputs:'
 for vec in gp_training_outputs:
-    print >> yamlfile, '\t-[' + ', '.join(['%7.3f' % x for x in vec]) + ']'
+    print >> yamlfile, '    -[' + ', '.join(['%7.3f' % x for x in vec]) + ']'
 yamlfile.close()
 
 # for our own purposes, save the estimated transform in a shelf
