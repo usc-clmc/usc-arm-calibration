@@ -10,6 +10,7 @@
 #include <arm_head_control/arm_head_control.h>
 #include <kdl_parser/kdl_parser.hpp>
 
+
 namespace arm_head_control
 {
 
@@ -18,7 +19,6 @@ ArmHeadControl::ArmHeadControl(ros::NodeHandle node_handle,
 : node_handle_(node_handle),
   action_server_(node_handle, action_name, boost::bind(&ArmHeadControl::execute, this, _1), false)
 {
-
   bool do_head_reset = true;
   ROS_VERIFY(usc_utilities::read(node_handle_, "do_head_reset", do_head_reset));
   head_unit_.reset(new arm_head_control::ArmHeadUnit(do_head_reset, true));
@@ -27,6 +27,18 @@ ArmHeadControl::ArmHeadControl(ros::NodeHandle node_handle,
   {
     ros::Duration(0.1).sleep();
   }
+
+  joint_state_pub_ = node_handle_.advertise<sensor_msgs::JointState>("/joint_states", 300);
+
+  joint_state_msg_.position.resize(4, 0.0);
+  joint_state_msg_.velocity.resize(4, 0.0);
+  joint_state_msg_.effort.resize(4, 0.0);
+  joint_state_msg_.name.push_back("LPAN");
+  joint_state_msg_.name.push_back("LTILT");
+  joint_state_msg_.name.push_back("UPAN");
+  joint_state_msg_.name.push_back("UTILT");
+  joint_state_msg_.header.frame_id = "";
+  joint_state_msg_.header.seq = 0;
 
   ROS_VERIFY(initialize());
 
@@ -82,7 +94,6 @@ bool ArmHeadControl::initialize()
 
 void ArmHeadControl::loop(const ros::TimerEvent& timer_event)
 {
-
   float current_positions[4];
   float current_velocities[4];
   mutex_.lock();
@@ -105,6 +116,12 @@ void ArmHeadControl::loop(const ros::TimerEvent& timer_event)
   tf_pub_->publishFixedTransforms();
   tf_pub_->publishTransforms(joint_positions_, receiving_time_stamp_);
 
+  joint_state_msg_.position[0] = joint_positions_["LPAN"];
+  joint_state_msg_.position[1] = joint_positions_["LTILT"];
+  joint_state_msg_.position[2] = joint_positions_["UPAN"];
+  joint_state_msg_.position[3] = joint_positions_["UTILT"];
+  joint_state_msg_.header.seq = joint_state_msg_.header.seq + 1;
+  joint_state_pub_.publish(joint_state_msg_);
 }
 
 void ArmHeadControl::execute(const arm_head_control::LookAtGoalConstPtr& goal)
@@ -159,7 +176,7 @@ void ArmHeadControl::execute(const arm_head_control::LookAtGoalConstPtr& goal)
       target_reached = true;
     }
     mutex_.unlock();
-}
+  }
 
   succeed("LookAt action succeeded.");
 }
@@ -167,6 +184,14 @@ void ArmHeadControl::execute(const arm_head_control::LookAtGoalConstPtr& goal)
 void ArmHeadControl::succeed(const std::string& info)
 {
   arm_head_control::LookAtResult result;
+
+  mutex_.lock();
+  result.ptu_joint_angels[0] = joint_positions_["LPAN"];
+  result.ptu_joint_angels[1] = joint_positions_["LTILT"];
+  result.ptu_joint_angels[2] = joint_positions_["UPAN"];
+  result.ptu_joint_angels[3] = joint_positions_["UTILT"];
+  mutex_.unlock();
+
   result.info.assign(info);
   result.result = arm_head_control::LookAtResult::SUCCEEDED;
   action_server_.setSucceeded(result);

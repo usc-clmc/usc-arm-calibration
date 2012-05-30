@@ -21,6 +21,7 @@
 #include <kdl/tree.hpp>
 #include <robot_state_publisher/robot_state_publisher.h>
 
+#include <sensor_msgs/JointState.h>
 #include <arm_head_control/arm_head_unit.h>
 
 namespace arm_head_control
@@ -53,6 +54,9 @@ private:
 
   void fail(const std::string& info);
   void succeed(const std::string& info);
+
+  ros::Publisher joint_state_pub_;
+  sensor_msgs::JointState joint_state_msg_;
 
   boost::shared_ptr<arm_head_control::ArmHeadUnit> head_unit_;
 
