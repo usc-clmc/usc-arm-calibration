@@ -50,6 +50,16 @@ ExtrinsicsCalibrator3D::ExtrinsicsCalibrator3D(ros::NodeHandle node_handle) :
 {
   calibrate_extrinsics_server_ = node_handle_.advertiseService("calibrateExtrinsics3D", &ExtrinsicsCalibrator3D::calibrateExtrinsics, this);
 
+  joint_state_msg_.name.push_back("LPAN");
+  joint_state_msg_.name.push_back("LTILT");
+  joint_state_msg_.name.push_back("UPAN");
+  joint_state_msg_.name.push_back("UTILT");
+  joint_state_msg_.position.resize(4, 0.0);
+  joint_state_msg_.velocity.resize(4, 0.0);
+  joint_state_msg_.effort.resize(4, 0.0);
+  joint_state_msg_.header.frame_id = "";
+  joint_state_msg_.header.seq = 0;
+
   readParams();
   if(move_head_using_SL_)
   {
@@ -69,6 +79,7 @@ ExtrinsicsCalibrator3D::ExtrinsicsCalibrator3D(ros::NodeHandle node_handle) :
       dashboard_client_.warn("...is lookAt behavior up and running ? (roslaunch arm_head_control arm_head_control.launch)");
       ROS_VERIFY(look_at_joint_client_->waitForServer());
     }
+
   }
 
   rviz_marker_pub_ = node_handle_.advertise<visualization_msgs::MarkerArray> ("visualization_marker_array", 10);
@@ -166,6 +177,11 @@ bool ExtrinsicsCalibrator3D::calibrateExtrinsics(arm_calibrate_extrinsics::Calib
         dashboard_client_.error("Problems when calling LookAt action.");
         response.result = arm_calibrate_extrinsics::CalibrateExtrinsics::Response::FAILED;
         return true;
+      }
+
+      for (int n = 0; n < 4; ++n)
+      {
+        joint_state_msg_.position[n] = look_at_joint_client_->getResult()->ptu_joint_angels[n];
       }
     }
 
@@ -450,6 +466,9 @@ void ExtrinsicsCalibrator3D::callback(const ar_target::ARMarkers3dConstPtr& mark
                (int)look_at_configurations_array_.size(), (int)averaging_markers_.size());
 
       ARFrame3d frame;
+
+      joint_state_msg_.header.stamp = markers->header.stamp;
+      frame.joint_states = joint_state_msg_;
 
       if(num_snapshots_for_averaging_ <= 1)
       {

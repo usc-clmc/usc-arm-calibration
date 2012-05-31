@@ -29,6 +29,8 @@
 #include <sensor_msgs/Image.h>
 #include <sensor_msgs/CameraInfo.h>
 
+#include <sensor_msgs/JointState.h>
+
 #include <visualization_msgs/MarkerArray.h>
 
 #include <actionlib/client/simple_action_client.h>
@@ -129,6 +131,8 @@ private:
 
   std::string cal_script_;
   bool do_calibration_;
+
+  sensor_msgs::JointState joint_state_msg_;
 
 };
 

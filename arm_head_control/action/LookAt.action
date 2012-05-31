@@ -2,6 +2,7 @@
 float64[4] ptu_joint_angels
 ---
 # Define the result
+float64[4] ptu_joint_angels
 int32 result
 int32 FAILED=0
 int32 SUCCEEDED=1

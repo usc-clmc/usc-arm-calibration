@@ -1,6 +1,6 @@
 <launch>
 
-  <arg name="do_head_reset" default="true"/> 
+  <arg name="do_head_reset" default="false"/> 
 
   <node pkg="arm_head_control" name="HeadInterface" type="arm_head_control" output="screen">
     <param name="do_head_reset" value="$(arg do_head_reset)"/>

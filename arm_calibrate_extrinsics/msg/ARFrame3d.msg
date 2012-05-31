@@ -1,6 +1,7 @@
 Header header
 int32[] ids
 ar_target/ARMarker3d[] markers
+sensor_msgs/JointState joint_states
 sensor_msgs/PointCloud2 points
 sensor_msgs/Image left_image
 sensor_msgs/Image right_image
