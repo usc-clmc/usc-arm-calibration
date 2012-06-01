@@ -1,0 +1,170 @@
+%% LyX 2.0.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{babel}
+\begin{document}
+
+\section{Installation (tested on ubuntu 12.04)}
+\begin{itemize}
+\item install fuerte from debs
+\item get the latest code from https://github.com/usc-clmc/usc-arm-calibration
+\item install the scipy machine learning toolkit: sudo apt-get install python-sklearn
+\end{itemize}
+
+\section{Running the calibration on a specific bagfile}
+\begin{enumerate}
+\item Collect a calibration bagfile (peter, want to fill this in a bit?)
+This process involves putting the calibration poster with AR markers
+on the table, then moving the head to a bunch of poses. At each pose,
+the 3D position (in camera frame) of any markers which can be seen
+by both the left and right bumblebee cameras is recorded.
+\item Run the calibration script on the resulting bagfile
+
+\begin{itemize}
+\item make sure you have a roscore running (the script publishes rviz markers
+to help visualize the optimization)
+\item \emph{rosrun arm\_fiducial\_cal scripts/calibrate.py <bagfile\_filename>}
+\end{itemize}
+\end{enumerate}
+
+\section{What the calibration script does:}
+
+
+\subsection{Calibrating the rigid transforms}
+
+First, we need to name the transforms we care about:
+\begin{itemize}
+\item $H_{T}^{B}$is the transform from the target frame to the robot base
+frame.
+\item $H_{C}^{P}$ is the transform from the left bumblebee frame to the
+top-of-pan-tilt frame.
+\item $H_{P}^{B}$ is the transform from the top-of-pan-tilt frame to to
+the robot base.
+\end{itemize}
+During this calibration, we're going to solve for $H_{T}^{B}$ and
+$H_{P}^{C}$. We assume that $H_{B}^{P}$is known (that the joint
+angles and kinematic model is correct). Lets say that we see a fiducial
+with the stereo pair. We'll denote the 3D position in camera frame
+as seen by the camera $p_{cam}$, and the position of that fiducial
+in the target frame (known since we designed the target) as $p_{target}$.
+We will denote the (not yet calculated) position of this point in
+the robot's base frame as $p_{base}$. There are two ways that we
+can calculate the 3D position of this point in base frame. First,
+if we know $H_{P}^{B}$ (target to base transform), then we have
+
+\[
+p_{base}=H_{T}^{B}p_{target}
+\]
+
+
+Second, if we know $H_{P}^{B}$ (bumblebee to top-of-pan-tilt transform),
+we have
+
+\[
+p_{base}=H_{P}^{B}H_{C}^{P}p_{cam}
+\]
+
+
+If our model were perfect, these two would be the same point in base
+frame. But it isn't so we can calculate an error for the position
+of this particular fiducial in this particular head pose:
+\[
+err=|H_{P}^{B}H_{C}^{P}p_{cam}-H_{T}^{B}p_{target}|
+\]
+Since we actually have observed a bunch of different fiducials from
+a bunch of different head poses, we use the sum of these errors:
+
+\[
+err=\sum|H_{P}^{B}H_{C}^{P}p_{cam}-H_{T}^{B}p_{target}|
+\]
+
+
+Now we have two unknown transforms we need to solve for: $H_{C}^{P}$
+and $H_{T}^{B}$. First we fix $H_{C}^{P}$ (camera to top-of-pan-tilt)
+and solve for $H_{T}^{B}$ (target to base) by minimizing the sum
+of errrors using a nonlinear optimizer. Next, we assume this estimated
+$H_{T}^{B}$ is correct, and do the same thing to solve for $H_{C}^{P}$.
+Then we repeat this a couple times, fixing one and solving for the
+other, so that they can converge to some nice values. 
+
+
+\subsection{Adding a GP correction}
+
+In reality, the rigid kinematics model doesn't perfectly model the
+behavior of the shitty pan-tilt unit. To account for this, we introduce
+a new transform, $H_{G}^{C}$. This is a transform froma corrected
+camera frame (G) to the camera frame the rigid kinematics model came
+up with (C). For any head position in which we saw more than 3 non-colinear
+fiducials, we can calculate the transform that minimizes the error
+that remains after calibrating the rigid kinematics model. For now
+we assume that the bottom pan tilt is fixed, and that the error transform
+$H_{G}^{C}$ is a function of the roll, pitch, and yaw of the camera
+in the base frame. This gives us
+
+\[
+H_{G}^{C}=f(roll,pitch,yaw)
+\]
+
+
+We model this function f as a Gaussian process. Actually we need more
+than one, since the transform is 6 dimensional. We use euler angles
+plus a translation to represent the transform, and estimate a separate
+GP for each of (roll, pitch, yaw, x0, y0, z0) of $H_{G}^{C}$. These
+should be small values, since they're just corrections. The choice
+of a GP here isn't actually that important; we're just using it to
+interpolate between each of the poses we used when we collected the
+calibration data.
+
+
+\section{Understanding the output text of the calibration script}
+
+It helps to run the script in a wide terminal (120 columns or more)
+to see the output clearly. The calibration script prints out, in order:
+\begin{itemize}
+\item Each of the frames (a single head pose) it finds in the bagfile, and
+the ID number of each AR marker it saw in this pose. If there are
+less than 3 markers visible, the frame is ignored, since we can't
+compute a 6DOF camera to calibration target transform. Most frames
+should have 3 to 10 markers visible.
+\item Results of the optimization for the base to target and the camera
+to top-of-pan-tilt 6DOF transforms. First the base to target transform
+is optimized, then the camera to top-of-pan-tilt transform is optimized.
+Then we repeat this a few times. For each optimization, during the
+optimization you should see a few lines that look like: 400 : -0.896
+0.670 0.813 -0.055 0.009 0.078 : 0.02''. These are ``<optimization
+iteration>: <roll> <pitch> <yaw> <x0> <y0> <z0>: <error>''. For the
+table to base transform, z0 should be about 0.79 meters. At the end
+of each optimization, some statistics about the optimization are printed.
+\item Inputs and outputs for the Gaussian process correction are printed:
+
+\begin{itemize}
+\item These look like: Frame 1: n\_markers=9 spread=0.48: -2.376 -0.013
+0.488 -> 0.016 0.003 -0.006 0.013 -0.011 0.013
+\item The fields are: <frame number>: <num\_visible\_markers> <spread>:
+<GP input vector> -> output of each of the 6 GP's corrections for
+each of roll, pitch, yaw, x, y, and z for this frame. ``spread''
+is a number that tries to capture how spread out (as in not co-linear)
+the visible markers are.
+\end{itemize}
+\end{itemize}
+
+\section{Files the calibration script outputs}
+
+In addition to a couple of USC specific files which should probably
+get deprecated at some point, the script updates the urdf in arm\_robot\_model/models/sensorsValues.urdf.xacro.
+It also outputs the training data of the correction GP to arm\_fiducial\_cal/calib/correction\_gp.yaml
+
+The training data includes 2 lists: the list of training data inputs
+(gp\_training\_input), and the list of training data ouputs (gp\_training\_output).
+Each training data input list includes the joint positions {[}LPAN,
+LTILT, UPAN, UTILT{]}. Each corresponding training data output inclunumbers
+which specify the correction transform that should be applied when
+the head is at those joint angesl: {[}roll, pitch, yaw, x, y, z{]}.
+The first 3 numbers are the euler RPY angles of the transform (in
+radians) and the last 3 numbers are the translation (in meters). Typical
+values for the translation should be a couple centimeters or less.
+Python code for converting between these 6 parameters and a homogneous
+transform matrix of the correction transform can be found in arm\_fiducial\_cal/src/arm\_fiducial\_cal/fc\_parameterizer.py
+\end{document}

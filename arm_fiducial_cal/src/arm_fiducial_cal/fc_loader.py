@@ -35,6 +35,7 @@ class FCLoader:
         frame.frame_id = frame_id
 
         # TODO: use uncalibrated transform to approximate point positions in base frame
+        frame.joint_states = msg.joint_states
         frame.neck_H_base = linalg.inv(ros_util.transform_to_matrix(msg.head_transform_base))
         cam_H_base = np.dot(self.params.initial_cam_H_neck, frame.neck_H_base)
         base_H_cam = linalg.inv(cam_H_base)
