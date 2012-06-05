@@ -1,9 +1,0 @@
-int32 id
-float64 confidence
-float64[] left_u_corners
-float64[] left_v_corners
-float64[] right_u_corners
-float64[] right_v_corners
-geometry_msgs/Point[] corner_positions
-geometry_msgs/Quaternion[] corner_orientations
-geometry_msgs/Pose center_pose

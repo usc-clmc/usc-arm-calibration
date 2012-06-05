@@ -1,4 +1,0 @@
-<launch>
-  <include file="$(find ar_target)/launch/ar_target_left_multi.launch" />
-  <include file="$(find ar_target)/launch/ar_target_right_multi.launch" />  
-</launch>
