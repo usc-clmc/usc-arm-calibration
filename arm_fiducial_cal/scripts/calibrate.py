@@ -77,9 +77,24 @@ opt.print_stats()
 # write out the resulting cal file to the urdf
 urdf_path = os.path.join(
     roslib.packages.get_pkg_dir("arm_robot_model"), "models/sensorsValues.urdf.xacro")
-print 'Cal Successful! Writing result to URDF to %s' % urdf_path
+print 'Cal Successful! Writing fixed offset result to URDF to %s' % urdf_path
 bb_left_neck_tf = ros_util.matrix_to_transform(linalg.inv(est_cam_H_neck))
 update_sensors_values_urdf(urdf_path, bb_left_neck_tf, None, None, None)
+
+# write out the fixed offset correction
+fixed_bb_offset_path = os.path.join(roslib.packages.get_pkg_dir("arm_fiducial_cal"), "calib/fixed_offset.txt")
+print 'Cal Successful! Writing fixed offset result to %s' % fixed_bb_offset_path
+print 'Notation is x y z qw qx qy qz.'
+fixed_bb_f  = open(fixed_bb_offset_path, 'w')
+x = bb_left_neck_tf.translation.x
+y = bb_left_neck_tf.translation.y
+z = bb_left_neck_tf.translation.z
+qw = bb_left_neck_tf.rotation.w
+qx = bb_left_neck_tf.rotation.x
+qy = bb_left_neck_tf.rotation.y
+qz = bb_left_neck_tf.rotation.z
+print >> fixed_bb_f, '%0.5f %0.5f %0.5f %0.5f %0.5f %0.5f %0.5f' % (x,y,z, qw,qx,qy,qz)
+fixed_bb_f.close()
 
 # write out table height (SL uses this)
 table_height_path = os.path.join(

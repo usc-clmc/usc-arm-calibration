@@ -1,6 +1,12 @@
 #########################################################################
 Instructions to run the calibration. See below for instructions in how
 to use the result
+
+IMPORTANT: Before using the result you need to update your kinematic
+model using the fixed offset stored in
+
+ arm_fiducil_cal/calib/fixed_offset.txt
+
 #########################################################################
 
 1) Git clone the repository into your home directory
@@ -67,3 +73,6 @@ corrections. Please see
 usc-arm-calibration/arm_fiducial_cal/src/head_corrector.cpp
 
 for a simple example.
+
+IMPORTANT: Update your kinematic model using the fixed offset stored 
+in arm_fiducil_cal/calib/fixed_offset.txt
