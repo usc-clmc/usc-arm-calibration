@@ -115,10 +115,6 @@ fcviz.draw_target(est_base_H_target, 'estimated_target_pose', true_color)
 for f_i, f in enumerate(frames):
     bf_head_origin  = geom.transform_points(np.zeros(3), linalg.inv(f.neck_H_base))
 
-    # hack to filter out poses where the lower pan-tilt isn't straight up
-    if bf_head_origin[2] < 1.7:
-        continue
-
     if len(f.visible_markers) < 6:
         print 'Skipping frame %d (only %d markers visible)' % (f_i, len(f.visible_markers))
         continue
