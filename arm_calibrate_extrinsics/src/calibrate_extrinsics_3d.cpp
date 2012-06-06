@@ -234,7 +234,25 @@ bool ExtrinsicsCalibrator3D::calibrateExtrinsics(arm_calibrate_extrinsics::Calib
       response.result = arm_calibrate_extrinsics::CalibrateExtrinsics::Response::FAILED;
       return true;
     }
+
+    dashboard_client_.info("Learning GP model.");
+
+    // calling learn_gp_model script
+    if (system(learn_gp_script_.c_str()))
+    {
+      dashboard_client_.error("Problems when calling learn_gp_model.sh script >%s<.", learn_gp_script_.c_str());
+      dashboard_client_.warn("To fix this, try executing it from the command line.");
+      dashboard_client_.warn(" $ rosrun arm_fiducial_cal learn_gp_model.sh");
+      dashboard_client_.error("");
+      response.result = arm_calibrate_extrinsics::CalibrateExtrinsics::Response::FAILED;
+      return true;
+    }
+
+    dashboard_client_.info("Done learning GP model.");
+
   }
+
+  dashboard_client_.info("All done captain.");
 
   response.result = arm_calibrate_extrinsics::CalibrateExtrinsics::Response::SUCCEEDED;
   return true;
@@ -634,9 +652,10 @@ void ExtrinsicsCalibrator3D::readParams()
   ROS_VERIFY(usc_utilities::read(node_handle_, "move_head_using_SL", move_head_using_SL_));
 
   ROS_VERIFY(usc_utilities::read(node_handle_, "do_calibration", do_calibration_));
-  cal_script_ = ros::package::getPath("arm_fiducial_cal");
-  usc_utilities::appendTrailingSlash(cal_script_);
-  cal_script_.append("scripts/./calibrate.py");
+  std::string arm_fiducial_cal_path = ros::package::getPath("arm_fiducial_cal");
+  usc_utilities::appendTrailingSlash(arm_fiducial_cal_path);
+  learn_gp_script_ = arm_fiducial_cal_path + "scripts/./learn_gp_model.sh";
+  cal_script_ = arm_fiducial_cal_path + "scripts/./calibrate.py";
 }
 
 bool ExtrinsicsCalibrator3D::readLookAtConfigurations()

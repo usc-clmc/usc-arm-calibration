@@ -9,6 +9,7 @@
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/arm_fiducial_cal</url>
 
+  <depend package="roscpp" />
   <depend package="rospy" />
   <depend package="opencv2"/>
   <depend package="cv_bridge"/>

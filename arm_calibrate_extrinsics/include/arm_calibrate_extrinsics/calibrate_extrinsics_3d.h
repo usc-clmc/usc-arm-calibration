@@ -132,6 +132,8 @@ private:
   std::string cal_script_;
   bool do_calibration_;
 
+  std::string learn_gp_script_;
+
   sensor_msgs::JointState joint_state_msg_;
 
 };

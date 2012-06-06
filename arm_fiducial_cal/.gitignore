@@ -1,2 +1,12 @@
-calib/
+calib
 cache
+build
+*.pyc
+*~
+doc/*.log
+doc/*.pdf
+doc/*.aux
+matlab/predictions.mat
+data/correction_gp_input.txt
+data/corrections_gp_output.txt
+data/models.txt

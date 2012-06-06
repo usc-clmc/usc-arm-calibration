@@ -2,9 +2,7 @@
 
   <include file="$(find arm_robot_model)/launch/arm_robot_model_extrinsics_calibration.launch" />
 
-<!--
   <include file="$(find arm_head_control)/launch/arm_head_control.launch" />
--->
 
   <node pkg="tf" type="static_transform_publisher" name="ZeroBBOffsetPublisher" args="0 0 0 0 0 0 BUMBLEBEE_LEFT_REAL BUMBLEBEE_LEFT 3.3333" />
   

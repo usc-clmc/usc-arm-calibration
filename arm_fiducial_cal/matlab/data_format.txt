@@ -1,0 +1,9 @@
+Each dimension is a separate GP model.
+
+line 1: number of input dimensions, number of output dimensions
+line 2: number of data points
+line 3 ... 3+num_data_points-1: input [7]
+
+For each dimension:
+line 1: output mean [1], output variance [1], kernel widths [7], kernel magnitude [1]
+line 3 ... 3+num_data_points-1: alpha [1]

@@ -1,0 +1,3 @@
+<launch> 
+  <node name="HeadCorrecter" pkg="arm_fiducial_cal" type="head_correcter_cpp" output="screen" />
+</launch>

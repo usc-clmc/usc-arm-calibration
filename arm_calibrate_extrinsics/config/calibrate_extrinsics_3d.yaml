@@ -3,7 +3,7 @@ bag_file_name: ar_target_frames_3d.bag
 confidence_threshold: 0.81
 num_snapshots_for_averaging: 1
 
-do_calibration: false
+do_calibration: true
 
 head_look_at_configurations:
 # lower_pan, lower_tilt, target_x, target_y, target_z

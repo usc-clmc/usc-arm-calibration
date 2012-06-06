@@ -1,11 +1,14 @@
+#########################################################################
+Instructions to run the calibration. See below for instructions in how
+to use the result
+#########################################################################
+
 1) Git clone the repository into your home directory
 
 $ cd
 $ git clone git://github.com/usc-clmc/usc-arm-calibration.git
 
 2) Add the following lines to your .bashrc
-
-$ git clone github.com/usc-arm-calibration
 
 source /opt/ros/fuerte/setup.bash
 export ROSCONSOLE_CONFIG_FILE=~/usc-arm-calibration/rosconsole
@@ -20,6 +23,7 @@ $ source ~/.bashrc
 $ rosdep init
 $ rosdep update
 $ rosdep install usc_fiducial_calibration
+$ apt-get install octave
 
 5) set some symlinks to point at the correct calibration files
 
@@ -29,15 +33,21 @@ roscd: No such package/stack 'arm_sl_user/armUser/config'
 
 (ignore these error messages)
 
-6) make
+6) make the ROS independent lib
+
+$ cd ~/usc-arm-calibration/arm_gp_lib
+$ cmake .
+$ make
+
+7) make the rest
 
 $ rosmake --pre-clean usc_fiducial_calibration
 
-7) start a roscore is a separate terminal
+8) start a roscore is a separate terminal
 
 $ roscore
 
-8) (cross fingers) and run the calibration code
+9) (cross fingers) and run the calibration code
 
 $ roslaunch usc_fiducial_calibration fiducial_calibration.launch
 
@@ -46,5 +56,14 @@ $ roslaunch usc_fiducial_calibration fiducial_calibration.launch
 $ copy ~/usc-arm-calibration/config/dot_rviz ~/.rviz
 $ rosrun rviz rviz
 
+#########################################################################
+Instructions in howto use the result
+#########################################################################
 
- 
+There is a ROS independent lib in usc-arm-calibration/arm_gp_lib that
+reads the generated parameters and can be used to get head offset 
+corrections. Please see
+
+usc-arm-calibration/arm_fiducial_cal/src/head_corrector.cpp
+
+for a simple example.

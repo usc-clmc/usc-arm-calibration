@@ -3,6 +3,7 @@ import re
 import numpy as np
 
 # ROS
+import rospy
 from geometry_msgs.msg import Transform, Vector3, Quaternion
 from tf import transformations
 
