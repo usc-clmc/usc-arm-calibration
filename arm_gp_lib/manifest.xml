@@ -1,0 +1,14 @@
+<package>
+  <description brief="arm_gp_lib">
+
+     arm_gp_lib
+
+  </description>
+  <author>Mrinal Kalakrishnan</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/arm_gp_lib</url>
+
+</package>
+
+

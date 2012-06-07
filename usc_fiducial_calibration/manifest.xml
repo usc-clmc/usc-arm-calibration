@@ -16,6 +16,7 @@
   <depend package="arm_calibrate_extrinsics"/>
   <depend package="arm_fiducial_cal"/>
   <depend package="ar_target"/>
+  <depend package="arm_gp_lib"/>
 
 </package>
 
