@@ -39,21 +39,15 @@ roscd: No such package/stack 'arm_sl_user/armUser/config'
 
 (ignore these error messages)
 
-6) make the ROS independent lib
-
-$ cd ~/usc-arm-calibration/arm_gp_lib
-$ cmake .
-$ make
-
-7) make the rest
+6) make
 
 $ rosmake --pre-clean usc_fiducial_calibration
 
-8) start a roscore is a separate terminal
+7) start a roscore is a separate terminal
 
 $ roscore
 
-9) (cross fingers) and run the calibration code
+8) (cross fingers) and run the calibration code
 
 $ roslaunch usc_fiducial_calibration fiducial_calibration.launch
 
