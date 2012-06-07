@@ -76,3 +76,21 @@ for a simple example.
 
 IMPORTANT: Update your kinematic model using the fixed offset stored 
 in arm_fiducil_cal/calib/fixed_offset.txt
+
+#########################################################################
+TVerify the kinematic model
+#########################################################################
+
+To verify the kinematic model we picked a whole lot of head configurations
+and computed the forward kinematics up to the last joint (before the offset
+to the left bumblebee). We stored the joint angles in
+
+arm_fiducial_cal/calib/verify_forward_kinematics_input.txt - format: <LOWER_PAN> <LOWER_TILT> <UPPER_PAN> <UPPER_TILT>
+
+and the corresponding cartesian poses in
+
+arm_fiducial_cal/calib/verify_forward_kinematics_output.txt - foramt: <x> <y> <z> <qw> <qx> <qy> <qz>
+
+Thus, in order to verify that our kinematics model of the head (up to the
+last link before the left bumblebee), you should be able to compute 
+the very same cartesian poses.
