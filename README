@@ -72,19 +72,37 @@ IMPORTANT: Update your kinematic model using the fixed offset stored
 in arm_fiducil_cal/calib/fixed_offset.txt
 
 #########################################################################
-TVerify the kinematic model
+To Verify the kinematic model
 #########################################################################
 
 To verify the kinematic model we picked a whole lot of head configurations
-and computed the forward kinematics up to the last joint (before the offset
-to the left bumblebee). We stored the joint angles in
+and computed the forward kinematics.
+
+To generate these files you need to run
+
+$ roslaunch arm_calibrate_extrinsics verify_head_calibration.launch 
+
+This script will use the (current) calibrated "fixed_offset.txt" and the current "models.txt".
+
+We stored the joint angles in
 
 arm_fiducial_cal/calib/verify_forward_kinematics_input.txt - format: <LOWER_PAN> <LOWER_TILT> <UPPER_PAN> <UPPER_TILT>
 
 and the corresponding cartesian poses in
 
-arm_fiducial_cal/calib/verify_forward_kinematics_output.txt - foramt: <x> <y> <z> <qw> <qx> <qy> <qz>
+arm_fiducial_cal/calib/verify_forward_kinematics_head_output.txt - foramt: <x> <y> <z> <qw> <qx> <qy> <qz>
 
-Thus, in order to verify that our kinematics model of the head (up to the
-last link before the left bumblebee), you should be able to compute 
-the very same cartesian poses.
+The corresponding left bumblebee poses (head + fixed calibrated offset) are in
+
+arm_fiducial_cal/calib/verify_forward_kinematics_left_bb_output.txt - foramt: <x> <y> <z> <qw> <qx> <qy> <qz>
+
+The corresponding left bumblebee poses after correction are in
+
+arm_fiducial_cal/calib/verify_forward_kinematics_gp_correction_output.txt - foramt: <x> <y> <z> <qw> <qx> <qy> <qz>
+
+The GP corrections used are in
+
+arm_fiducial_cal/calib/verify_forward_kinematics_gp_corrections_only_output.txt - foramt: <x> <y> <z> <r> <p> <y>
+
+Thus, in order to verify that our kinematics model of the head, you should get
+the "same" cartesian poses for all three frames.

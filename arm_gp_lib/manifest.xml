@@ -9,6 +9,10 @@
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/arm_gp_lib</url>
 
+  <export>
+    <cpp cflags="-I${prefix}/include" lflags="-Wl,-rpath,${prefix} -L${prefix} -larm_gp"/>
+  </export>
+
 </package>
 
 

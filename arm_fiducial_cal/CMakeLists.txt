@@ -21,8 +21,8 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 #uncomment if you have defined services
 #rosbuild_gensrv()
 
-include_directories(${PROJECT_SOURCE_DIR}/../arm_gp_lib/include)
-link_directories(${PROJECT_SOURCE_DIR}/../arm_gp_lib)
+# include_directories(${PROJECT_SOURCE_DIR}/../arm_gp_lib/include)
+# link_directories(${PROJECT_SOURCE_DIR}/../arm_gp_lib)
 
 rosbuild_add_executable(head_correcter_cpp
   src/head_correcter.cpp

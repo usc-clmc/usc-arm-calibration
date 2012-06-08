@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="arm_calibrate_extrinsics" name="VerifyHeadCalibration" type="verify_head_calibration" output="screen"/>
+  
+</launch>

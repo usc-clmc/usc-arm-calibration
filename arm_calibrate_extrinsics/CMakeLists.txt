@@ -33,6 +33,10 @@ rosbuild_add_executable(calibrate_extrinsics_3d
 )
 rosbuild_link_boost(calibrate_extrinsics_3d signals)
 
+rosbuild_add_executable(verify_head_calibration
+  src/verify_head_calibration.cpp
+)
+
 #common commands for building c++ executables and libraries
 #rosbuild_add_library(${PROJECT_NAME} src/example.cpp)
 #target_link_libraries(${PROJECT_NAME} another_library)

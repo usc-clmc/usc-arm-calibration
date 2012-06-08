@@ -32,6 +32,7 @@
 
   <!-- for JPL + CMU -->
   <depend package="arm_head_control"/>
+  <depend package="arm_gp_lib"/>
 
   <export>
     <cpp cflags="-I${prefix}/msg_gen/cpp -I${prefix}/srv_gen/cpp"/>

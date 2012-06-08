@@ -136,8 +136,6 @@ private:
 
   sensor_msgs::JointState joint_state_msg_;
 
-  bool generateHeadFK();
-
 };
 
 }
